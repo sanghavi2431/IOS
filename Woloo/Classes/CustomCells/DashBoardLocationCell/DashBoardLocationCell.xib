@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DashBoardLocationCell" rowHeight="136" id="KGk-i7-Jjw" customClass="DashBoardLocationCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLR-Fx-Ed9">
+                        <rect key="frame" x="30" y="5" width="362" height="239"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0N-aB-kdX">
+                                <rect key="frame" x="10" y="10" width="37" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5d2-89-vZA"/>
+                                    <constraint firstAttribute="width" constant="37" id="gZO-Ke-Xcx"/>
+                                </constraints>
+                                <state key="normal" image="locationWoloo"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="locationAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yQI-1Z-JUi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate a Loo Near You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-c1-GY3">
+                                <rect key="frame" x="55" y="21" width="222.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="3su-xm-Ra4"/>
+                                    <constraint firstAttribute="width" constant="222.5" id="a2u-vj-w2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                <color key="textColor" name="Woloo_Gray_bg"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqq-Vb-Lnx">
+                                <rect key="frame" x="118" y="48" width="289" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                <color key="textColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squreArrow" translatesAutoresizingMaskIntoConstraints="NO" id="DL0-G3-xEp">
+                                <rect key="frame" x="332" y="25" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3Va-Pd-6Ip"/>
+                                    <constraint firstAttribute="width" constant="20" id="UO4-kD-dqX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapWoloo" translatesAutoresizingMaskIntoConstraints="NO" id="07t-Bd-VEt">
+                                <rect key="frame" x="10" y="69" width="342" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="3yE-cs-wMS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="Woloo_Yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="D0N-aB-kdX" secondAttribute="bottom" constant="179" id="3Vq-Ud-6FQ"/>
+                            <constraint firstAttribute="bottom" secondItem="07t-Bd-VEt" secondAttribute="bottom" constant="9" id="3d0-Iv-nzI"/>
+                            <constraint firstItem="D0N-aB-kdX" firstAttribute="top" secondItem="nLR-Fx-Ed9" secondAttribute="top" constant="10" id="Cnl-wU-ies"/>
+                            <constraint firstAttribute="bottom" secondItem="uJf-c1-GY3" secondAttribute="bottom" constant="190" id="FKw-9A-rI2"/>
+                            <constraint firstItem="07t-Bd-VEt" firstAttribute="leading" secondItem="nLR-Fx-Ed9" secondAttribute="leading" constant="10" id="Ra6-5h-VCV"/>
+                            <constraint firstItem="uJf-c1-GY3" firstAttribute="centerY" secondItem="D0N-aB-kdX" secondAttribute="centerY" id="UCi-X6-OaT"/>
+                            <constraint firstItem="uJf-c1-GY3" firstAttribute="leading" secondItem="D0N-aB-kdX" secondAttribute="trailing" constant="8" id="XWk-YN-Mgj"/>
+                            <constraint firstAttribute="trailing" secondItem="07t-Bd-VEt" secondAttribute="trailing" constant="10" id="aJK-4M-oiZ"/>
+                            <constraint firstItem="DL0-G3-xEp" firstAttribute="trailing" secondItem="nLR-Fx-Ed9" secondAttribute="trailingMargin" constant="-2" id="fNF-nI-B1q"/>
+                            <constraint firstItem="07t-Bd-VEt" firstAttribute="top" secondItem="nLR-Fx-Ed9" secondAttribute="top" constant="69" id="g7Q-ry-C8K"/>
+                            <constraint firstItem="uJf-c1-GY3" firstAttribute="top" secondItem="nLR-Fx-Ed9" secondAttribute="top" constant="21" id="h8R-RV-BX4"/>
+                            <constraint firstItem="DL0-G3-xEp" firstAttribute="bottom" secondItem="uJf-c1-GY3" secondAttribute="bottom" constant="-4" id="jOk-Nw-0Gq"/>
+                            <constraint firstItem="D0N-aB-kdX" firstAttribute="leading" secondItem="nLR-Fx-Ed9" secondAttribute="leading" constant="10" id="rJJ-bf-kUV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nLR-Fx-Ed9" secondAttribute="bottom" constant="6" id="0K6-sD-Thi"/>
+                    <constraint firstItem="nLR-Fx-Ed9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4TJ-NJ-zFA"/>
+                    <constraint firstItem="nLR-Fx-Ed9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="CRW-BC-ZaD"/>
+                    <constraint firstAttribute="trailing" secondItem="nLR-Fx-Ed9" secondAttribute="trailing" constant="30" id="pfD-bL-XXg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="locationButton" destination="D0N-aB-kdX" id="NpZ-tS-C9X"/>
+                <outlet property="locationDescLabel" destination="eqq-Vb-Lnx" id="gXV-e1-F3H"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="111.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="locationWoloo" width="234" height="326"/>
+        <image name="mapWoloo" width="1050" height="540"/>
+        <image name="squreArrow" width="47" height="47"/>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="gTV-IL-0wX" customClass="ImageCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="123"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="123"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SXp-CD-faC">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="123"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYH-jm-7wO">
+                        <rect key="frame" x="99" y="10" width="40" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recycleBin" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-gH-BPj">
+                                <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                <color key="backgroundColor" name="Woloo_Yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0lw-NA-Mw4"/>
+                                    <constraint firstAttribute="height" constant="20" id="lna-T3-xM3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-ic-ek0">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jqS-k2-tjC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Woloo_Yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WKZ-ic-ek0" secondAttribute="bottom" id="06U-Kq-c4j"/>
+                            <constraint firstItem="9iU-gH-BPj" firstAttribute="centerX" secondItem="GYH-jm-7wO" secondAttribute="centerX" id="52Q-g3-OJo"/>
+                            <constraint firstAttribute="trailing" secondItem="WKZ-ic-ek0" secondAttribute="trailing" id="HWp-ae-MYd"/>
+                            <constraint firstItem="WKZ-ic-ek0" firstAttribute="top" secondItem="GYH-jm-7wO" secondAttribute="top" id="MnN-xd-TDi"/>
+                            <constraint firstAttribute="width" constant="40" id="QbS-go-MkO"/>
+                            <constraint firstAttribute="height" constant="40" id="aC2-EC-DUc"/>
+                            <constraint firstItem="9iU-gH-BPj" firstAttribute="centerY" secondItem="GYH-jm-7wO" secondAttribute="centerY" id="oH9-P3-sxe"/>
+                            <constraint firstItem="WKZ-ic-ek0" firstAttribute="leading" secondItem="GYH-jm-7wO" secondAttribute="leading" id="vlk-5t-Z4q"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusImage" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-Rg-yTw">
+                        <rect key="frame" x="49.5" y="36.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="91X-eM-fdq"/>
+                            <constraint firstAttribute="width" constant="50" id="bZV-Zk-FvS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GYH-jm-7wO" secondAttribute="trailing" constant="10" id="80g-Kc-axi"/>
+                <constraint firstAttribute="bottom" secondItem="SXp-CD-faC" secondAttribute="bottom" id="AcQ-f7-tHD"/>
+                <constraint firstItem="dHi-Rg-yTw" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="H2S-xb-mBF"/>
+                <constraint firstItem="dHi-Rg-yTw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Rer-aM-wgS"/>
+                <constraint firstItem="SXp-CD-faC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lSa-p8-9Qn"/>
+                <constraint firstItem="SXp-CD-faC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vIA-qj-B9B"/>
+                <constraint firstItem="GYH-jm-7wO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wkV-lQ-h66"/>
+                <constraint firstAttribute="trailing" secondItem="SXp-CD-faC" secondAttribute="trailing" id="xHR-FV-TA9"/>
+            </constraints>
+            <size key="customSize" width="149" height="123"/>
+            <connections>
+                <outlet property="buttonView" destination="GYH-jm-7wO" id="GL7-iN-98K"/>
+                <outlet property="deleteButton" destination="WKZ-ic-ek0" id="6g0-bO-8Xu"/>
+                <outlet property="imageView" destination="SXp-CD-faC" id="9jL-Kq-cwi"/>
+                <outlet property="plusPlaceHolderImage" destination="dHi-Rg-yTw" id="ZHA-fZ-sU3"/>
+            </connections>
+            <point key="canvasLocation" x="212.31884057971016" y="122.20982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plusImage" width="126" height="126"/>
+        <image name="recycleBin" width="38" height="49"/>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

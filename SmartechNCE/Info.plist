@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>UNNotificationExtensionCategory</key>
+			<array>
+				<string>SmartechCarouselLandscapeNotification</string>
+				<string>SmartechCarouselPortraitNotification</string>
+				<string>SmartechPN</string>
+			</array>
+			<key>UNNotificationExtensionDefaultContentHidden </key>
+			<true/>
+			<key>UNNotificationExtensionInitialContentSizeRatio</key>
+			<real>0.25</real>
+			<key>UNNotificationExtensionUserInteractionEnabled</key>
+			<true/>
+		</dict>
+		<key>NSExtensionMainStoryboard</key>
+		<string>MainInterface</string>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.usernotifications.content-extension</string>
+	</dict>
+	<key>SmartechKeys</key>
+	<dict>
+		<key>SmartechAppGroup</key>
+		<string>group.in.woloo.app</string>
+		<key>SmartechAppId</key>
+		<string>3b444c5acee35cf83bb2246da7e4b5c9</string>
+		<key>SmartechNotificationIcon</key>
+		<string>logoBanner</string>
+	</dict>
+</dict>
+</plist>

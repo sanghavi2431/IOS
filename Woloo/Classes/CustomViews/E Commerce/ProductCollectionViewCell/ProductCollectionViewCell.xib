@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFD-9d-6nG">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="190"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjZ-ee-x1Y">
+                                <rect key="frame" x="6" y="6" width="148" height="178"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbR-1I-7y8">
+                                        <rect key="frame" x="148" y="0.0" width="0.0" height="178"/>
+                                        <color key="backgroundColor" name="Woloo_Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" id="Ids-lE-4ds"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_about_banner" translatesAutoresizingMaskIntoConstraints="NO" id="rRH-kY-r5c">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="178"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYn-wm-qNO">
+                                        <rect key="frame" x="0.0" y="144" width="148" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zontom Freedom Standing Uranation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-hl-gCe">
+                                                <rect key="frame" x="2" y="5" width="142" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Woloo_white_text"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RiU-te-U7U"/>
+                                            <constraint firstItem="eEV-hl-gCe" firstAttribute="top" secondItem="eYn-wm-qNO" secondAttribute="top" constant="5" id="SS0-AZ-9hD"/>
+                                            <constraint firstAttribute="bottom" secondItem="eEV-hl-gCe" secondAttribute="bottom" constant="5" id="dZS-QJ-ZyK"/>
+                                            <constraint firstItem="eEV-hl-gCe" firstAttribute="leading" secondItem="eYn-wm-qNO" secondAttribute="leading" constant="2" id="eJy-8A-d2n"/>
+                                            <constraint firstAttribute="trailing" secondItem="eEV-hl-gCe" secondAttribute="trailing" constant="4" id="png-kU-Ru4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rRH-kY-r5c" firstAttribute="top" secondItem="OjZ-ee-x1Y" secondAttribute="top" id="3uo-ef-jFR"/>
+                                    <constraint firstItem="rRH-kY-r5c" firstAttribute="leading" secondItem="OjZ-ee-x1Y" secondAttribute="leading" id="6xG-x3-ZYY"/>
+                                    <constraint firstItem="eYn-wm-qNO" firstAttribute="leading" secondItem="OjZ-ee-x1Y" secondAttribute="leading" id="ADW-1l-ffe"/>
+                                    <constraint firstAttribute="bottom" secondItem="sbR-1I-7y8" secondAttribute="bottom" id="ErD-PC-Aq5"/>
+                                    <constraint firstAttribute="bottom" secondItem="rRH-kY-r5c" secondAttribute="bottom" id="de2-Qt-oej"/>
+                                    <constraint firstItem="sbR-1I-7y8" firstAttribute="leading" secondItem="rRH-kY-r5c" secondAttribute="trailing" id="ibt-w4-va4"/>
+                                    <constraint firstAttribute="trailing" secondItem="sbR-1I-7y8" secondAttribute="trailing" id="lhm-NO-r3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="eYn-wm-qNO" secondAttribute="trailing" id="ofR-c2-2uT"/>
+                                    <constraint firstItem="sbR-1I-7y8" firstAttribute="top" secondItem="OjZ-ee-x1Y" secondAttribute="top" id="rkw-Ea-cCx"/>
+                                    <constraint firstAttribute="bottom" secondItem="eYn-wm-qNO" secondAttribute="bottom" constant="4" id="vnc-JO-g9u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="OjZ-ee-x1Y" firstAttribute="top" secondItem="nFD-9d-6nG" secondAttribute="top" constant="6" id="6RN-2o-sbh"/>
+                            <constraint firstItem="OjZ-ee-x1Y" firstAttribute="leading" secondItem="nFD-9d-6nG" secondAttribute="leading" constant="6" id="oFa-bI-oa8"/>
+                            <constraint firstAttribute="trailing" secondItem="OjZ-ee-x1Y" secondAttribute="trailing" constant="6" id="qe6-iP-c5r"/>
+                            <constraint firstAttribute="bottom" secondItem="OjZ-ee-x1Y" secondAttribute="bottom" constant="6" id="wrw-kt-B6H"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nFD-9d-6nG" secondAttribute="trailing" id="6m8-Wp-PKQ"/>
+                <constraint firstItem="nFD-9d-6nG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IP0-ec-DJG"/>
+                <constraint firstAttribute="bottom" secondItem="nFD-9d-6nG" secondAttribute="bottom" id="NqF-b7-acO"/>
+                <constraint firstItem="nFD-9d-6nG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dYW-2c-cTv"/>
+            </constraints>
+            <size key="customSize" width="160" height="190"/>
+            <connections>
+                <outlet property="productImage" destination="rRH-kY-r5c" id="Zky-Gn-SeW"/>
+                <outlet property="productNameLabel" destination="eEV-hl-gCe" id="adu-fJ-5VO"/>
+            </connections>
+            <point key="canvasLocation" x="217.39130434782609" y="117.85714285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_about_banner" width="376" height="183.5"/>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Medium.ttf">
+            <string>MavenPro-Medium</string>
+        </array>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WelcomeCell" id="gTV-IL-0wX" customClass="WelcomeCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="838"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="838"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-Be-uGR">
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="838"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49C-ta-szh">
+                                <rect key="frame" x="0.0" y="0.0" width="362" height="838"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcv-XI-XQd">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="838"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFN-oq-Vfm">
+                                                <rect key="frame" x="20" y="30" width="322" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="Ldv-Ip-UWW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro" pointSize="35"/>
+                                                <color key="textColor" name="Woloo_Yellow"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id8-OW-qUO">
+                                                <rect key="frame" x="20" y="101" width="322" height="140"/>
+                                                <string key="text">Woloo brings a tech enabled loo-discovery platform app that helps women to locate the nearest washroom, whenever they are away from their home or office.
+
+If you are a Premium Restaurant, QSR, Café, or any other retail business outlet with a safe &amp; hygienic washroom, here is an opportunity for you to attract more customers &amp; also earn extra money. All you need to do is upgrade your existing washroom as per Woloo standards &amp; be a part of our loo discovery network on Woloo app.</string>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                                <color key="textColor" name="Woloo_white_text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Id8-OW-qUO" firstAttribute="top" secondItem="YFN-oq-Vfm" secondAttribute="bottom" constant="30" id="0a5-1l-j1v"/>
+                                            <constraint firstAttribute="trailing" secondItem="YFN-oq-Vfm" secondAttribute="trailing" constant="20" id="C5U-LQ-8nu"/>
+                                            <constraint firstItem="Id8-OW-qUO" firstAttribute="leading" secondItem="Qcv-XI-XQd" secondAttribute="leading" constant="20" id="LwW-WD-17E"/>
+                                            <constraint firstItem="YFN-oq-Vfm" firstAttribute="leading" secondItem="Qcv-XI-XQd" secondAttribute="leading" constant="20" id="YKh-Ry-2cf"/>
+                                            <constraint firstItem="YFN-oq-Vfm" firstAttribute="top" secondItem="Qcv-XI-XQd" secondAttribute="top" constant="30" id="aKe-zc-MBp"/>
+                                            <constraint firstAttribute="trailing" secondItem="Id8-OW-qUO" secondAttribute="trailing" constant="20" id="r8d-Vv-a7Y"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="bottom" secondItem="syc-g1-P5T" secondAttribute="bottom" id="4af-7J-pVc"/>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="leading" secondItem="syc-g1-P5T" secondAttribute="leading" id="KD4-nJ-l2f"/>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="trailing" secondItem="syc-g1-P5T" secondAttribute="trailing" id="PBa-82-PFS"/>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="height" secondItem="49C-ta-szh" secondAttribute="height" priority="750" id="Ru5-r0-uhj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qcv-XI-XQd" secondAttribute="bottom" id="aTT-ZI-4Zp"/>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="top" secondItem="syc-g1-P5T" secondAttribute="top" id="gd0-8G-seU"/>
+                                    <constraint firstItem="Qcv-XI-XQd" firstAttribute="width" secondItem="49C-ta-szh" secondAttribute="width" id="iSf-3P-e1i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qcv-XI-XQd" secondAttribute="trailing" id="zTF-3p-QXI"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="H5c-dl-VzI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="syc-g1-P5T"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="49C-ta-szh" secondAttribute="trailing" id="bby-N6-o5h"/>
+                            <constraint firstItem="49C-ta-szh" firstAttribute="top" secondItem="AcK-Be-uGR" secondAttribute="top" id="cQw-IG-z2b"/>
+                            <constraint firstAttribute="bottom" secondItem="49C-ta-szh" secondAttribute="bottom" id="esP-Vj-vjx"/>
+                            <constraint firstItem="49C-ta-szh" firstAttribute="leading" secondItem="AcK-Be-uGR" secondAttribute="leading" id="r6x-Bg-M5I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AcK-Be-uGR" secondAttribute="trailing" id="HKc-5N-e1U"/>
+                <constraint firstItem="AcK-Be-uGR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MAw-Xt-6zH"/>
+                <constraint firstAttribute="bottom" secondItem="AcK-Be-uGR" secondAttribute="bottom" id="XKi-J5-hg4"/>
+                <constraint firstItem="AcK-Be-uGR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" symbolic="YES" id="lUY-Ef-nHL"/>
+            </constraints>
+            <size key="customSize" width="362" height="838"/>
+            <point key="canvasLocation" x="366.66666666666669" y="360.26785714285711"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

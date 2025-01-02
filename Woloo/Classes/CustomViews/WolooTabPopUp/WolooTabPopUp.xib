@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WolooTabPopUp" customModule="Woloo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WolooTabPopUp" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="420"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaK-Ka-wg5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="420"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRa-Bi-48L">
+                            <rect key="frame" x="0.0" y="10" width="414" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="mEd-kT-TML"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" name="Woloo_white_text"/>
+                            </state>
+                            <connections>
+                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="PvJ-eI-F3B"/>
+                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="jIR-0e-p8b"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="C0t-TQ-dIH">
+                            <rect key="frame" x="40" y="50" width="335" height="90"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="Jgr-VP-MEK">
+                                    <rect key="frame" x="0.0" y="0.0" width="157.5" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-G0-il3">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="73.5"/>
+                                            <state key="normal" image="locationWithCircle"/>
+                                            <connections>
+                                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="50v-cY-na6"/>
+                                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="ePY-93-eTC"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Loo Locator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-M6-Hq2">
+                                            <rect key="frame" x="0.0" y="73.5" width="157.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="sdy-vB-z2m"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U5C-sd-riw">
+                                    <rect key="frame" x="177.5" y="0.0" width="157.5" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vw-id-u87">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="73.5"/>
+                                            <state key="normal" image="cart"/>
+                                            <connections>
+                                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="HQe-lT-JLc"/>
+                                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="uBI-pv-Vyi"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-yw-Udm">
+                                            <rect key="frame" x="0.0" y="73.5" width="157.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rjO-uh-qBb">
+                            <rect key="frame" x="40" y="160" width="335" height="90"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="ZAA-d3-s4K">
+                                    <rect key="frame" x="0.0" y="0.0" width="157.5" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5t-Vp-kta">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="73.5"/>
+                                            <state key="normal" image="trackerCircle"/>
+                                            <connections>
+                                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="YPx-Bs-nA8"/>
+                                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="nvO-Xd-WKa"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period Tracker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8i-GV-8Mu">
+                                            <rect key="frame" x="0.0" y="73.5" width="157.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="gVG-pv-DUd"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="jQc-wf-vZL">
+                                    <rect key="frame" x="177.5" y="0.0" width="157.5" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXU-yf-H7B">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="73.5"/>
+                                            <state key="normal" image="thirstReminderWithCircle"/>
+                                            <connections>
+                                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5b6-yQ-Ubc"/>
+                                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="7pk-Sy-Bm9"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thirst Reminder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acx-mJ-18R">
+                                            <rect key="frame" x="0.0" y="73.5" width="157.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="BCs-BG-QLD"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l4b-ua-MnI">
+                            <rect key="frame" x="40" y="270" width="335" height="90"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="ih5-Qa-wE8">
+                                    <rect key="frame" x="0.0" y="0.0" width="157.5" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1a-L2-F6A">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="73.5"/>
+                                            <state key="normal" image="comunityWithCircle"/>
+                                            <connections>
+                                                <action selector="allButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Bnf-hD-4su"/>
+                                                <action selector="allButtonAction:" destination="-1" eventType="touchUpInside" id="DEE-Sd-PXF"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woloo Community" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmc-AZ-6NP">
+                                            <rect key="frame" x="0.0" y="73.5" width="157.5" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="Ckp-pu-MaU"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="AaF-Vc-W94">
+                                    <rect key="frame" x="177.5" y="0.0" width="157.5" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-M6-WQX">
+                                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="90"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mc-UO-FYS">
+                                            <rect key="frame" x="0.0" y="90" width="157.5" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" name="Woloo_white_text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="bgg-wh-ImL"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="C0t-TQ-dIH" secondAttribute="trailing" constant="39" id="AUs-WN-izv"/>
+                        <constraint firstItem="l4b-ua-MnI" firstAttribute="top" secondItem="rjO-uh-qBb" secondAttribute="bottom" constant="20" id="Aqe-6v-lXo"/>
+                        <constraint firstItem="rjO-uh-qBb" firstAttribute="leading" secondItem="OaK-Ka-wg5" secondAttribute="leading" constant="40" id="D0Y-FA-XsP"/>
+                        <constraint firstAttribute="trailing" secondItem="rjO-uh-qBb" secondAttribute="trailing" constant="39" id="GI3-Yj-EFA"/>
+                        <constraint firstAttribute="trailing" secondItem="l4b-ua-MnI" secondAttribute="trailing" constant="39" id="c27-c5-tAY"/>
+                        <constraint firstItem="C0t-TQ-dIH" firstAttribute="top" secondItem="TRa-Bi-48L" secondAttribute="bottom" constant="20" id="eoL-IQ-S3q"/>
+                        <constraint firstItem="TRa-Bi-48L" firstAttribute="top" secondItem="OaK-Ka-wg5" secondAttribute="top" constant="10" id="iq3-Ru-rTr"/>
+                        <constraint firstItem="rjO-uh-qBb" firstAttribute="top" secondItem="C0t-TQ-dIH" secondAttribute="bottom" constant="20" id="lUK-Vc-B9f"/>
+                        <constraint firstItem="TRa-Bi-48L" firstAttribute="leading" secondItem="OaK-Ka-wg5" secondAttribute="leading" id="owM-b8-Z0a"/>
+                        <constraint firstItem="l4b-ua-MnI" firstAttribute="leading" secondItem="OaK-Ka-wg5" secondAttribute="leading" constant="40" id="qHq-ht-1xi"/>
+                        <constraint firstItem="C0t-TQ-dIH" firstAttribute="leading" secondItem="OaK-Ka-wg5" secondAttribute="leading" constant="40" id="qYb-zN-QBU"/>
+                        <constraint firstAttribute="trailing" secondItem="TRa-Bi-48L" secondAttribute="trailing" id="xKr-9E-OqZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OaK-Ka-wg5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0TH-On-GTJ"/>
+                <constraint firstItem="OaK-Ka-wg5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H0w-A5-M5R"/>
+                <constraint firstItem="OaK-Ka-wg5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Tut-sk-Tfe"/>
+                <constraint firstItem="OaK-Ka-wg5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="h14-v5-WBQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128.98550724637681" y="-197.54464285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cart" width="70" height="70"/>
+        <image name="comunityWithCircle" width="70" height="70"/>
+        <image name="locationWithCircle" width="70" height="70"/>
+        <image name="thirstReminderWithCircle" width="70" height="70"/>
+        <image name="trackerCircle" width="70" height="70"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

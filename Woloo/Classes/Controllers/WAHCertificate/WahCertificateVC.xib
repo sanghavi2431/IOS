@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WahCertificateVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="E2u-EB-nqf" id="dsR-ce-zvF"/>
+                <outlet property="lblCertiDate" destination="7H5-RU-sGg" id="5Ol-YS-6rR"/>
+                <outlet property="lblCertiNumber" destination="kAE-It-s7y" id="7iT-aX-hQh"/>
+                <outlet property="lblName" destination="kq2-rA-BHP" id="5Yh-S5-8S9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAH Certificate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-o6-fx3">
+                    <rect key="frame" x="0.0" y="47" width="428" height="69"/>
+                    <color key="backgroundColor" name="Woloo_white_text"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="BUX-hU-1UD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
+                    <color key="textColor" name="Woloo_Gray_bg"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2u-EB-nqf">
+                    <rect key="frame" x="24" y="67" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="5KY-cq-A6P"/>
+                        <constraint firstAttribute="width" constant="40" id="Pqp-cE-cHM"/>
+                    </constraints>
+                    <color key="tintColor" name="Woloo_Gray_bg"/>
+                    <state key="normal" image="ic_left_arrow"/>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="ok4-k8-ExW"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjS-5s-deS">
+                    <rect key="frame" x="0.0" y="116" width="428" height="776"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUO-9v-XLV">
+                            <rect key="frame" x="0.0" y="50" width="428" height="15"/>
+                            <color key="backgroundColor" name="Woloo_Gray_bg"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="dN5-Wd-74z"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wah" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-3B-Whm">
+                            <rect key="frame" x="164" y="7.6666666666666714" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="1Vh-mf-rcX"/>
+                                <constraint firstAttribute="height" constant="100" id="I0u-Ao-J8l"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fIZ-3A-dpu">
+                            <rect key="frame" x="0.0" y="132.66666666666669" width="428" height="643.33333333333326"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certificate Of Assurance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="w2E-Vm-DaJ">
+                                    <rect key="frame" x="50.666666666666657" y="0.0" width="327" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="7WE-H5-bo3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBJ-es-x1U">
+                                    <rect key="frame" x="157" y="73.666666666666657" width="114" height="50"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   M/s test test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq2-rA-BHP">
+                                            <rect key="frame" x="12" y="0.0" width="90" height="16.333333333333332"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEN-yn-Ekv">
+                                            <rect key="frame" x="0.0" y="24.333333333333371" width="114" height="1"/>
+                                            <color key="backgroundColor" name="Woloo_Gray_bg"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="lKU-xy-iKg"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="EEN-yn-Ekv" firstAttribute="leading" secondItem="IBJ-es-x1U" secondAttribute="leading" id="0Qh-BD-Hwd"/>
+                                        <constraint firstAttribute="trailing" secondItem="EEN-yn-Ekv" secondAttribute="trailing" id="7I9-2T-E8A"/>
+                                        <constraint firstItem="EEN-yn-Ekv" firstAttribute="top" secondItem="kq2-rA-BHP" secondAttribute="bottom" constant="8" id="7Vr-o3-Obf"/>
+                                        <constraint firstItem="kq2-rA-BHP" firstAttribute="leading" secondItem="IBJ-es-x1U" secondAttribute="leading" constant="12" id="CCa-2E-uRB"/>
+                                        <constraint firstItem="kq2-rA-BHP" firstAttribute="top" secondItem="IBJ-es-x1U" secondAttribute="top" id="e55-ah-OUu"/>
+                                        <constraint firstItem="kq2-rA-BHP" firstAttribute="centerX" secondItem="EEN-yn-Ekv" secondAttribute="centerX" id="exE-hc-5in"/>
+                                        <constraint firstAttribute="height" constant="50" id="ieb-qq-QpE"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quo-Jv-4Oz" userLabel="Complies with the requirements of Woloo Assurance of Hygiene [WAH] Guidelines">
+                                    <rect key="frame" x="35.333333333333343" y="161.33333333333334" width="357.66666666666663" height="115.00000000000003"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="115" id="Cnn-Sh-3JV"/>
+                                    </constraints>
+                                    <string key="text">Complies with the requirements of 
+Woloo Assurance of Hygiene [WAH] Guidelines</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-3P-b77">
+                                    <rect key="frame" x="35" y="314" width="358" height="98"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4en-MF-MDW">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certificate No.:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIV-mR-Amc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="dFH-6p-fYR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drv-Km-Mfe">
+                                                    <rect key="frame" x="98" y="0.0" width="70" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12343" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAE-It-s7y">
+                                                            <rect key="frame" x="8" y="0.0" width="54" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYT-eo-hAp">
+                                                            <rect key="frame" x="0.0" y="21" width="70" height="1"/>
+                                                            <color key="backgroundColor" name="Woloo_Gray_bg"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="mvZ-x5-Gpg"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="RYT-eo-hAp" secondAttribute="trailing" id="7xL-l0-ibd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RYT-eo-hAp" secondAttribute="bottom" constant="8" id="Hub-6H-BvA"/>
+                                                        <constraint firstItem="kAE-It-s7y" firstAttribute="leading" secondItem="drv-Km-Mfe" secondAttribute="leading" constant="8" id="U8Z-mS-57f"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kAE-It-s7y" secondAttribute="trailing" constant="8" id="axR-Fz-kLq"/>
+                                                        <constraint firstItem="RYT-eo-hAp" firstAttribute="leading" secondItem="drv-Km-Mfe" secondAttribute="leading" id="b3H-P0-iWj"/>
+                                                        <constraint firstItem="RYT-eo-hAp" firstAttribute="top" secondItem="kAE-It-s7y" secondAttribute="bottom" id="cUF-20-cea"/>
+                                                        <constraint firstItem="kAE-It-s7y" firstAttribute="top" secondItem="drv-Km-Mfe" secondAttribute="top" id="zkt-PA-WFV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="YAC-tE-kkh"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bU7-kr-hAn">
+                                            <rect key="frame" x="0.0" y="38" width="238" height="60"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGg-wb-2L3" userLabel="Date of Certification: (Valid for one year)">
+                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="28.666666666666668"/>
+                                                    <string key="text">Date of Certification:
+(Valid for one year)</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="Woloo_Gray_bg"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd3-XJ-FJh">
+                                                    <rect key="frame" x="120" y="0.0" width="118" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12343" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7H5-RU-sGg">
+                                                            <rect key="frame" x="8" y="0.0" width="102" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="VKH-62-4kj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6z6-1P-9Z1">
+                                                            <rect key="frame" x="0.0" y="21" width="118" height="1"/>
+                                                            <color key="backgroundColor" name="Woloo_Gray_bg"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="j0n-EQ-tGy"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="6z6-1P-9Z1" firstAttribute="top" secondItem="7H5-RU-sGg" secondAttribute="bottom" id="HhF-1o-Zrf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7H5-RU-sGg" secondAttribute="trailing" constant="8" id="SoE-Xk-Jss"/>
+                                                        <constraint firstItem="6z6-1P-9Z1" firstAttribute="leading" secondItem="hd3-XJ-FJh" secondAttribute="leading" id="b9g-HO-aaq"/>
+                                                        <constraint firstItem="7H5-RU-sGg" firstAttribute="leading" secondItem="hd3-XJ-FJh" secondAttribute="leading" constant="8" id="cmz-vU-Tgr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6z6-1P-9Z1" secondAttribute="bottom" constant="8" id="d8P-f6-G9W"/>
+                                                        <constraint firstItem="7H5-RU-sGg" firstAttribute="top" secondItem="hd3-XJ-FJh" secondAttribute="top" id="gLv-vD-IKy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6z6-1P-9Z1" secondAttribute="trailing" id="u56-uy-brr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="sW6-Dw-6WR"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certification Body" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-O1-mmM" userLabel="Complies with the requirements of Woloo Assurance of Hygiene [WAH] Guidelines">
+                                    <rect key="frame" x="145.66666666666669" y="449.66666666666674" width="136.66666666666669" height="20.333333333333314"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20.5" id="Euh-qh-e5U"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="fQk-2S-VzA">
+                                    <rect key="frame" x="20" y="507.66666666666674" width="388" height="50"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-My-rLN">
+                                            <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="50"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TBC" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-NN-XPl">
+                                            <rect key="frame" x="205.66666666666663" y="0.0" width="182.33333333333337" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="0CL-WV-ozC"/>
+                                    </constraints>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9A-xw-bu2" userLabel="Complies with the requirements of Woloo Assurance of Hygiene [WAH] Guidelines">
+                                    <rect key="frame" x="8" y="595.33333333333337" width="412" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Xeb-fs-g6M"/>
+                                    </constraints>
+                                    <string key="text">This certificate certifies that the mentioned outlet complies with the requirements defined as per WAH Guide released in 2020. however this certificate does not guarantee any incidental breach of hygiene service by this outlet.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="fQk-2S-VzA" secondAttribute="trailing" constant="20" id="0J6-o3-vfL"/>
+                                <constraint firstItem="k9A-xw-bu2" firstAttribute="leading" secondItem="fIZ-3A-dpu" secondAttribute="leading" constant="8" id="aN7-Uk-6CX"/>
+                                <constraint firstItem="k3g-3P-b77" firstAttribute="leading" secondItem="fIZ-3A-dpu" secondAttribute="leading" constant="35" id="jPT-om-1GT"/>
+                                <constraint firstAttribute="trailing" secondItem="k3g-3P-b77" secondAttribute="trailing" constant="35" id="nbv-Sl-n9q"/>
+                                <constraint firstAttribute="trailing" secondItem="k9A-xw-bu2" secondAttribute="trailing" constant="8" id="vcd-ma-LTL"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PUO-9v-XLV" firstAttribute="leading" secondItem="AjS-5s-deS" secondAttribute="leading" id="7SY-eU-bDz"/>
+                        <constraint firstItem="eaE-3B-Whm" firstAttribute="centerX" secondItem="AjS-5s-deS" secondAttribute="centerX" id="BML-5Y-61i"/>
+                        <constraint firstAttribute="trailing" secondItem="PUO-9v-XLV" secondAttribute="trailing" id="COc-aq-sWd"/>
+                        <constraint firstAttribute="bottom" secondItem="fIZ-3A-dpu" secondAttribute="bottom" id="ISS-Jm-Ouo"/>
+                        <constraint firstItem="fIZ-3A-dpu" firstAttribute="leading" secondItem="AjS-5s-deS" secondAttribute="leading" id="JYE-dr-yxQ"/>
+                        <constraint firstItem="fIZ-3A-dpu" firstAttribute="top" secondItem="eaE-3B-Whm" secondAttribute="bottom" constant="25" id="Mlu-He-grR"/>
+                        <constraint firstItem="PUO-9v-XLV" firstAttribute="top" secondItem="AjS-5s-deS" secondAttribute="top" constant="50" id="U6p-dz-kEc"/>
+                        <constraint firstAttribute="trailing" secondItem="fIZ-3A-dpu" secondAttribute="trailing" id="hKJ-TO-CEx"/>
+                        <constraint firstItem="eaE-3B-Whm" firstAttribute="centerY" secondItem="PUO-9v-XLV" secondAttribute="centerY" id="hqW-d4-851"/>
+                        <constraint firstItem="PUO-9v-XLV" firstAttribute="centerX" secondItem="AjS-5s-deS" secondAttribute="centerX" id="sOm-Rv-i3c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AjS-5s-deS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dvj-16-7gL"/>
+                <constraint firstItem="E2u-EB-nqf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Lcx-5R-l06"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AjS-5s-deS" secondAttribute="bottom" id="PAu-fi-bbE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AjS-5s-deS" secondAttribute="trailing" id="RUO-d5-nYM"/>
+                <constraint firstItem="E2u-EB-nqf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="UKc-53-sY2"/>
+                <constraint firstAttribute="trailing" secondItem="Swa-o6-fx3" secondAttribute="trailing" id="hwq-hs-HNo"/>
+                <constraint firstItem="Swa-o6-fx3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="j3M-fX-J8o"/>
+                <constraint firstItem="AjS-5s-deS" firstAttribute="top" secondItem="Swa-o6-fx3" secondAttribute="bottom" id="pIg-tz-Pty"/>
+                <constraint firstItem="Swa-o6-fx3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w0s-dl-Dov"/>
+            </constraints>
+            <point key="canvasLocation" x="-121.96261682242989" y="42.764578833693307"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="TBC" width="344" height="107"/>
+        <image name="Wah" width="331" height="361"/>
+        <image name="gray_logo" width="1835" height="1162"/>
+        <image name="ic_left_arrow" width="82" height="43"/>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

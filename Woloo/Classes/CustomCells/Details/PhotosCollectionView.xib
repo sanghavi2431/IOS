@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="PhotosCollectionView" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="256"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JC-Ub-kBZ">
+                    <rect key="frame" x="16" y="0.0" width="339" height="256"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ef-ue-m4a">
+                            <rect key="frame" x="0.0" y="26" width="60.5" height="27"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="19"/>
+                            <color key="textColor" name="Woloo_Yellow"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMq-Tl-nh5">
+                            <rect key="frame" x="0.0" y="0.0" width="339" height="1"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="cZw-L2-Bg8"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B0g-J1-S2D">
+                            <rect key="frame" x="0.0" y="65" width="339" height="150"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="nlm-pL-87g"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1HX-EH-jer">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOG-Mt-oZT">
+                            <rect key="frame" x="0.0" y="255" width="339" height="1"/>
+                            <viewLayoutGuide key="safeArea" id="4TH-On-HQN"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="1fu-d7-yP6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DOG-Mt-oZT" firstAttribute="top" secondItem="B0g-J1-S2D" secondAttribute="bottom" constant="40" id="0vG-rZ-CF6"/>
+                        <constraint firstItem="B0g-J1-S2D" firstAttribute="leading" secondItem="7JC-Ub-kBZ" secondAttribute="leading" id="DHX-8m-maJ"/>
+                        <constraint firstAttribute="bottom" secondItem="DOG-Mt-oZT" secondAttribute="bottom" id="DzD-yY-UjA"/>
+                        <constraint firstItem="B0g-J1-S2D" firstAttribute="top" secondItem="6Ef-ue-m4a" secondAttribute="bottom" constant="12" id="FIY-er-vNO"/>
+                        <constraint firstItem="DOG-Mt-oZT" firstAttribute="leading" secondItem="7JC-Ub-kBZ" secondAttribute="leading" id="GXE-9H-fcr"/>
+                        <constraint firstAttribute="trailing" secondItem="DOG-Mt-oZT" secondAttribute="trailing" id="Nua-mX-Gky"/>
+                        <constraint firstItem="6Ef-ue-m4a" firstAttribute="top" secondItem="lMq-Tl-nh5" secondAttribute="bottom" constant="25" id="P60-gE-HPP"/>
+                        <constraint firstItem="6Ef-ue-m4a" firstAttribute="leading" secondItem="7JC-Ub-kBZ" secondAttribute="leading" id="S6J-JV-bWA"/>
+                        <constraint firstAttribute="trailing" secondItem="lMq-Tl-nh5" secondAttribute="trailing" id="doJ-iF-hLy"/>
+                        <constraint firstItem="lMq-Tl-nh5" firstAttribute="top" secondItem="7JC-Ub-kBZ" secondAttribute="top" id="mJu-c2-3Nb"/>
+                        <constraint firstAttribute="trailing" secondItem="B0g-J1-S2D" secondAttribute="trailing" id="r3C-LK-2Za"/>
+                        <constraint firstItem="lMq-Tl-nh5" firstAttribute="leading" secondItem="7JC-Ub-kBZ" secondAttribute="leading" id="t1E-OQ-jUB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="Woloo_Gray_bg"/>
+            <constraints>
+                <constraint firstItem="7JC-Ub-kBZ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="SSM-4J-nGK"/>
+                <constraint firstItem="7JC-Ub-kBZ" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="iXv-I1-yH0"/>
+                <constraint firstAttribute="trailing" secondItem="7JC-Ub-kBZ" secondAttribute="trailing" constant="16" id="o4Y-ba-lSv"/>
+                <constraint firstAttribute="bottom" secondItem="7JC-Ub-kBZ" secondAttribute="bottom" id="xI7-LS-6Za"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="B0g-J1-S2D" id="QYt-xg-ooo"/>
+            </connections>
+            <point key="canvasLocation" x="176.08695652173915" y="170.75892857142856"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
