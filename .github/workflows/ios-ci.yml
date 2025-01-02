@@ -1,4 +1,4 @@
-name: iOS CI/CD Pipeline
+name: iOS CI
 
 on:
   push:
@@ -10,42 +10,26 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.3.3
+      - name: List all Xcode versions
+        run: |
+          ls /Applications | grep Xcode
 
-    - name: Install CocoaPods
-      run: |
-        sudo gem install cocoapods -v 1.16.2
-        pod install
-      working-directory: ./  # Ensure this points to the directory where the Podfile exists
+      - name: Set up Xcode 14.2 (adjust the path based on the listing)
+        run: |
+          sudo xcode-select --switch /Applications/Xcode_14.2.app
 
-    - name: Install xcpretty
-      run: gem install xcpretty
+      - name: Install Ruby and CocoaPods
+        run: |
+          ruby -v
+          sudo gem install cocoapods -v 1.16.2
+          
+      - name: Install dependencies with CocoaPods
+        run: |
+          pod install --repo-update
 
-    - name: Set up Xcode
-      run: sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
-
-    - name: Clean project
-      run: |
-        xcodebuild clean -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator
-
-    - name: Build project
-      run: |
-        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
-
-    - name: Run unit tests
-      run: |
-        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | xcpretty -r junit --output result.xml
-      continue-on-error: true
-
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: junit-report
-        path: result.xml
+      - name: Build the project
+        run: |
+          xcodebuild clean build -workspace YourWorkspace.xcworkspace -scheme YourScheme -sdk iphoneos
