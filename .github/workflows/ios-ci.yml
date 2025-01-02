@@ -7,16 +7,16 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-latest  # Ensure macOS runner is selected
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Set up Xcode
-      uses: apple-actions/setup-xcode@v2  # Ensure compatibility with Xcode 14.2
+      uses: actions/setup-xcode@v2  # This is the official Xcode setup action from GitHub
       with:
-        xcode-version: '14.2'  # Set to the exact Xcode version
+        xcode-version: '14.2'  # Use the version provided by the developer
 
     - name: Set up Ruby (version 3.3.3)
       run: |
@@ -27,13 +27,13 @@ jobs:
 
     - name: Install CocoaPods (version 1.16.2)
       run: |
-        gem install cocoapods -v 1.16.2
+        gem install cocoapods -v 1.16.2  # Installing the correct CocoaPods version
         pod install
       working-directory: Woloo.xcworkspace
 
     - name: Install xcpretty
       run: |
-        gem install xcpretty
+        gem install xcpretty  # xcpretty is helpful for formatting the test output
 
     - name: Build project
       run: |
