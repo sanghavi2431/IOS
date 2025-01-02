@@ -28,9 +28,7 @@ jobs:
       run: gem install xcpretty
 
     - name: Set up Xcode
-      uses: macos-actions/setup-xcode@v2
-      with:
-        xcode-version: '14.2'
+      run: sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
 
     - name: Clean project
       run: |
