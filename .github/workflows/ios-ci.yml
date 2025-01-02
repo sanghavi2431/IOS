@@ -1,17 +1,20 @@
-name: Test Xcode Setup
+name: iOS Build CI/CD Pipeline
 
-on: 
+on:
   push:
     branches:
       - master
 
 jobs:
-  test-xcode:
+  build:
     runs-on: macos-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Xcode
-      uses: actions/setup-xcode@v2  # or v3
+    - name: Verify Xcode version
+      run: |
+        echo "Checking Xcode version"
+        xcodebuild -version
+        xcode-select -p
