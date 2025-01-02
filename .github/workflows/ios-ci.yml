@@ -30,9 +30,9 @@ jobs:
         gem install xcpretty
       working-directory: ./  # Ensure we're in the root of the repository
 
-    # Step 3: Set up Xcode 14.2
+    # Step 3: Set up Xcode
     - name: Set up Xcode
-      uses: apple-actions/setup-xcode@v3
+      uses: apple-actions/setup-xcode@v2  # Use v2 instead of v3 for stability
       with:
         xcode-version: '14.2'  # Specify the exact version of Xcode you're using
 
