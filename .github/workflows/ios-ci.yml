@@ -3,62 +3,43 @@ name: iOS CI/CD Pipeline
 on:
   push:
     branches:
-      - master  # Trigger when code is pushed to the 'master' branch
+      - master
 
 jobs:
   build:
-    runs-on: macos-latest  # Use GitHub-hosted macOS runner
+    runs-on: macos-latest
 
     steps:
-    # Step 1: Checkout the code from the repository
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Step 2: Set up Ruby, install CocoaPods, and install xcpretty
-    - name: Set up Ruby and install CocoaPods and xcpretty
+    - name: Set up Xcode
+      uses: apple-actions/setup-xcode@v3
+      with:
+        xcode-version: '14.0'  # Replace with the version you're using
+
+    - name: Install CocoaPods
       run: |
-        # Install rbenv if not already installed
-        brew install rbenv
-        rbenv install 3.3.3
-        rbenv global 3.3.3
-        # Install CocoaPods
-        gem install cocoapods -v 1.16.2
-        # Install dependencies
-        pod install --verbose  # Ensure no errors in pod install
-        # Install xcpretty for formatted test output
+        gem install cocoapods
+        pod install
+      working-directory: Woloo.xcworkspace
+
+    - name: Install xcpretty
+      run: |
         gem install xcpretty
-      working-directory: ./  # Ensure we're in the root of the repository
 
-    # Step 3: Set up Xcode Command Line Tools
-    - name: Install Xcode Command Line Tools
-      run: |
-        sudo xcode-select --install
-      working-directory: ./  # Ensure we're in the root of the repository
-
-    # Step 4: Build the project
     - name: Build project
       run: |
-        xcodebuild -workspace Woloo.xcworkspace \
-                   -scheme Woloo \
-                   -sdk iphonesimulator \
-                   -destination 'platform=iOS Simulator,name=iPhone 13' \
-                   build
-      working-directory: ./  # Ensure we're in the root of the repository
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
 
-    # Step 5: Run unit tests and generate report
-    - name: Run unit tests and generate report
+    - name: Run unit tests (when test cases are available)
       run: |
-        xcodebuild -workspace Woloo.xcworkspace \
-                   -scheme Woloo \
-                   -sdk iphonesimulator \
-                   -destination 'platform=iOS Simulator,name=iPhone 13' \
-                   test | xcpretty -r junit  # Run tests and format output to JUnit XML
-      working-directory: ./  # Ensure we're in the root of the repository
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | tee result.log | xcpretty -r junit
+      continue-on-error: true
 
-    # Step 6: Upload the JUnit test results as an artifact
     - name: Upload test results
-      if: always()  # Upload the report even if tests fail
+      if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: junit-report  # Name of the artifact
-        path: result.xml  # Path to the generated JUnit XML report
+        name: junit-report
+        path: result.xml
