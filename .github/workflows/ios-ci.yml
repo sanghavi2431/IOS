@@ -7,45 +7,43 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest  # Ensure macOS runner is selected
+    runs-on: macos-latest
 
     steps:
+    # Checkout the repository
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    # Set up Xcode environment
     - name: Set up Xcode
-      uses: actions/setup-xcode@v2  # This is the official Xcode setup action from GitHub
-      with:
-        xcode-version: '14.2'  # Use the version provided by the developer
+      uses: apple-actions/setup-xcode@v2  # Using the latest compatible version (v2)
 
-    - name: Set up Ruby (version 3.3.3)
+    # Install CocoaPods and dependencies
+    - name: Install CocoaPods
       run: |
-        brew install rbenv
-        rbenv install 3.3.3
-        rbenv global 3.3.3
-        ruby -v  # Verify Ruby version
-
-    - name: Install CocoaPods (version 1.16.2)
-      run: |
-        gem install cocoapods -v 1.16.2  # Installing the correct CocoaPods version
+        gem install cocoapods -v 1.16.2  # Install the specific CocoaPods version
         pod install
       working-directory: Woloo.xcworkspace
 
+    # Install xcpretty for test result formatting
     - name: Install xcpretty
       run: |
-        gem install xcpretty  # xcpretty is helpful for formatting the test output
+        gem install xcpretty
 
+    # Build the project
     - name: Build project
       run: |
         xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
 
+    # Run unit tests, format results with xcpretty, and capture in junit format
     - name: Run unit tests (when test cases are available)
       run: |
         xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | tee result.log | xcpretty -r junit
-      continue-on-error: true
+      continue-on-error: true  # Allow pipeline to continue even if tests fail
 
+    # Upload test results as an artifact
     - name: Upload test results
-      if: always()
+      if: always()  # Ensure this step runs even if previous steps fail
       uses: actions/upload-artifact@v3
       with:
         name: junit-report
