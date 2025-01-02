@@ -16,16 +16,19 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 3.3.3
 
     - name: Install CocoaPods
       run: |
-        sudo gem install cocoapods --pre
+        sudo gem install cocoapods
         pod install
       working-directory: ./  # Adjust if necessary
 
     - name: Install xcpretty
       run: gem install xcpretty
+
+    - name: Set Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
 
     - name: Build project
       run: |
