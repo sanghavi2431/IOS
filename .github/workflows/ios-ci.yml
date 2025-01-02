@@ -3,7 +3,7 @@ name: iOS CI/CD Pipeline
 on:
   push:
     branches:
-      - dev  # Trigger when code is pushed to the 'dev' branch
+      - master  # Trigger when code is pushed to the 'dev' branch
 
 jobs:
   build:
