@@ -3,7 +3,7 @@ name: iOS CI/CD Pipeline
 on:
   push:
     branches:
-      - master  # Trigger when code is pushed to the 'dev' branch
+      - master  # Trigger when code is pushed to the 'master' branch
 
 jobs:
   build:
@@ -17,20 +17,19 @@ jobs:
     # Step 2: Set up Ruby, install CocoaPods, and install xcpretty
     - name: Set up Ruby and install CocoaPods and xcpretty
       run: |
-        # Install specific Ruby version (optional if needed)
+        # Install rbenv if not already installed
         brew install rbenv
         rbenv install 3.3.3
         rbenv global 3.3.3
-
-        # Install the specific version of CocoaPods (1.16.2)
+        # Install CocoaPods
         gem install cocoapods -v 1.16.2
-        pod install
-
+        # Install dependencies
+        pod install --verbose  # Ensure no errors in pod install
         # Install xcpretty for formatted test output
         gem install xcpretty
       working-directory: ./  # Ensure we're in the root of the repository
 
-    # Step 3: Set up Xcode (Optional - GitHub runners already have Xcode installed)
+    # Step 3: Set up Xcode Command Line Tools
     - name: Install Xcode Command Line Tools
       run: |
         sudo xcode-select --install
