@@ -1,0 +1,65 @@
+name: iOS CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - dev  # Trigger when code is pushed to the 'dev' branch
+
+jobs:
+  build:
+    runs-on: macos-latest  # Use GitHub-hosted macOS runner
+
+    steps:
+    # Step 1: Checkout the code from the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Ruby, install CocoaPods, and install xcpretty
+    - name: Set up Ruby and install CocoaPods and xcpretty
+      run: |
+        # Install specific Ruby version (optional if needed)
+        brew install rbenv
+        rbenv install 3.3.3
+        rbenv global 3.3.3
+
+        # Install the specific version of CocoaPods (1.16.2)
+        gem install cocoapods -v 1.16.2
+        pod install
+
+        # Install xcpretty for formatted test output
+        gem install xcpretty
+      working-directory: ./  # Ensure we're in the root of the repository
+
+    # Step 3: Set up Xcode 14.2
+    - name: Set up Xcode
+      uses: apple-actions/setup-xcode@v3
+      with:
+        xcode-version: '14.2'  # Specify the exact version of Xcode you're using
+
+    # Step 4: Build the project
+    - name: Build project
+      run: |
+        xcodebuild -workspace Woloo.xcworkspace \
+                   -scheme Woloo \
+                   -sdk iphonesimulator \
+                   -destination 'platform=iOS Simulator,name=iPhone 13' \
+                   build
+      working-directory: ./  # Ensure we're in the root of the repository
+
+    # Step 5: Run unit tests and generate report
+    - name: Run unit tests and generate report
+      run: |
+        xcodebuild -workspace Woloo.xcworkspace \
+                   -scheme Woloo \
+                   -sdk iphonesimulator \
+                   -destination 'platform=iOS Simulator,name=iPhone 13' \
+                   test | xcpretty -r junit  # Run tests and format output to JUnit XML
+      working-directory: ./  # Ensure we're in the root of the repository
+
+    # Step 6: Upload the JUnit test results as an artifact
+    - name: Upload test results
+      if: always()  # Upload the report even if tests fail
+      uses: actions/upload-artifact@v3
+      with:
+        name: junit-report  # Name of the artifact
+        path: result.xml  # Path to the generated JUnit XML report
