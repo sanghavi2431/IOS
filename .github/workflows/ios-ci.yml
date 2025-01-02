@@ -30,11 +30,11 @@ jobs:
         gem install xcpretty
       working-directory: ./  # Ensure we're in the root of the repository
 
-    # Step 3: Set up Xcode
-    - name: Set up Xcode
-      uses: apple-actions/setup-xcode@v2  # Use v2 instead of v3 for stability
-      with:
-        xcode-version: '14.2'  # Specify the exact version of Xcode you're using
+    # Step 3: Set up Xcode (Optional - GitHub runners already have Xcode installed)
+    - name: Install Xcode Command Line Tools
+      run: |
+        sudo xcode-select --install
+      working-directory: ./  # Ensure we're in the root of the repository
 
     # Step 4: Build the project
     - name: Build project
