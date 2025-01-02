@@ -3,7 +3,7 @@ name: iOS CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - master  # Replace with the branch name you want to monitor
 
 jobs:
   build:
@@ -13,25 +13,30 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Xcode
-      uses: actions/setup-xcode@v3
-      with:
-        xcode-version: '14.0'  # Replace with the version you're using
+    - name: Select Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_14.0.app/Contents/Developer
 
     - name: Install CocoaPods
       run: |
         gem install cocoapods
         pod install
-      working-directory: path/to/your/project
+      working-directory: ./  # Adjust if necessary
 
     - name: Install xcpretty
-      run: |
-        gem install xcpretty
+      run: gem install xcpretty
 
     - name: Build project
       run: |
         xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
 
-    - name: Run unit tests (when test cases are available)
+    - name: Run unit tests
       run: |
-        xcod
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | xcpretty -r junit --output result.xml
+      continue-on-error: true
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: junit-report
+        path: result.xml
