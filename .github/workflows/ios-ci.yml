@@ -3,30 +3,30 @@ name: iOS CI/CD Pipeline
 on:
   push:
     branches:
-      - master  # This triggers on any push to the 'dev' branch.
+      - master
 
 jobs:
   build:
-    runs-on: macos-latest  # macOS environment for iOS build
+    runs-on: macos-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Set up Xcode
-      uses: actions/setup-xcode@v3  # Correct action to use for Xcode setup
+      uses: apple-actions/setup-xcode@v2  # Try v2 if v3 fails
       with:
-        xcode-version: '14.2'  # Ensure correct Xcode version is used
+        xcode-version: '14.0'  # Replace with the version you're using
 
     - name: Install CocoaPods
       run: |
         gem install cocoapods
-        pod install  # Install the dependencies via CocoaPods
+        pod install
       working-directory: Woloo.xcworkspace
 
     - name: Install xcpretty
       run: |
-        gem install xcpretty  # For better formatted test output
+        gem install xcpretty
 
     - name: Build project
       run: |
@@ -34,12 +34,12 @@ jobs:
 
     - name: Run unit tests (when test cases are available)
       run: |
-        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | tee result.log | xcpretty -r junit  # Running tests and formatting results
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | tee result.log | xcpretty -r junit
       continue-on-error: true
 
     - name: Upload test results
-      if: always()  # This ensures that the report is uploaded even if the test fails.
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: junit-report
-        path: result.xml  # Path to the test results
+        path: result.xml
