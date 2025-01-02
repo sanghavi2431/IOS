@@ -30,6 +30,16 @@ jobs:
     - name: Set Xcode version
       run: sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
 
+    - name: Clean project
+      run: |
+        xcodebuild clean -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator
+
+    - name: Remove Pods and re-install
+      run: |
+        rm -rf Pods
+        rm -rf Woloo.xcworkspace
+        pod install
+
     - name: Build project
       run: |
         xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
