@@ -20,25 +20,21 @@ jobs:
 
     - name: Install CocoaPods
       run: |
-        sudo gem install cocoapods
+        sudo gem install cocoapods -v 1.16.2
         pod install
-      working-directory: ./  # Adjust if necessary
+      working-directory: ./  # Ensure this points to the directory where the Podfile exists
 
     - name: Install xcpretty
       run: gem install xcpretty
 
-    - name: Set Xcode version
-      run: sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
+    - name: Set up Xcode
+      uses: macos-actions/setup-xcode@v2
+      with:
+        xcode-version: '14.2'
 
     - name: Clean project
       run: |
         xcodebuild clean -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator
-
-    - name: Remove Pods and re-install
-      run: |
-        rm -rf Pods
-        rm -rf Woloo.xcworkspace
-        pod install
 
     - name: Build project
       run: |
