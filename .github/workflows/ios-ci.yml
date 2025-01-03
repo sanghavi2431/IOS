@@ -15,7 +15,7 @@ jobs:
 
     - name: Set Xcode version
       run: |
-        xcode_version="15.0.1" # Use the exact available version
+        xcode_version="16.1" # Use the exact available version
         sudo xcode-select --switch /Applications/Xcode_$xcode_version.app || exit 1
         xcodebuild -version
 
