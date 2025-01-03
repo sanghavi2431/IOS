@@ -31,6 +31,9 @@ jobs:
         # Install xcodes (to manage Xcode versions)
         brew install --cask xcodes && \
         
+        # Ensure xcversion command is available
+        export PATH="/opt/homebrew/opt/xcodes/bin:$PATH" && \
+        
         # Install Xcode 16.2 using xcodes
         xcversion install $xcode_version && \
         
