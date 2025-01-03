@@ -15,9 +15,12 @@ jobs:
 
     - name: Set Xcode version
       run: |
-        xcode_version="15.3" # Replace with an available version from GitHub Actions
+        echo "Available Xcode installations:"
+        ls /Applications/
+        xcode_version="15.0" # Adjust based on available versions
         sudo xcode-select --switch /Applications/Xcode-$xcode_version.app || exit 1
         xcodebuild -version
+
 
     - name: Install Ruby, CocoaPods, and xcpretty
       run: |
