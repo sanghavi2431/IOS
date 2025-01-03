@@ -23,14 +23,15 @@ jobs:
         export PATH="/opt/homebrew/opt/ruby@$ruby_version/bin:$PATH"
 
         # Install CocoaPods
-        sudo gem install cocoapods -v $cocoapods_version || exit 1
+        gem install cocoapods -v $cocoapods_version || exit 1
 
         # Install xcpretty
-        sudo gem install xcpretty || exit 1
+        gem install xcpretty || exit 1
 
         # Verify installations
         ruby -v
-        cocoapods --version
+        pod --version   # Use `pod` to verify CocoaPods installation
+        xcpretty --version
         xcodebuild -version
       shell: bash
 
