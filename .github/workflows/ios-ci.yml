@@ -15,9 +15,10 @@ jobs:
 
     - name: Install and Set Xcode 16.2
       run: |
-        echo "Installing and verifying Xcode 16.2"
-        xcversion install '16.2'  # Installs Xcode version 16.2
-        sudo xcode-select --switch /Applications/Xcode-16.2.app  # Ensure 16.2 is used
+        echo "Installing xcversion"
+        sudo gem install xcode-install  # Install xcversion
+        xcversion install '16.2'  # Install Xcode version 16.2
+        sudo xcode-select --switch /Applications/Xcode-16.2.app  # Ensure Xcode 16.2 is used
         xcodebuild -version
 
     - name: Verify and Install Ruby 3.3.3
