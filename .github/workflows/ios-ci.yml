@@ -13,21 +13,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Set Xcode version
+      run: |
+        xcode_version="16.2"
+        sudo xcode-select --switch /Applications/Xcode-$xcode_version.app || exit 1
+        xcodebuild -version
+
     - name: Install Ruby, CocoaPods, and xcpretty
       run: |
         ruby_version="3.2"
         cocoapods_version="1.16.2"
-
         # Install Ruby
         brew install ruby@$ruby_version || exit 1
         export PATH="/opt/homebrew/opt/ruby@$ruby_version/bin:$PATH"
-
         # Install CocoaPods
         gem install cocoapods -v $cocoapods_version || exit 1
-
         # Install xcpretty
         gem install xcpretty || exit 1
-
         # Verify installations
         ruby -v
         pod --version   # Use `pod` to verify CocoaPods installation
@@ -35,15 +37,13 @@ jobs:
         xcodebuild -version
       shell: bash
 
-    - name: Install CocoaPods dependencies
-      run: pod install
-      working-directory: ./  # Adjust if necessary
+    - name: Clean CocoaPods cache
+      run: pod cache clean --all
 
-    - name: Set Xcode version
+    - name: Install CocoaPods dependencies
       run: |
-        xcode_version="16.2"
-        sudo xcode-select --switch /Applications/Xcode-$xcode_version.app || exit 1
-        xcodebuild -version
+        pod install --verbose || exit 1
+      working-directory: ./  # Adjust if necessary
 
     - name: Build project
       run: |
