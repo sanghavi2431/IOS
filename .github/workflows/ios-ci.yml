@@ -13,13 +13,29 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install Ruby 3.3.3, CocoaPods 1.16.2, and xcpretty
+    - name: Install Ruby 3.3.3, CocoaPods 1.16.2, xcpretty, and Xcode 16.2
       run: |
-        ruby_version="3.3.3"; cocoapods_version="1.16.2"; \
+        ruby_version="3.3.3"
+        cocoapods_version="1.16.2"
+        xcode_version="16.2"
+
+        # Install specific Ruby version
         brew install ruby@$ruby_version && \
+        
+        # Install CocoaPods with the specific version
         sudo gem install cocoapods -v $cocoapods_version && \
-        sudo gem install xcpretty
-      shell: /bin/bash
+        
+        # Install xcpretty
+        sudo gem install xcpretty && \
+        
+        # Install Xcode 16.2 (if not already installed)
+        sudo xcode-select --switch /Applications/Xcode-$xcode_version.app || \
+        brew install --cask "xcode@$xcode_version" && \
+        
+        # Verify Xcode version
+        xcodebuild -version && \
+        xcode-select -p
+      shell: bash
 
     - name: Install CocoaPods dependencies
       run: |
