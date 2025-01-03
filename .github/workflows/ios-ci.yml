@@ -19,8 +19,6 @@ jobs:
         sudo xcode-select --switch /Applications/Xcode_$xcode_version.app || exit 1
         xcodebuild -version
 
-
-
     - name: Install Ruby, CocoaPods, and xcpretty
       run: |
         ruby_version="3.2"
@@ -32,4 +30,31 @@ jobs:
         gem install cocoapods -v $cocoapods_version || exit 1
         # Install xcpretty
         gem install xcpretty || exit 1
-        # Veri
+        # Verify installations
+        ruby -v
+        pod --version
+        xcpretty --version
+        xcodebuild -version
+      shell: bash
+
+    - name: Clean CocoaPods cache
+      run: pod cache clean --all
+
+    - name: Install CocoaPods dependencies
+      run: |
+        pod install --verbose || exit 1
+      working-directory: ./  # Adjust if necessary
+
+    - name: Build project
+      run: |
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 13' build || exit 1
+
+    - name: Run unit tests
+      run: |
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 13' test | \
+          tee result.log | xcpretty -r junit || exit 1
+
+   
+
