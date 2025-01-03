@@ -13,53 +13,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install and Set Xcode 16.2
+    - name: Install Ruby 3.3.3, CocoaPods 1.16.2, and xcpretty
       run: |
-        echo "Installing xcversion"
-        sudo gem install xcode-install  # Install xcversion
-        xcversion install '16.2'  # Install Xcode version 16.2
-        sudo xcode-select --switch /Applications/Xcode-16.2.app  # Ensure Xcode 16.2 is used
-        xcodebuild -version
+        ruby_version="3.3.3"; cocoapods_version="1.16.2"; \
+        brew install ruby@$ruby_version && \
+        sudo gem install cocoapods -v $cocoapods_version && \
+        sudo gem install xcpretty
+      shell: /bin/bash
 
-    - name: Verify and Install Ruby 3.3.3
+    - name: Install CocoaPods dependencies
       run: |
-        echo "Installing and verifying Ruby 3.3.3"
-        brew install rbenv
-        rbenv install -s 3.3.3  # Installs only if not already installed
-        rbenv global 3.3.3
-        ruby -v
-
-    - name: Install CocoaPods 1.16.2
-      run: |
-        echo "Installing CocoaPods version 1.16.2"
-        gem install cocoapods -v 1.16.2
-        pod --version
-
-    - name: Install `xcpretty`
-      run: |
-        echo "Installing xcpretty for log formatting"
-        gem install xcpretty
-        xcpretty --version
-
-    - name: Install dependencies
-      run: pod install
-      working-directory: ./  # Assumes the Podfile is in the root directory
+        pod install
+      working-directory: ./  # Assuming the Podfile is in the root directory
 
     - name: Build project
       run: |
-        xcodebuild -workspace Woloo.xcworkspace \
-        -scheme Woloo \
-        -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 13' \
-        build
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' build
 
-    - name: Run unit tests (if applicable)
+    - name: Run unit tests (when test cases are available)
       run: |
-        xcodebuild -workspace Woloo.xcworkspace \
-        -scheme Woloo \
-        -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone 13' \
-        test | tee result.log | xcpretty -r junit
+        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13' test | tee result.log | xcpretty -r junit
       continue-on-error: true
 
     - name: Upload test results
@@ -67,4 +40,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: junit-report
-        path: result.log
+        path: result.xml
