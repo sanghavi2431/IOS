@@ -1,68 +1,47 @@
-name: iOS Build CI/CD Pipeline
+name: GitHub Action 
 
-on:
+on: 
   push:
-    branches:
+    branches:    
       - master
-
+      
 jobs:
-  build:
+  deploy:
+    name: GitHub Pipeline
     runs-on: macos-latest
-
+    
     steps:
-    # Step 1: Checkout repository
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    # Step 2: List available Xcode versions
-    - name: List available Xcode versions
-      run: ls /Applications/ | grep Xcode
-
-    # Step 3: Set Xcode version
-    - name: Set Xcode version
-      run: |
-        xcode_version="16.1" # Specify the desired version
-        sudo xcode-select --switch /Applications/Xcode_$xcode_version.app || exit 1
-        xcodebuild -version
-
-    # Step 4: Install Ruby, CocoaPods, and xcpretty
-    - name: Install Ruby, CocoaPods, and xcpretty
-      run: |
-        ruby_version="3.2"
-        cocoapods_version="1.16.2"
-        # Install Ruby
-        brew install ruby@$ruby_version || exit 1
-        export PATH="/opt/homebrew/opt/ruby@$ruby_version/bin:$PATH"
-        # Install CocoaPods
-        gem install cocoapods -v $cocoapods_version || exit 1
-        # Install xcpretty
-        gem install xcpretty || exit 1
-        # Verify installations
-        ruby -v
-        pod --version
-        xcpretty --version
-      shell: bash
-
-    # Step 5: Clean CocoaPods cache
-    - name: Clean CocoaPods cache
-      run: pod cache clean --all
-
-    # Step 6: Install CocoaPods dependencies
-    - name: Install CocoaPods dependencies
-      run: |
-        pod install --verbose || exit 1
-      working-directory: ./  # Adjust if necessary
-
-    # Step 7: Build project
-    - name: Build project
-      run: |
-        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 13' build || exit 1
-
-    # Step 8: Run unit tests and generate JUnit report
-    - name: Run unit tests and generate JUnit report
-      run: |
-        mkdir -p junit-reports
-        xcodebuild -workspace Woloo.xcworkspace -scheme Woloo -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 13' test | \
-          tee junit-reports/result.log | xcpretty -r junit --output junit-reports/test-results.xml || exit 1
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Selecting Xcode Version
+        run: sudo xcode-select -switch /Applications/Xcode_16.2.app
+        
+      - name: Running Xcode version Is?
+        run: /usr/bin/xcodebuild -version
+       
+      - name: Build Cleanup
+        run: |
+          xcodebuild clean -project Woloo.xcodeproj -scheme Woloo | xcpretty
+          
+      - name: Build Test
+        run: |
+          xcodebuild test -project Woloo.xcodeproj -scheme Woloo -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' -resultBundle -reporter junit | xcpretty -s
+          
+      - name: Save Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: ./TestResults/*.xml  # Path to the JUnit XML report
+          
+      - name: Parse Test Results Summary
+        run: |
+          if [ -f ./TestResults/Test-*.xml ]; then
+            tests_failed=$(xmllint --xpath "count(//testcase[failure])" ./TestResults/Test-*.xml)
+            tests_total=$(xmllint --xpath "count(//testcase)" ./TestResults/Test-*.xml)
+            tests_passed=$((tests_total - tests_failed))
+            echo "Tests Passed: $tests_passed"
+            echo "Tests Failed: $tests_failed"
+          else
+            echo "No test results found."
+          fi
