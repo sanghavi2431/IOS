@@ -31,7 +31,7 @@ jobs:
       # Step 5: Build Project
       - name: Build Project
         run: |
-          xcodebuild build -project Woloo.xcodeproj -scheme Woloo -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' | xcpretty
+          xcodebuild build -project Woloo.xcodeproj -scheme Woloo -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0' | xcpretty
 
       # Step 6: Run Test Cases and Save Results
       - name: Run Tests and Save Results
