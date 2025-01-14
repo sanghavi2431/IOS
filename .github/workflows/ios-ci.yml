@@ -29,7 +29,7 @@ jobs:
           xcodebuild test -project Woloo.xcodeproj -scheme Woloo -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' -resultBundle -reporter junit | xcpretty -s
           
       - name: Save Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: ./TestResults/*.xml  # Path to the JUnit XML report
