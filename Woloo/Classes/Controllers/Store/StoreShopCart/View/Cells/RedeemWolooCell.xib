@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="RedeemWolooCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dC3-E8-vrQ" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="12" width="298" height="119"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_woloo_point" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-V4-HTs">
+                                <rect key="frame" x="16" y="13" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ad5-7I-QP2"/>
+                                    <constraint firstAttribute="width" constant="20" id="pqN-q4-IBr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeem your Woloo Points" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubr-uv-WMr">
+                                <rect key="frame" x="42" y="13" width="244" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 210 Woloo Points to Redeem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcv-AH-YvE">
+                                <rect key="frame" x="18" y="43" width="268" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redeem 10 Woloo Points for Rs. 10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-RX-8ST">
+                                <rect key="frame" x="18" y="75" width="142" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b0-Rn-38X" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                <rect key="frame" x="176" y="74.333333333333329" width="106" height="30"/>
+                                <color key="backgroundColor" name="yellow_button_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BWu-Ph-Nzn"/>
+                                    <constraint firstAttribute="width" constant="106" id="D4E-I3-zoE"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apply"/>
+                                <connections>
+                                    <action selector="clickedApplyBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Ej-5Y-F9w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Bc-V4-HTs" firstAttribute="top" secondItem="dC3-E8-vrQ" secondAttribute="top" constant="13" id="171-gd-Xdc"/>
+                            <constraint firstItem="Ubr-uv-WMr" firstAttribute="leading" secondItem="8Bc-V4-HTs" secondAttribute="trailing" constant="6" id="1fi-oV-1CO"/>
+                            <constraint firstItem="2b0-Rn-38X" firstAttribute="top" secondItem="zcv-AH-YvE" secondAttribute="bottom" constant="17" id="6Qb-Nk-pPD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ubr-uv-WMr" secondAttribute="trailing" constant="12" id="6uT-or-5Pp"/>
+                            <constraint firstItem="YRM-RX-8ST" firstAttribute="leading" secondItem="dC3-E8-vrQ" secondAttribute="leading" constant="18" id="8ie-Ob-tQE"/>
+                            <constraint firstItem="2b0-Rn-38X" firstAttribute="leading" secondItem="YRM-RX-8ST" secondAttribute="trailing" constant="16" id="IV9-hR-8Mb"/>
+                            <constraint firstItem="8Bc-V4-HTs" firstAttribute="leading" secondItem="dC3-E8-vrQ" secondAttribute="leading" constant="16" id="MGJ-iA-3bS"/>
+                            <constraint firstAttribute="bottom" secondItem="2b0-Rn-38X" secondAttribute="bottom" constant="14.67" id="Ocy-BV-M6n"/>
+                            <constraint firstItem="Ubr-uv-WMr" firstAttribute="bottom" secondItem="8Bc-V4-HTs" secondAttribute="bottom" id="Qvx-5X-Pwa"/>
+                            <constraint firstItem="zcv-AH-YvE" firstAttribute="top" secondItem="Ubr-uv-WMr" secondAttribute="bottom" constant="10" id="SrE-Sz-TeX"/>
+                            <constraint firstItem="YRM-RX-8ST" firstAttribute="centerY" secondItem="2b0-Rn-38X" secondAttribute="centerY" id="aSU-0P-EEK"/>
+                            <constraint firstAttribute="trailing" secondItem="2b0-Rn-38X" secondAttribute="trailing" constant="16" id="d1V-7Z-fR6"/>
+                            <constraint firstItem="zcv-AH-YvE" firstAttribute="leading" secondItem="dC3-E8-vrQ" secondAttribute="leading" constant="18" id="oJu-Tx-fBC"/>
+                            <constraint firstItem="Ubr-uv-WMr" firstAttribute="top" secondItem="8Bc-V4-HTs" secondAttribute="top" id="q2h-rG-tP1"/>
+                            <constraint firstAttribute="trailing" secondItem="zcv-AH-YvE" secondAttribute="trailing" constant="12" id="qhu-q9-kw4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="dC3-E8-vrQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0Y9-bN-6Sg"/>
+                    <constraint firstAttribute="trailing" secondItem="dC3-E8-vrQ" secondAttribute="trailing" constant="16" id="DXT-g7-qVP"/>
+                    <constraint firstAttribute="bottom" secondItem="dC3-E8-vrQ" secondAttribute="bottom" constant="12" id="QYw-N4-437"/>
+                    <constraint firstItem="dC3-E8-vrQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="gtP-Xa-UyD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblCoinsInfo" destination="zcv-AH-YvE" id="5RB-EI-Or9"/>
+            </connections>
+            <point key="canvasLocation" x="85.496183206106863" y="54.577464788732399"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_woloo_point" width="20" height="20"/>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

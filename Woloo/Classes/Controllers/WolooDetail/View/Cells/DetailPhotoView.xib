@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="DetailPhotoView" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20B-8a-XeQ">
+                        <rect key="frame" x="26" y="12" width="332" height="35"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FMg-kq-GeG">
+                        <rect key="frame" x="26" y="59" width="332" height="150"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="UDb-wS-B3f"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hiI-Re-nYa">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-hS-nVy">
+                        <rect key="frame" x="25" y="217" width="334" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="qEy-x4-SMV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.95182291666666663" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rcJ-hS-nVy" secondAttribute="trailing" constant="25" id="0e8-Uq-2vZ"/>
+                    <constraint firstItem="20B-8a-XeQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="3Sr-mu-v5S"/>
+                    <constraint firstAttribute="trailing" secondItem="FMg-kq-GeG" secondAttribute="trailing" constant="26" id="97o-nF-UkA"/>
+                    <constraint firstItem="rcJ-hS-nVy" firstAttribute="top" secondItem="FMg-kq-GeG" secondAttribute="bottom" constant="8" id="KGT-l3-x5m"/>
+                    <constraint firstItem="20B-8a-XeQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="PIF-0t-6pk"/>
+                    <constraint firstItem="FMg-kq-GeG" firstAttribute="top" secondItem="20B-8a-XeQ" secondAttribute="bottom" constant="12" id="QX7-lv-jGv"/>
+                    <constraint firstItem="FMg-kq-GeG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="YiJ-7A-zw1"/>
+                    <constraint firstItem="rcJ-hS-nVy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="cdO-DA-UjJ"/>
+                    <constraint firstAttribute="trailing" secondItem="20B-8a-XeQ" secondAttribute="trailing" constant="26" id="e05-kB-dGX"/>
+                    <constraint firstAttribute="bottom" secondItem="rcJ-hS-nVy" secondAttribute="bottom" constant="8" id="ubE-J8-rz5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="FMg-kq-GeG" id="qFR-zN-YkC"/>
+                <outlet property="lblPhoto" destination="20B-8a-XeQ" id="jgd-tA-3HJ"/>
+            </connections>
+            <point key="canvasLocation" x="149.61832061068702" y="83.802816901408448"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchLocationsViewController" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="mvU-65-EQD" id="tsC-a0-IpV"/>
+                <outlet property="txtFieldSearchLocation" destination="ved-3X-dAF" id="SMN-hQ-Y8c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-65-EQD">
+                    <rect key="frame" x="0.0" y="132" width="393" height="686"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAN-hz-y4l" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                    <rect key="frame" x="12" y="59" width="369" height="65"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ved-3X-dAF">
+                            <rect key="frame" x="61" y="8" width="296" height="49"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Ju-uKB">
+                            <rect key="frame" x="12" y="12" width="41" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="41" id="1dm-iN-B6F"/>
+                                <constraint firstAttribute="height" constant="41" id="nzd-NH-6a9"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_Back_navigation"/>
+                            <connections>
+                                <action selector="clickedBackbtn:" destination="-1" eventType="touchUpInside" id="Gdf-6q-Tdb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="Woloo_white_text"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rFC-Ju-uKB" secondAttribute="bottom" constant="12" id="2qX-OT-1zh"/>
+                        <constraint firstAttribute="bottom" secondItem="ved-3X-dAF" secondAttribute="bottom" constant="8" id="4Gg-HX-YLd"/>
+                        <constraint firstItem="ved-3X-dAF" firstAttribute="top" secondItem="pAN-hz-y4l" secondAttribute="top" constant="8" id="DJr-b8-KJK"/>
+                        <constraint firstItem="ved-3X-dAF" firstAttribute="leading" secondItem="rFC-Ju-uKB" secondAttribute="trailing" constant="8" id="htJ-8G-M1c"/>
+                        <constraint firstItem="rFC-Ju-uKB" firstAttribute="top" secondItem="pAN-hz-y4l" secondAttribute="top" constant="12" id="iyl-yN-MSB"/>
+                        <constraint firstItem="rFC-Ju-uKB" firstAttribute="leading" secondItem="pAN-hz-y4l" secondAttribute="leading" constant="12" id="tfL-gQ-siC"/>
+                        <constraint firstAttribute="trailing" secondItem="ved-3X-dAF" secondAttribute="trailing" constant="12" id="uTw-Iv-v3f"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pAN-hz-y4l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="GCv-oW-s4d"/>
+                <constraint firstItem="mvU-65-EQD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Llb-Wh-M24"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mvU-65-EQD" secondAttribute="bottom" id="Vgr-Wv-WHP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mvU-65-EQD" secondAttribute="trailing" id="hfV-nH-oGk"/>
+                <constraint firstItem="pAN-hz-y4l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jZY-6Y-ocC"/>
+                <constraint firstItem="mvU-65-EQD" firstAttribute="top" secondItem="pAN-hz-y4l" secondAttribute="bottom" constant="8" id="jaf-jg-gbU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pAN-hz-y4l" secondAttribute="trailing" constant="12" id="pKk-IH-Okd"/>
+            </constraints>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_Back_navigation" width="41" height="41"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WriteAReviewPopUpVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="txtView" destination="jbk-c6-O4A" id="0ly-Nc-Byd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="467"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-LR-KYq">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="467"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOD-Qu-4CJ">
+                            <rect key="frame" x="151.66666666666666" y="14" width="90" height="4"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="6aV-H1-oZg"/>
+                                <constraint firstAttribute="width" constant="90" id="cdk-S9-lCc"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_popUp_Btn"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-qA-0tQ">
+                            <rect key="frame" x="12" y="43" width="134.66666666666666" height="16.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-of-NdD">
+                            <rect key="frame" x="47.333333333333343" y="87.666666666666671" width="298.33333333333326" height="40.333333333333329"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-cS-Bwz">
+                                    <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="40.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40.43" id="5hz-qc-RI7"/>
+                                        <constraint firstAttribute="height" constant="40.43" id="sTf-ca-0M4"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                    </state>
+                                    <state key="selected" image="icon_star_selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-1F-DBk">
+                                    <rect key="frame" x="64.666666666666657" y="0.0" width="40.333333333333343" height="40.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40.43" id="I3J-1K-77c"/>
+                                        <constraint firstAttribute="width" constant="40.43" id="iD3-GY-gRE"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                    </state>
+                                    <state key="selected" image="icon_star_selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-jQ-f7v">
+                                    <rect key="frame" x="129" y="0.0" width="40.333333333333343" height="40.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40.43" id="PdE-OP-N8C"/>
+                                        <constraint firstAttribute="width" constant="40.43" id="ecd-PG-Pqw"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                    </state>
+                                    <state key="selected" image="icon_star_selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOK-So-rdg">
+                                    <rect key="frame" x="193.33333333333331" y="0.0" width="40.333333333333343" height="40.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40.43" id="16q-nf-BND"/>
+                                        <constraint firstAttribute="height" constant="40.43" id="KZO-13-W3u"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                    </state>
+                                    <state key="selected" image="icon_star_selected"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-HP-9Xf">
+                                    <rect key="frame" x="257.66666666666669" y="0.0" width="40.666666666666686" height="40.333333333333336"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40.43" id="0cY-H8-W0b"/>
+                                        <constraint firstAttribute="width" constant="40.43" id="bxK-wE-iTp"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                    </state>
+                                    <state key="selected" image="icon_star_selected"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCb-ij-M0k" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                            <rect key="frame" x="12" y="156" width="369" height="232"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type Your Review Here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jbk-c6-O4A">
+                                    <rect key="frame" x="12" y="12" width="345" height="208"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="jbk-c6-O4A" secondAttribute="bottom" constant="12" id="6lS-al-ueX"/>
+                                <constraint firstItem="jbk-c6-O4A" firstAttribute="top" secondItem="LCb-ij-M0k" secondAttribute="top" constant="12" id="DEQ-I6-jbv"/>
+                                <constraint firstAttribute="height" constant="232" id="Ptc-oe-dWa"/>
+                                <constraint firstItem="jbk-c6-O4A" firstAttribute="leading" secondItem="LCb-ij-M0k" secondAttribute="leading" constant="12" id="eiE-dm-RGY"/>
+                                <constraint firstAttribute="trailing" secondItem="jbk-c6-O4A" secondAttribute="trailing" constant="12" id="uYQ-pU-msX"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-zJ-p7w" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="403" width="393" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giy-VI-aY9" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="12" width="341" height="40"/>
+                                    <color key="backgroundColor" name="yellow_button_color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="xib-YX-sgw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickedSubmitBtn:" destination="-1" eventType="touchUpInside" id="wHI-Gf-rXi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Giy-VI-aY9" firstAttribute="leading" secondItem="pYf-zJ-p7w" secondAttribute="leading" constant="26" id="Hch-9I-Tdw"/>
+                                <constraint firstAttribute="trailing" secondItem="Giy-VI-aY9" secondAttribute="trailing" constant="26" id="KMp-6e-GQz"/>
+                                <constraint firstItem="Giy-VI-aY9" firstAttribute="top" secondItem="pYf-zJ-p7w" secondAttribute="top" constant="12" id="Riq-cS-ktf"/>
+                                <constraint firstItem="Giy-VI-aY9" firstAttribute="centerY" secondItem="pYf-zJ-p7w" secondAttribute="centerY" id="dJt-VI-SXk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="J6l-qA-0tQ" firstAttribute="top" secondItem="fOD-Qu-4CJ" secondAttribute="bottom" constant="25" id="1Ce-Ev-kjw"/>
+                        <constraint firstAttribute="trailing" secondItem="LCb-ij-M0k" secondAttribute="trailing" constant="12" id="1WE-LL-AV0"/>
+                        <constraint firstItem="pYf-zJ-p7w" firstAttribute="leading" secondItem="Xce-LR-KYq" secondAttribute="leading" id="2U1-bv-nLT"/>
+                        <constraint firstItem="fOD-Qu-4CJ" firstAttribute="centerX" secondItem="Xce-LR-KYq" secondAttribute="centerX" id="3Hl-d1-FAM"/>
+                        <constraint firstAttribute="bottom" secondItem="pYf-zJ-p7w" secondAttribute="bottom" id="9XV-s9-Cyc"/>
+                        <constraint firstItem="J6l-qA-0tQ" firstAttribute="leading" secondItem="Xce-LR-KYq" secondAttribute="leading" constant="12" id="KPl-hW-82I"/>
+                        <constraint firstItem="LCb-ij-M0k" firstAttribute="leading" secondItem="Xce-LR-KYq" secondAttribute="leading" constant="12" id="XcL-Ou-2Da"/>
+                        <constraint firstAttribute="trailing" secondItem="pYf-zJ-p7w" secondAttribute="trailing" id="beu-v9-fJp"/>
+                        <constraint firstItem="fOD-Qu-4CJ" firstAttribute="top" secondItem="Xce-LR-KYq" secondAttribute="top" constant="14" id="fVJ-K3-lQD"/>
+                        <constraint firstItem="a5Q-of-NdD" firstAttribute="centerX" secondItem="Xce-LR-KYq" secondAttribute="centerX" id="h0g-l4-9Gn"/>
+                        <constraint firstItem="pYf-zJ-p7w" firstAttribute="top" secondItem="LCb-ij-M0k" secondAttribute="bottom" constant="15" id="nsx-Fo-Wbi"/>
+                        <constraint firstItem="a5Q-of-NdD" firstAttribute="top" secondItem="J6l-qA-0tQ" secondAttribute="bottom" constant="28" id="qQk-Jd-S9k"/>
+                        <constraint firstItem="LCb-ij-M0k" firstAttribute="top" secondItem="a5Q-of-NdD" secondAttribute="bottom" constant="28" id="qxY-ZI-ISs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Xce-LR-KYq" secondAttribute="bottom" id="GA6-Wy-Dxd"/>
+                <constraint firstAttribute="trailing" secondItem="Xce-LR-KYq" secondAttribute="trailing" id="WN3-vu-5ZL"/>
+                <constraint firstItem="Xce-LR-KYq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ol2-G6-f6g"/>
+                <constraint firstItem="Xce-LR-KYq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="um0-J8-JS2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.717557251908396" y="173.59154929577466"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_uncheck_star" width="40.666667938232422" height="40.666667938232422"/>
+        <image name="icon_popUp_Btn" width="74" height="4"/>
+        <image name="icon_star_selected" width="40.666667938232422" height="40.666667938232422"/>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

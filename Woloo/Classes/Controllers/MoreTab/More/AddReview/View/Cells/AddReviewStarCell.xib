@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="AddReviewStarCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sx9-yI-sr0" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="12" width="292" height="67"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OWz-Vp-4Ih">
+                                <rect key="frame" x="22" y="13.666666666666671" width="248" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-Zj-bib">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2bf-e9-iR6"/>
+                                            <constraint firstAttribute="width" constant="40" id="2dY-4I-yQX"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                        </state>
+                                        <state key="selected" image="icon_star_selected"/>
+                                        <connections>
+                                            <action selector="clickedBtnRate1:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fTq-P7-OtT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-a7-djd">
+                                        <rect key="frame" x="52" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="6Pv-9l-IsX"/>
+                                            <constraint firstAttribute="height" constant="40" id="eXg-an-EE0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                        </state>
+                                        <state key="selected" image="icon_star_selected"/>
+                                        <connections>
+                                            <action selector="clickedBtnRate2:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hBN-Hi-HXG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bac-BM-cl6">
+                                        <rect key="frame" x="104" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="2wl-gn-xzZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="hSW-Ec-ryL"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                        </state>
+                                        <state key="selected" image="icon_star_selected"/>
+                                        <connections>
+                                            <action selector="clickedBtnRate3:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J34-FU-QHs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-cZ-ztZ">
+                                        <rect key="frame" x="156" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4ea-ka-osb"/>
+                                            <constraint firstAttribute="width" constant="40" id="prc-mX-IZN"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                        </state>
+                                        <state key="selected" image="icon_star_selected"/>
+                                        <connections>
+                                            <action selector="clickedBtnRate4:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pye-Tp-onI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvn-0X-3Rb">
+                                        <rect key="frame" x="208" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="USZ-Wz-thc"/>
+                                            <constraint firstAttribute="height" constant="40" id="i4z-QN-alB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="Icon_uncheck_star" symbolScale="large"/>
+                                        </state>
+                                        <state key="selected" image="icon_star_selected"/>
+                                        <connections>
+                                            <action selector="clickedBtnRate5:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jd2-dm-sxr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OWz-Vp-4Ih" firstAttribute="leading" secondItem="Sx9-yI-sr0" secondAttribute="leading" constant="22" id="9hv-3S-zBU"/>
+                            <constraint firstAttribute="height" constant="67" id="BTS-sf-zhl"/>
+                            <constraint firstItem="OWz-Vp-4Ih" firstAttribute="centerY" secondItem="Sx9-yI-sr0" secondAttribute="centerY" id="El4-Um-i8z"/>
+                            <constraint firstAttribute="trailing" secondItem="OWz-Vp-4Ih" secondAttribute="trailing" constant="22" id="iHg-qJ-AYm"/>
+                            <constraint firstItem="OWz-Vp-4Ih" firstAttribute="centerX" secondItem="Sx9-yI-sr0" secondAttribute="centerX" id="wq2-qJ-jgL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sx9-yI-sr0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="80C-RO-Uux"/>
+                    <constraint firstItem="Sx9-yI-sr0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ka6-lL-k6U"/>
+                    <constraint firstAttribute="bottom" secondItem="Sx9-yI-sr0" secondAttribute="bottom" constant="4" id="sXA-rP-wXg"/>
+                    <constraint firstAttribute="trailing" secondItem="Sx9-yI-sr0" secondAttribute="trailing" constant="16" id="tN1-b1-WDc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnRate1" destination="2x6-Zj-bib" id="Lhm-ga-BsF"/>
+                <outlet property="btnRate2" destination="EK2-a7-djd" id="QCO-rC-Cb8"/>
+                <outlet property="btnRate3" destination="bac-BM-cl6" id="CaB-5U-n9Y"/>
+                <outlet property="btnRate4" destination="Hfg-cZ-ztZ" id="9QN-Zi-ad7"/>
+                <outlet property="btnRate5" destination="bvn-0X-3Rb" id="RNe-MN-UXL"/>
+                <outlet property="vwBackStar" destination="Sx9-yI-sr0" id="Q9Y-aQ-ZoZ"/>
+            </connections>
+            <point key="canvasLocation" x="7.6335877862595414" y="35.563380281690144"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_uncheck_star" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="icon_star_selected" width="40.666667938232422" height="40.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J07-44-xEU">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-SemiBold.ttf">
+            <string>MavenPro-SemiBold</string>
+        </array>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Root Navigation Controller-->
+        <scene sceneID="Ek7-2t-lTd">
+            <objects>
+                <navigationController storyboardIdentifier="RootNavigationController" navigationBarHidden="YES" id="J07-44-xEU" customClass="RootNavigationController" customModule="Woloo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z1A-Fj-C4A">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HOa-ZX-mSP" kind="relationship" relationship="rootViewController" id="Vjj-rD-4WA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8w-og-Ba6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1735" y="76"/>
+        </scene>
+        <!--RootVC-->
+        <scene sceneID="Phu-rL-1Uw">
+            <objects>
+                <viewController storyboardIdentifier="RootVC" id="HOa-ZX-mSP" customClass="RootVC" customModule="Woloo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aln-q1-cJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksi-1g-ks4">
+                                <rect key="frame" x="16" y="36" width="343" height="595"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woloo_black_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-bb-bxV">
+                                        <rect key="frame" x="42" y="0.0" width="259" height="183"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="183" id="hoE-MN-aD2"/>
+                                            <constraint firstAttribute="width" constant="259" id="qAq-84-cig"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfv-hC-Qs5">
+                                        <rect key="frame" x="24" y="238" width="295" height="226"/>
+                                        <string key="text">Locate &amp; use
+Clean, Hygienic
+&amp; Safe
+Washrooms 
+anywhere
+You go</string>
+                                        <fontDescription key="fontDescription" name="MavenPro-SemiBold" family="Maven Pro" pointSize="32"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbG-XL-Cd1" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="555" width="241" height="40"/>
+                                        <color key="backgroundColor" name="Woloo_white_text"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Q4e-9n-FSQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13.300000190734863"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="7.0099999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapNextButton:" destination="HOa-ZX-mSP" eventType="touchUpInside" id="86O-Fm-RGR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Dfv-hC-Qs5" firstAttribute="leading" secondItem="Ksi-1g-ks4" secondAttribute="leading" constant="24" id="180-Vl-FHG"/>
+                                    <constraint firstItem="hbG-XL-Cd1" firstAttribute="leading" secondItem="Ksi-1g-ks4" secondAttribute="leading" constant="51" id="2nC-tA-V22"/>
+                                    <constraint firstItem="PA6-bb-bxV" firstAttribute="centerX" secondItem="Ksi-1g-ks4" secondAttribute="centerX" id="BZK-lN-bvx"/>
+                                    <constraint firstItem="PA6-bb-bxV" firstAttribute="top" secondItem="Ksi-1g-ks4" secondAttribute="top" id="BoA-US-9B6"/>
+                                    <constraint firstAttribute="bottom" secondItem="hbG-XL-Cd1" secondAttribute="bottom" id="Li9-Sp-9Wt"/>
+                                    <constraint firstItem="Dfv-hC-Qs5" firstAttribute="top" secondItem="PA6-bb-bxV" secondAttribute="bottom" constant="54.82" id="b9U-oT-Wne"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dfv-hC-Qs5" secondAttribute="trailing" constant="24" id="etb-36-WQV"/>
+                                    <constraint firstItem="hbG-XL-Cd1" firstAttribute="top" secondItem="Dfv-hC-Qs5" secondAttribute="bottom" constant="91" id="oT6-t6-L2L"/>
+                                    <constraint firstAttribute="trailing" secondItem="hbG-XL-Cd1" secondAttribute="trailing" constant="51" id="xho-5n-ceI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IXs-M7-eyf"/>
+                        <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ksi-1g-ks4" firstAttribute="centerY" secondItem="aln-q1-cJ3" secondAttribute="centerY" id="8L1-7I-gdM"/>
+                            <constraint firstItem="IXs-M7-eyf" firstAttribute="trailing" secondItem="Ksi-1g-ks4" secondAttribute="trailing" constant="16" id="9W9-0O-Dr1"/>
+                            <constraint firstItem="Ksi-1g-ks4" firstAttribute="leading" secondItem="IXs-M7-eyf" secondAttribute="leading" constant="16" id="kK0-7R-In2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uCl-jy-6f4"/>
+                    <connections>
+                        <outlet property="imgLogo" destination="PA6-bb-bxV" id="eYo-3J-Lnf"/>
+                        <outlet property="nextButton" destination="hbG-XL-Cd1" id="xHY-Gk-lV2"/>
+                        <segue destination="q9k-44-StI" kind="show" identifier="AuthenticationSegue" id="VTY-7A-qAV"/>
+                        <segue destination="bSy-Ie-XeQ" kind="show" identifier="LaunchTabBar" id="z69-B5-3hn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVt-TO-JGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="77.811094452773617"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="Got-qo-STr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="bSy-Ie-XeQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="13k-2H-pM3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LP9-hj-mca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="556"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="IHq-sP-yn5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Authentication" id="q9k-44-StI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rjX-V3-VsN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXo-hj-f3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VGc-td-uLo">
+            <objects>
+                <viewController id="xVI-BF-jf6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HAn-Ig-FbD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bsT-8o-gc1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKH-ib-zac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="-286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="woloo_black_Logo" width="259" height="166.5"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

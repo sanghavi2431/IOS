@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-dR-Vx5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Delivery Pincode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pij-p4-RVz">
+                            <rect key="frame" x="105.5" y="90" width="203" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                            <color key="textColor" name="Woloo_Yellow"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5PZ-SX-PC3">
+                            <rect key="frame" x="172" y="10" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="647-Ot-413"/>
+                                <constraint firstAttribute="width" secondItem="5PZ-SX-PC3" secondAttribute="height" id="Edv-f2-GT9"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuT-oO-A8s">
+                            <rect key="frame" x="368" y="30" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cuT-oO-A8s" secondAttribute="height" id="ITR-XG-OKx"/>
+                                <constraint firstAttribute="height" constant="30" id="XsR-qZ-YqL"/>
+                            </constraints>
+                            <state key="normal" image="darkCross"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHa-P4-yET">
+                            <rect key="frame" x="83" y="138.5" width="248" height="45"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="M5q-X1-snR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="Woloo_Light_Gray_bg"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cuT-oO-A8s" secondAttribute="trailing" constant="16" id="3KD-0U-Gbp"/>
+                        <constraint firstItem="cuT-oO-A8s" firstAttribute="centerY" secondItem="5PZ-SX-PC3" secondAttribute="centerY" id="4qm-WH-TEM"/>
+                        <constraint firstItem="pij-p4-RVz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tVx-dR-Vx5" secondAttribute="leading" constant="16" id="AVf-7p-O6u"/>
+                        <constraint firstItem="VHa-P4-yET" firstAttribute="width" secondItem="tVx-dR-Vx5" secondAttribute="width" multiplier="0.6" id="BtB-FQ-ejd"/>
+                        <constraint firstItem="VHa-P4-yET" firstAttribute="top" secondItem="pij-p4-RVz" secondAttribute="bottom" constant="25" id="Byf-bY-Ds0"/>
+                        <constraint firstItem="pij-p4-RVz" firstAttribute="top" secondItem="5PZ-SX-PC3" secondAttribute="bottom" constant="10" id="FGY-KC-2cq"/>
+                        <constraint firstItem="pij-p4-RVz" firstAttribute="centerX" secondItem="tVx-dR-Vx5" secondAttribute="centerX" id="GZj-RL-Jdy"/>
+                        <constraint firstItem="5PZ-SX-PC3" firstAttribute="top" secondItem="tVx-dR-Vx5" secondAttribute="top" constant="10" id="JDn-ty-sv5"/>
+                        <constraint firstItem="VHa-P4-yET" firstAttribute="centerX" secondItem="tVx-dR-Vx5" secondAttribute="centerX" id="bG2-hu-jeZ"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pij-p4-RVz" secondAttribute="trailing" constant="16" id="gvp-2l-VoS"/>
+                        <constraint firstAttribute="height" constant="250" id="mj9-eq-ici"/>
+                        <constraint firstItem="5PZ-SX-PC3" firstAttribute="centerX" secondItem="tVx-dR-Vx5" secondAttribute="centerX" id="mze-oY-8wR"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bwA-Mx-nn0">
+                    <rect key="frame" x="16" y="270" width="382" height="57"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akC-Bu-4a8">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Delivery Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmI-4M-eGD">
+                            <rect key="frame" x="0.0" y="33.5" width="382" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Woloo_Yellow"/>
+            <constraints>
+                <constraint firstItem="tVx-dR-Vx5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2DB-1I-GlX"/>
+                <constraint firstItem="tVx-dR-Vx5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2rL-GE-kWZ"/>
+                <constraint firstItem="bwA-Mx-nn0" firstAttribute="top" secondItem="tVx-dR-Vx5" secondAttribute="bottom" constant="20" id="6Q0-Qz-6Bc"/>
+                <constraint firstItem="bwA-Mx-nn0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="D6s-75-8Iu"/>
+                <constraint firstAttribute="trailing" secondItem="tVx-dR-Vx5" secondAttribute="trailing" id="JcS-e9-0d5"/>
+                <constraint firstAttribute="trailing" secondItem="bwA-Mx-nn0" secondAttribute="trailing" constant="16" id="cyY-G6-uN7"/>
+                <constraint firstItem="bwA-Mx-nn0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d4C-Fr-N9S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="crossButton" destination="cuT-oO-A8s" id="zQT-d7-ggW"/>
+                <outlet property="enterDeliveryCodeLabel" destination="pij-p4-RVz" id="JLQ-Ld-011"/>
+                <outlet property="orLabel" destination="akC-Bu-4a8" id="jbo-3I-a9r"/>
+                <outlet property="outerView" destination="tVx-dR-Vx5" id="3k4-pf-CdZ"/>
+                <outlet property="pincodeContainerView" destination="VHa-P4-yET" id="Jdh-Th-oSU"/>
+                <outlet property="selectDeliveryLabel" destination="dmI-4M-eGD" id="COi-DY-KuR"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="72.991071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="darkCross" width="95" height="96"/>
+        <image name="logo" width="742.5" height="557.5"/>
+        <namedColor name="Woloo_Light_Gray_bg">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

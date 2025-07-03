@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreOrderStatusVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="Nhr-8R-fZl" id="kfk-kJ-h4r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LH-o6-kvz">
+                    <rect key="frame" x="12" y="71" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Lyp-Mx-mVz"/>
+                        <constraint firstAttribute="height" constant="20" id="OPW-c5-aYR"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="icon_back_left"/>
+                    <connections>
+                        <action selector="clickedBackBtn:" destination="-1" eventType="touchUpInside" id="guT-js-c6I"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iQ-Tea">
+                    <rect key="frame" x="52" y="70.666666666666671" width="37.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-8R-fZl">
+                    <rect key="frame" x="0.0" y="99.666666666666686" width="393" height="718.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="H7c-iQ-Tea" firstAttribute="leading" secondItem="6LH-o6-kvz" secondAttribute="trailing" id="5zS-22-rfm"/>
+                <constraint firstItem="6LH-o6-kvz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Gkp-P7-ONm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Nhr-8R-fZl" secondAttribute="bottom" id="NGe-W5-7PD"/>
+                <constraint firstAttribute="trailing" secondItem="Nhr-8R-fZl" secondAttribute="trailing" id="bw8-nw-mhl"/>
+                <constraint firstItem="Nhr-8R-fZl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hvH-TE-2gt"/>
+                <constraint firstItem="6LH-o6-kvz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="llZ-ry-QNF"/>
+                <constraint firstItem="H7c-iQ-Tea" firstAttribute="centerY" secondItem="6LH-o6-kvz" secondAttribute="centerY" id="sMB-h0-rrY"/>
+                <constraint firstItem="Nhr-8R-fZl" firstAttribute="top" secondItem="H7c-iQ-Tea" secondAttribute="bottom" constant="8" id="zik-rJ-QeG"/>
+            </constraints>
+            <point key="canvasLocation" x="3.8167938931297707" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_back_left" width="10" height="10"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

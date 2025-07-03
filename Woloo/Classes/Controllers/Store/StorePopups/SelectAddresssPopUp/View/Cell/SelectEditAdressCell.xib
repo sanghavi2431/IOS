@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="SelectEditAdressCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-Mg-ZKc" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="12" width="303" height="72"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD5-bE-f3S">
+                                <rect key="frame" x="16" y="25.666666666666664" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8t2-ZE-9LF"/>
+                                    <constraint firstAttribute="width" constant="21" id="LtB-L8-BIZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icon_radio_unselected"/>
+                                <state key="selected" image="icon_Radio_selected"/>
+                                <connections>
+                                    <action selector="clickedBtnRadio:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e0x-M1-pi8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8O-bG-sGv">
+                                <rect key="frame" x="53" y="15" width="175" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-iP-up6">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1234 Lane road, Area, Location, Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS9-Je-w4a">
+                                        <rect key="frame" x="0.0" y="26.333333333333339" width="175" height="15.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Na8-iP-up6" firstAttribute="leading" secondItem="D8O-bG-sGv" secondAttribute="leading" id="Ala-CQ-Pmg"/>
+                                    <constraint firstAttribute="bottom" secondItem="HS9-Je-w4a" secondAttribute="bottom" id="EgA-gL-smn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Na8-iP-up6" secondAttribute="trailing" id="LXw-Au-8nd"/>
+                                    <constraint firstAttribute="trailing" secondItem="HS9-Je-w4a" secondAttribute="trailing" id="MyI-Sz-J7D"/>
+                                    <constraint firstItem="Na8-iP-up6" firstAttribute="top" secondItem="D8O-bG-sGv" secondAttribute="top" id="Vxn-ef-2aQ"/>
+                                    <constraint firstItem="HS9-Je-w4a" firstAttribute="leading" secondItem="D8O-bG-sGv" secondAttribute="leading" id="YWS-qj-FWt"/>
+                                    <constraint firstItem="HS9-Je-w4a" firstAttribute="top" secondItem="Na8-iP-up6" secondAttribute="bottom" constant="4" id="mbX-SL-bxI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgl-LG-Sy9">
+                                <rect key="frame" x="240" y="25.666666666666664" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bBZ-A0-Gcb"/>
+                                    <constraint firstAttribute="width" constant="21" id="jiA-Gl-jBJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icon_edit_profile"/>
+                                <connections>
+                                    <action selector="clickedBtnEditAddress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hmS-vp-LDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAv-4t-iTm">
+                                <rect key="frame" x="266" y="25.666666666666664" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="93T-Jk-LA3"/>
+                                    <constraint firstAttribute="width" constant="21" id="MDH-ap-M9B"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="clickedDeleteBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kz4-3Q-54z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VD5-bE-f3S" firstAttribute="leading" secondItem="aMg-Mg-ZKc" secondAttribute="leading" constant="16" id="Bk0-6H-myi"/>
+                            <constraint firstItem="sAv-4t-iTm" firstAttribute="centerY" secondItem="fgl-LG-Sy9" secondAttribute="centerY" id="G31-sY-h9m"/>
+                            <constraint firstItem="sAv-4t-iTm" firstAttribute="leading" secondItem="fgl-LG-Sy9" secondAttribute="trailing" constant="5" id="Jk0-Tp-3UW"/>
+                            <constraint firstItem="D8O-bG-sGv" firstAttribute="leading" secondItem="VD5-bE-f3S" secondAttribute="trailing" constant="16" id="R90-Du-kIt"/>
+                            <constraint firstItem="fgl-LG-Sy9" firstAttribute="leading" secondItem="D8O-bG-sGv" secondAttribute="trailing" constant="12" id="RYI-ep-jzx"/>
+                            <constraint firstAttribute="trailing" secondItem="sAv-4t-iTm" secondAttribute="trailing" constant="16" id="iin-st-die"/>
+                            <constraint firstItem="VD5-bE-f3S" firstAttribute="centerY" secondItem="aMg-Mg-ZKc" secondAttribute="centerY" id="jm5-4m-VwI"/>
+                            <constraint firstAttribute="bottom" secondItem="D8O-bG-sGv" secondAttribute="bottom" constant="15" id="q4u-kc-bUA"/>
+                            <constraint firstItem="fgl-LG-Sy9" firstAttribute="centerY" secondItem="aMg-Mg-ZKc" secondAttribute="centerY" id="s2D-cw-Pa6"/>
+                            <constraint firstItem="D8O-bG-sGv" firstAttribute="top" secondItem="aMg-Mg-ZKc" secondAttribute="top" constant="15" id="vjU-cK-oN4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="aMg-Mg-ZKc" secondAttribute="trailing" constant="16" id="1Wm-6f-S8D"/>
+                    <constraint firstItem="aMg-Mg-ZKc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="7NN-6R-4PX"/>
+                    <constraint firstItem="aMg-Mg-ZKc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ceA-sk-mdA"/>
+                    <constraint firstAttribute="bottom" secondItem="aMg-Mg-ZKc" secondAttribute="bottom" constant="12" id="xDL-9d-Bua"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnRadio" destination="VD5-bE-f3S" id="OjY-2Z-7vd"/>
+                <outlet property="lblAddress" destination="HS9-Je-w4a" id="Usb-6B-JWl"/>
+                <outlet property="lblTitleAddress" destination="Na8-iP-up6" id="jP0-8x-BVk"/>
+            </connections>
+            <point key="canvasLocation" x="121.37404580152672" y="38.028169014084511"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_Radio_selected" width="22" height="22.333333969116211"/>
+        <image name="icon_edit_profile" width="59" height="59"/>
+        <image name="icon_radio_unselected" width="22" height="22.333333969116211"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

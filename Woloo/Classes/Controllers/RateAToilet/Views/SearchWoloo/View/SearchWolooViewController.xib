@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchWolooViewController" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="NrX-gG-r3b" id="FWd-6d-thF"/>
+                <outlet property="txtFieldSearchWoloo" destination="bYU-hf-Ak3" id="98z-p6-Ebd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-y6-gkP" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="65"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYU-hf-Ak3">
+                            <rect key="frame" x="61" y="8" width="320" height="49"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TES-wh-Dyn">
+                            <rect key="frame" x="12" y="12" width="41" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="41" id="bLs-jS-FvP"/>
+                                <constraint firstAttribute="height" constant="41" id="gab-CL-qMT"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_Back_navigation"/>
+                            <connections>
+                                <action selector="clickedBackbtn:" destination="-1" eventType="touchUpInside" id="I2h-SL-iXG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="Woloo_white_text"/>
+                    <constraints>
+                        <constraint firstItem="bYU-hf-Ak3" firstAttribute="leading" secondItem="TES-wh-Dyn" secondAttribute="trailing" constant="8" id="65g-xD-jt1"/>
+                        <constraint firstItem="bYU-hf-Ak3" firstAttribute="top" secondItem="aTc-y6-gkP" secondAttribute="top" constant="8" id="Bhu-wK-2WO"/>
+                        <constraint firstItem="TES-wh-Dyn" firstAttribute="top" secondItem="aTc-y6-gkP" secondAttribute="top" constant="12" id="D9i-hP-SU6"/>
+                        <constraint firstAttribute="trailing" secondItem="bYU-hf-Ak3" secondAttribute="trailing" constant="12" id="DC9-Zw-BrL"/>
+                        <constraint firstAttribute="bottom" secondItem="bYU-hf-Ak3" secondAttribute="bottom" constant="8" id="KBk-AH-b35"/>
+                        <constraint firstItem="TES-wh-Dyn" firstAttribute="leading" secondItem="aTc-y6-gkP" secondAttribute="leading" constant="12" id="asM-U5-EnR"/>
+                        <constraint firstAttribute="bottom" secondItem="TES-wh-Dyn" secondAttribute="bottom" constant="12" id="dgv-2X-l38"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NrX-gG-r3b">
+                    <rect key="frame" x="0.0" y="132" width="393" height="686"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NrX-gG-r3b" secondAttribute="bottom" id="JyA-nD-lVh"/>
+                <constraint firstItem="aTc-y6-gkP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LZy-OC-LCD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aTc-y6-gkP" secondAttribute="trailing" id="NYj-pa-q9X"/>
+                <constraint firstItem="aTc-y6-gkP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PtA-XG-f7h"/>
+                <constraint firstItem="NrX-gG-r3b" firstAttribute="top" secondItem="aTc-y6-gkP" secondAttribute="bottom" constant="8" id="Tci-q5-9vs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NrX-gG-r3b" secondAttribute="trailing" id="nyc-xa-jGT"/>
+                <constraint firstItem="NrX-gG-r3b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vKI-dz-N5K"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_Back_navigation" width="41" height="41"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

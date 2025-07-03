@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="GenderSelectionCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-wY-oZu">
+                        <rect key="frame" x="12" y="0.0" width="296" height="73"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xj3-JQ-mEv" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                                <rect key="frame" x="18" y="9" width="260" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3A-kc-qde">
+                                        <rect key="frame" x="12" y="17" width="30" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <color key="textColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPU-x1-uaP">
+                                        <rect key="frame" x="80" y="16.666666666666668" width="60" height="22.000000000000004"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="9qX-rG-4RF"/>
+                                            <constraint firstAttribute="height" constant="22" id="iZk-Eo-HXc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Male" image="smallcircle.fill.circle" catalog="system">
+                                            <color key="titleColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" title="Male" image="largecircle.fill.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="clickedBtnMale:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eZO-zV-IPi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qt7-wN-nkj">
+                                        <rect key="frame" x="150" y="16.666666666666668" width="90" height="22.000000000000004"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="H76-NS-waU"/>
+                                            <constraint firstAttribute="height" constant="22" id="MJc-Cy-59T"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Female" image="smallcircle.fill.circle" catalog="system">
+                                            <color key="titleColor" red="0.25490196079999999" green="0.25098039220000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" title="Female" image="largecircle.fill.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="clickedBtnFemale:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ShV-fe-eef"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cPU-x1-uaP" firstAttribute="centerY" secondItem="M3A-kc-qde" secondAttribute="centerY" id="Krl-QU-I90"/>
+                                    <constraint firstItem="M3A-kc-qde" firstAttribute="centerY" secondItem="Xj3-JQ-mEv" secondAttribute="centerY" id="Xzd-Fr-bKo"/>
+                                    <constraint firstItem="Qt7-wN-nkj" firstAttribute="leading" secondItem="cPU-x1-uaP" secondAttribute="trailing" constant="10" id="YDj-Ai-aHs"/>
+                                    <constraint firstItem="Qt7-wN-nkj" firstAttribute="centerY" secondItem="cPU-x1-uaP" secondAttribute="centerY" id="YSY-PR-Vhw"/>
+                                    <constraint firstAttribute="height" constant="55" id="hzk-zb-Sbi"/>
+                                    <constraint firstItem="M3A-kc-qde" firstAttribute="leading" secondItem="Xj3-JQ-mEv" secondAttribute="leading" constant="12" id="pAm-hz-6p1"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qt7-wN-nkj" secondAttribute="trailing" constant="20" symbolic="YES" id="pbc-ua-eVJ"/>
+                                    <constraint firstItem="cPU-x1-uaP" firstAttribute="leading" secondItem="M3A-kc-qde" secondAttribute="trailing" constant="38" id="qBn-dF-Pxj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Woloo_white_text"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xj3-JQ-mEv" secondAttribute="trailing" constant="18" id="1Te-cH-1pz"/>
+                            <constraint firstAttribute="bottom" secondItem="Xj3-JQ-mEv" secondAttribute="bottom" constant="9" id="73g-Y4-LDq"/>
+                            <constraint firstItem="Xj3-JQ-mEv" firstAttribute="leading" secondItem="DAj-wY-oZu" secondAttribute="leading" constant="18" id="TAd-oB-KTI"/>
+                            <constraint firstItem="Xj3-JQ-mEv" firstAttribute="top" secondItem="DAj-wY-oZu" secondAttribute="top" constant="9" id="Zge-xe-3tL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DAj-wY-oZu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9xZ-7O-PTv"/>
+                    <constraint firstAttribute="bottom" secondItem="DAj-wY-oZu" secondAttribute="bottom" id="UEg-Og-wLE"/>
+                    <constraint firstItem="DAj-wY-oZu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="fQz-bn-8jd"/>
+                    <constraint firstAttribute="trailing" secondItem="DAj-wY-oZu" secondAttribute="trailing" constant="12" id="pPe-yo-9nX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnFemale" destination="Qt7-wN-nkj" id="1Dl-KA-q19"/>
+                <outlet property="btnMale" destination="cPU-x1-uaP" id="lIk-WK-kh6"/>
+                <outlet property="lblGender" destination="M3A-kc-qde" id="SDS-uF-s9b"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="29.929577464788736"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="largecircle.fill.circle" catalog="system" width="128" height="123"/>
+        <image name="smallcircle.fill.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

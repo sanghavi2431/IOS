@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="SearchWolooForRateCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LL-W6-8D3">
+                        <rect key="frame" x="73.666666666666671" y="12" width="177.66666666666663" height="45"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RG-AI-CCy" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="69" width="293" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="HZy-Vj-Wt5">
+                                <rect key="frame" x="10" y="5" width="20" height="34"/>
+                                <color key="tintColor" name="Woloo_Gray_bg"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Woloo Hosts/ Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="465-E4-pZd">
+                                <rect key="frame" x="40" y="0.0" width="253" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textPlaceholderColor">
+                                        <color key="value" name="Woloo_Light_Gray_bg"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKz-vO-lEB">
+                                <rect key="frame" x="263" y="12" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="lbv-VT-TZF"/>
+                                    <constraint firstAttribute="width" constant="20" id="xs3-74-WvV"/>
+                                </constraints>
+                                <color key="tintColor" name="Woloo_Gray_bg"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-8G-6GP">
+                                <rect key="frame" x="30" y="0.0" width="263" height="44"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="clickedSearchLocation:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xPF-Za-EkA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gPx-8G-6GP" firstAttribute="leading" secondItem="HZy-Vj-Wt5" secondAttribute="trailing" id="0k7-bR-vOu"/>
+                            <constraint firstAttribute="trailing" secondItem="465-E4-pZd" secondAttribute="trailing" id="EDh-cT-J5V"/>
+                            <constraint firstAttribute="bottom" secondItem="HZy-Vj-Wt5" secondAttribute="bottom" constant="5" id="LJB-q6-qNP"/>
+                            <constraint firstItem="gPx-8G-6GP" firstAttribute="top" secondItem="6RG-AI-CCy" secondAttribute="top" id="Nzm-zU-9ws"/>
+                            <constraint firstItem="465-E4-pZd" firstAttribute="top" secondItem="6RG-AI-CCy" secondAttribute="top" id="Oo2-xT-Qbd"/>
+                            <constraint firstAttribute="trailing" secondItem="gPx-8G-6GP" secondAttribute="trailing" id="RP7-DW-fTn"/>
+                            <constraint firstAttribute="height" constant="44" id="TLn-sl-nhy"/>
+                            <constraint firstAttribute="bottom" secondItem="465-E4-pZd" secondAttribute="bottom" id="aFe-NA-isF"/>
+                            <constraint firstItem="HZy-Vj-Wt5" firstAttribute="leading" secondItem="6RG-AI-CCy" secondAttribute="leading" constant="10" id="fZY-UO-Wq2"/>
+                            <constraint firstAttribute="bottom" secondItem="gPx-8G-6GP" secondAttribute="bottom" id="iIE-hk-kNe"/>
+                            <constraint firstItem="IKz-vO-lEB" firstAttribute="centerY" secondItem="6RG-AI-CCy" secondAttribute="centerY" id="lQd-kd-Keb"/>
+                            <constraint firstAttribute="trailing" secondItem="IKz-vO-lEB" secondAttribute="trailing" constant="10" id="nCT-BM-R7y"/>
+                            <constraint firstItem="HZy-Vj-Wt5" firstAttribute="top" secondItem="6RG-AI-CCy" secondAttribute="top" constant="5" id="slY-Xy-8Ud"/>
+                            <constraint firstItem="465-E4-pZd" firstAttribute="leading" secondItem="HZy-Vj-Wt5" secondAttribute="trailing" constant="10" id="yg3-xj-4Gm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6RG-AI-CCy" secondAttribute="trailing" constant="16" id="3uS-3p-umP"/>
+                    <constraint firstItem="6RG-AI-CCy" firstAttribute="top" secondItem="2LL-W6-8D3" secondAttribute="bottom" constant="12" id="8js-Th-CXu"/>
+                    <constraint firstItem="6RG-AI-CCy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="K8Z-aZ-Ywj"/>
+                    <constraint firstItem="2LL-W6-8D3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ms0-la-Jy7"/>
+                    <constraint firstItem="2LL-W6-8D3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="RP4-f4-XJg"/>
+                    <constraint firstAttribute="bottom" secondItem="6RG-AI-CCy" secondAttribute="bottom" constant="12" id="xnV-la-Mgk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnSearchLocation" destination="gPx-8G-6GP" id="y9S-qt-9a6"/>
+                <outlet property="txtFieldLSearchLocation" destination="465-E4-pZd" id="es6-dq-Eio"/>
+                <outlet property="vwBack" destination="6RG-AI-CCy" id="YeU-g2-JNH"/>
+            </connections>
+            <point key="canvasLocation" x="43.511450381679388" y="48.943661971830991"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="close" width="32" height="32"/>
+        <image name="ic_search" width="20" height="20"/>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Light_Gray_bg">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

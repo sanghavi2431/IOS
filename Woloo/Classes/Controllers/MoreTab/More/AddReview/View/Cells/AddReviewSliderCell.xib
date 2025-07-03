@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="KGk-i7-Jjw" customClass="AddReviewSliderCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cibil_slider" translatesAutoresizingMaskIntoConstraints="NO" id="JCc-mt-4GU">
+                        <rect key="frame" x="16" y="12" width="288" height="5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="xPQ-a9-KAV"/>
+                        </constraints>
+                    </imageView>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-Ux-QNx">
+                        <rect key="frame" x="14" y="0.0" width="290" height="34"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="thumbTintColor" name="Woloo_Yellow"/>
+                        <connections>
+                            <action selector="changedSliderValue:" destination="KGk-i7-Jjw" eventType="valueChanged" id="oqY-9X-eIz"/>
+                        </connections>
+                    </slider>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JCc-mt-4GU" secondAttribute="trailing" constant="16" id="342-sx-Iij"/>
+                    <constraint firstItem="JCc-mt-4GU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="6lp-UM-daT"/>
+                    <constraint firstItem="JCc-mt-4GU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JLc-dl-Vzd"/>
+                    <constraint firstItem="VbA-Ux-QNx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="L26-BI-0QE"/>
+                    <constraint firstAttribute="bottom" secondItem="VbA-Ux-QNx" secondAttribute="bottom" constant="1" id="QFy-TP-qeQ"/>
+                    <constraint firstAttribute="bottom" secondItem="JCc-mt-4GU" secondAttribute="bottom" constant="12" id="awa-1e-iyk"/>
+                    <constraint firstAttribute="trailing" secondItem="VbA-Ux-QNx" secondAttribute="trailing" constant="18" id="dCz-LB-fIC"/>
+                    <constraint firstItem="VbA-Ux-QNx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="t9x-Ld-DPa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="sliderVW" destination="VbA-Ux-QNx" id="n91-5w-mHP"/>
+            </connections>
+            <point key="canvasLocation" x="71.755725190839698" y="14.788732394366198"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cibil_slider" width="380" height="8"/>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

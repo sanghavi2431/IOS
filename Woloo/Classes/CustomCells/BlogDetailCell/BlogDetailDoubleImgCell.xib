@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="452" id="KGk-i7-Jjw" customClass="BlogDetailDoubleImgCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="452"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="452"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-sd-1rW" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="4" y="12" width="412" height="428"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmR-WQ-VQA">
+                                <rect key="frame" x="16" y="16" width="51" height="51"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woloo_black_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-mw-MV1">
+                                        <rect key="frame" x="8" y="8" width="35" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="Woloo_Yellow"/>
+                                <constraints>
+                                    <constraint firstItem="fbX-mw-MV1" firstAttribute="leading" secondItem="lmR-WQ-VQA" secondAttribute="leading" constant="8" id="Pgw-jh-Ir0"/>
+                                    <constraint firstAttribute="bottom" secondItem="fbX-mw-MV1" secondAttribute="bottom" constant="8" id="fTv-nQ-GAn"/>
+                                    <constraint firstAttribute="height" constant="51" id="go5-Lz-XAa"/>
+                                    <constraint firstAttribute="width" constant="51" id="jy8-0c-kDU"/>
+                                    <constraint firstAttribute="trailing" secondItem="fbX-mw-MV1" secondAttribute="trailing" constant="8" id="ngc-YX-Wfc"/>
+                                    <constraint firstItem="fbX-mw-MV1" firstAttribute="top" secondItem="lmR-WQ-VQA" secondAttribute="top" constant="8" id="xJg-Aj-YGJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woloo Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHY-uI-nhm">
+                                <rect key="frame" x="79" y="31.333333333333336" width="98.666666666666686" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mw0-oL-oiQ">
+                                <rect key="frame" x="0.0" y="83" width="412" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ste-pU-wy0">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="2ly-il-dNd"/>
+                                            <constraint firstAttribute="width" constant="200" id="eQN-Ua-gxP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-Fr-sm9">
+                                        <rect key="frame" x="212" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5Wl-Gr-mmG"/>
+                                            <constraint firstAttribute="width" constant="200" id="ShW-tv-RQg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="10 Simple changes that leads to weight loss in a short period of time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-CF-1mv">
+                                <rect key="frame" x="16" y="345" width="380" height="63"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                <color key="textColor" name="Woloo_Gray_bg"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y0U-WM-1OA">
+                                <rect key="frame" x="16" y="299" width="130" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAr-xm-Oc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="TYO-5D-P0P"/>
+                                            <constraint firstAttribute="height" constant="30" id="p2U-gO-wos"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_unlike_heart"/>
+                                        <state key="selected" image="icon_like_red"/>
+                                        <connections>
+                                            <action selector="clickedLikeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B9w-T3-eYF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghm-TC-ylx">
+                                        <rect key="frame" x="50" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ahP-Ao-Sjc"/>
+                                            <constraint firstAttribute="width" constant="30" id="jMx-wh-688"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                        <state key="normal" image="icon_comment"/>
+                                        <state key="selected" image="favouriteFillIcon"/>
+                                        <connections>
+                                            <action selector="clickedCommentBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8zb-Re-9zK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkD-6e-xZq">
+                                        <rect key="frame" x="100" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="uzw-ya-MS9"/>
+                                            <constraint firstAttribute="width" constant="30" id="w7P-uN-z2v"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_share_blog"/>
+                                        <connections>
+                                            <action selector="clickedShareBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lhu-HR-ynu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-m0-KHA">
+                                <rect key="frame" x="325" y="294" width="71" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig_coins" translatesAutoresizingMaskIntoConstraints="NO" id="Ss3-Df-ilL">
+                                        <rect key="frame" x="8" y="8" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.84" id="FRY-Ul-ZuH"/>
+                                            <constraint firstAttribute="width" constant="23.84" id="wqM-d4-xMb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6r-Wq-F1q">
+                                        <rect key="frame" x="40" y="8" width="23" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Woloo_Yellow"/>
+                                <constraints>
+                                    <constraint firstItem="Ss3-Df-ilL" firstAttribute="top" secondItem="V2K-m0-KHA" secondAttribute="top" constant="8" id="F2e-vm-l3H"/>
+                                    <constraint firstItem="Ss3-Df-ilL" firstAttribute="leading" secondItem="V2K-m0-KHA" secondAttribute="leading" constant="8" id="Qm3-Fd-Itt"/>
+                                    <constraint firstItem="E6r-Wq-F1q" firstAttribute="leading" secondItem="Ss3-Df-ilL" secondAttribute="trailing" constant="8" id="bH9-mF-35E"/>
+                                    <constraint firstAttribute="trailing" secondItem="E6r-Wq-F1q" secondAttribute="trailing" constant="8" id="h3l-DM-S1g"/>
+                                    <constraint firstItem="E6r-Wq-F1q" firstAttribute="centerY" secondItem="Ss3-Df-ilL" secondAttribute="centerY" id="tXR-8L-L3G"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ss3-Df-ilL" secondAttribute="bottom" constant="8" id="vPa-Ue-5BW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5.96"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAM-U9-1ic">
+                                <rect key="frame" x="311" y="28" width="88" height="27"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87y-2p-pHM">
+                                        <rect key="frame" x="12" y="6" width="64" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEM-P6-KWl">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="27"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="4.7300000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickedShopNowBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a4z-Pd-sxd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="yellow_button_color"/>
+                                <constraints>
+                                    <constraint firstItem="cEM-P6-KWl" firstAttribute="top" secondItem="wAM-U9-1ic" secondAttribute="top" id="5qW-d2-i5e"/>
+                                    <constraint firstItem="87y-2p-pHM" firstAttribute="leading" secondItem="wAM-U9-1ic" secondAttribute="leading" constant="12" id="EOX-TS-yBU"/>
+                                    <constraint firstAttribute="trailing" secondItem="87y-2p-pHM" secondAttribute="trailing" constant="12" id="Fzz-o7-bxR"/>
+                                    <constraint firstAttribute="bottom" secondItem="cEM-P6-KWl" secondAttribute="bottom" id="Jk4-rD-sqE"/>
+                                    <constraint firstItem="87y-2p-pHM" firstAttribute="top" secondItem="wAM-U9-1ic" secondAttribute="top" constant="6" id="QSc-au-h9U"/>
+                                    <constraint firstItem="cEM-P6-KWl" firstAttribute="leading" secondItem="wAM-U9-1ic" secondAttribute="leading" id="TGw-S0-wuG"/>
+                                    <constraint firstAttribute="height" constant="27" id="VLU-nn-tqC"/>
+                                    <constraint firstAttribute="bottom" secondItem="87y-2p-pHM" secondAttribute="bottom" constant="6" id="lYM-Ia-ZEE"/>
+                                    <constraint firstAttribute="trailing" secondItem="cEM-P6-KWl" secondAttribute="trailing" id="rdk-fq-JVg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="4.7300000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wAM-U9-1ic" secondAttribute="trailing" constant="13" id="36H-u3-rXY"/>
+                            <constraint firstItem="V2K-m0-KHA" firstAttribute="centerY" secondItem="y0U-WM-1OA" secondAttribute="centerY" id="5jg-NN-Kcm"/>
+                            <constraint firstAttribute="trailing" secondItem="V2K-m0-KHA" secondAttribute="trailing" constant="16" id="7Cg-2t-rO2"/>
+                            <constraint firstAttribute="trailing" secondItem="kHJ-CF-1mv" secondAttribute="trailing" constant="16" id="7cp-jm-3ut"/>
+                            <constraint firstItem="kHJ-CF-1mv" firstAttribute="leading" secondItem="fo1-sd-1rW" secondAttribute="leading" constant="16" id="E7A-8Q-pm3"/>
+                            <constraint firstItem="SHY-uI-nhm" firstAttribute="centerY" secondItem="lmR-WQ-VQA" secondAttribute="centerY" id="FSk-Ue-npN"/>
+                            <constraint firstItem="mw0-oL-oiQ" firstAttribute="leading" secondItem="fo1-sd-1rW" secondAttribute="leading" id="Kmc-Fl-9Zm"/>
+                            <constraint firstItem="lmR-WQ-VQA" firstAttribute="leading" secondItem="fo1-sd-1rW" secondAttribute="leading" constant="16" id="QXI-ct-TT3"/>
+                            <constraint firstItem="lmR-WQ-VQA" firstAttribute="top" secondItem="fo1-sd-1rW" secondAttribute="top" constant="16" id="TLB-L5-pXW"/>
+                            <constraint firstAttribute="bottom" secondItem="kHJ-CF-1mv" secondAttribute="bottom" constant="20" id="V6H-GI-d4M"/>
+                            <constraint firstItem="wAM-U9-1ic" firstAttribute="centerY" secondItem="SHY-uI-nhm" secondAttribute="centerY" id="arD-Uh-pxn"/>
+                            <constraint firstItem="y0U-WM-1OA" firstAttribute="leading" secondItem="fo1-sd-1rW" secondAttribute="leading" constant="16" id="dIE-3B-XXM"/>
+                            <constraint firstItem="kHJ-CF-1mv" firstAttribute="top" secondItem="y0U-WM-1OA" secondAttribute="bottom" constant="16" id="ebQ-Op-BFm"/>
+                            <constraint firstAttribute="trailing" secondItem="mw0-oL-oiQ" secondAttribute="trailing" id="ftQ-d7-ePp"/>
+                            <constraint firstItem="y0U-WM-1OA" firstAttribute="top" secondItem="mw0-oL-oiQ" secondAttribute="bottom" constant="16" id="m6f-Y7-mfW"/>
+                            <constraint firstItem="mw0-oL-oiQ" firstAttribute="top" secondItem="lmR-WQ-VQA" secondAttribute="bottom" constant="16" id="uZA-8q-TyD"/>
+                            <constraint firstItem="SHY-uI-nhm" firstAttribute="leading" secondItem="lmR-WQ-VQA" secondAttribute="trailing" constant="12" id="x7Q-Zd-eCi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fo1-sd-1rW" secondAttribute="bottom" constant="12" id="Es3-Ws-Qo2"/>
+                    <constraint firstAttribute="trailing" secondItem="fo1-sd-1rW" secondAttribute="trailing" constant="4" id="XJm-Ub-MYM"/>
+                    <constraint firstItem="fo1-sd-1rW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="Za2-bt-Kds"/>
+                    <constraint firstItem="fo1-sd-1rW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hAt-oQ-1Ik"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="blogDescroptionLabel" destination="kHJ-CF-1mv" id="Esl-pt-FSt"/>
+                <outlet property="blogTitle" destination="SHY-uI-nhm" id="g7f-Yd-855"/>
+                <outlet property="btnShop" destination="cEM-P6-KWl" id="LvE-Bz-vgB"/>
+                <outlet property="commentButton" destination="ghm-TC-ylx" id="vLp-dW-mSq"/>
+                <outlet property="imgVw1" destination="ste-pU-wy0" id="jiJ-KR-yrE"/>
+                <outlet property="imgVw2" destination="6lu-Fr-sm9" id="Ch0-EI-gMP"/>
+                <outlet property="likeButton" destination="dAr-xm-Oc3" id="boS-CC-4sh"/>
+                <outlet property="shareButton" destination="qkD-6e-xZq" id="u2B-fm-XDk"/>
+            </connections>
+            <point key="canvasLocation" x="112.21374045801527" y="82.394366197183103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="favouriteFillIcon" width="27" height="25"/>
+        <image name="icon_comment" width="30" height="30"/>
+        <image name="icon_like_red" width="23" height="17"/>
+        <image name="icon_share_blog" width="30" height="30"/>
+        <image name="icon_unlike_heart" width="30" height="30"/>
+        <image name="pig_coins" width="24" height="25"/>
+        <image name="woloo_black_Logo" width="259" height="166.66667175292969"/>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

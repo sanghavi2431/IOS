@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditPeriodTrackerPopUp" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="cycleLengthTextField" destination="8Ew-Gx-SRt" id="xSg-Kk-X0Q"/>
+                <outlet property="dayTextField" destination="rdV-Yg-Z5e" id="eZ5-3x-Z0N"/>
+                <outlet property="monthTextField" destination="vH8-8F-6JG" id="LoY-xw-d1Y"/>
+                <outlet property="periodLengthTextField" destination="yl3-sR-ib2" id="a3W-85-4py"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearTextField" destination="Wxe-IX-lFl" id="1ph-YJ-U2g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-MQ-Hxf">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUt-LS-7jX">
+                            <rect key="frame" x="12" y="12" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="hL4-Nv-jea"/>
+                                <constraint firstAttribute="height" constant="20" id="tmW-Og-Vbc"/>
+                            </constraints>
+                            <state key="normal" image="icon_back_left"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN7-SE-Mgv">
+                            <rect key="frame" x="39" y="13.666666666666664" width="33.333333333333343" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" name="Woloo_Light_Gray_bg"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your Periods like a Pro!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpX-AL-TUl">
+                            <rect key="frame" x="53" y="41.666666666666657" width="287" height="57.333333333333343"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hz9-Nj-liy">
+                            <rect key="frame" x="130.66666666666666" y="119" width="131.99999999999997" height="1"/>
+                            <color key="backgroundColor" name="yellow_button_color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="5iH-Mp-LXT"/>
+                                <constraint firstAttribute="height" constant="1" id="v8d-4x-W07"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Mention your last period date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDh-nx-vqD">
+                            <rect key="frame" x="46" y="136" width="301" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tdK-sA-aWD">
+                            <rect key="frame" x="55" y="168" width="275" height="75"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="05" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-Yg-Z5e">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="loF-Ua-And"/>
+                                        <constraint firstAttribute="width" constant="75" id="s5y-G2-v78"/>
+                                    </constraints>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jun" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vH8-8F-6JG">
+                                    <rect key="frame" x="100" y="0.0" width="75" height="75"/>
+                                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2021" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-IX-lFl">
+                                    <rect key="frame" x="200" y="0.0" width="75" height="75"/>
+                                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cycle Length (In Days)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO6-Kc-fQv">
+                            <rect key="frame" x="105.00000000000001" y="256" width="183.33333333333337" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="28" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ew-Gx-SRt">
+                            <rect key="frame" x="159" y="288" width="75" height="75"/>
+                            <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="9uM-tP-lyX"/>
+                                <constraint firstAttribute="height" constant="75" id="brd-UA-Zwf"/>
+                            </constraints>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Period Length (In Days)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-Gg-jdL">
+                            <rect key="frame" x="102" y="376" width="189" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yl3-sR-ib2">
+                            <rect key="frame" x="159" y="408" width="75" height="75"/>
+                            <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="byx-nf-nBm"/>
+                                <constraint firstAttribute="width" constant="75" id="ers-YY-Tts"/>
+                            </constraints>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-AW-Xml" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                            <rect key="frame" x="96.666666666666686" y="503" width="200" height="40"/>
+                            <color key="backgroundColor" name="Woloo_Yellow"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="XZD-Xy-tiu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickedSaveBtn:" destination="-1" eventType="touchUpInside" id="NJp-kD-z2f"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="CN7-SE-Mgv" firstAttribute="centerY" secondItem="fUt-LS-7jX" secondAttribute="centerY" id="4Rz-cI-yN1"/>
+                        <constraint firstItem="hz9-Nj-liy" firstAttribute="top" secondItem="cpX-AL-TUl" secondAttribute="bottom" constant="20" id="58g-Tp-kIw"/>
+                        <constraint firstItem="nvj-AW-Xml" firstAttribute="top" secondItem="yl3-sR-ib2" secondAttribute="bottom" constant="20" id="5BO-kE-yQS"/>
+                        <constraint firstItem="cpX-AL-TUl" firstAttribute="leading" secondItem="bO6-MQ-Hxf" secondAttribute="leading" constant="53" id="8el-S5-WKK"/>
+                        <constraint firstItem="tdK-sA-aWD" firstAttribute="leading" secondItem="bO6-MQ-Hxf" secondAttribute="leading" constant="55" id="9Gd-SV-bYd"/>
+                        <constraint firstItem="kCp-Gg-jdL" firstAttribute="centerX" secondItem="QDh-nx-vqD" secondAttribute="centerX" id="A60-Ph-e6n"/>
+                        <constraint firstItem="tdK-sA-aWD" firstAttribute="top" secondItem="QDh-nx-vqD" secondAttribute="bottom" constant="15" id="CET-k1-mAd"/>
+                        <constraint firstItem="cpX-AL-TUl" firstAttribute="top" secondItem="CN7-SE-Mgv" secondAttribute="bottom" constant="11" id="Cli-qK-wtG"/>
+                        <constraint firstItem="fUt-LS-7jX" firstAttribute="leading" secondItem="bO6-MQ-Hxf" secondAttribute="leading" constant="12" id="ElI-JL-3cP"/>
+                        <constraint firstItem="hz9-Nj-liy" firstAttribute="centerX" secondItem="cpX-AL-TUl" secondAttribute="centerX" id="FD9-V7-PqW"/>
+                        <constraint firstItem="yl3-sR-ib2" firstAttribute="top" secondItem="kCp-Gg-jdL" secondAttribute="bottom" constant="15" id="GWC-7q-BXE"/>
+                        <constraint firstItem="CN7-SE-Mgv" firstAttribute="leading" secondItem="fUt-LS-7jX" secondAttribute="trailing" constant="7" id="IfI-py-Z7z"/>
+                        <constraint firstAttribute="trailing" secondItem="QDh-nx-vqD" secondAttribute="trailing" constant="46" id="JKB-a7-zAw"/>
+                        <constraint firstItem="8Ew-Gx-SRt" firstAttribute="top" secondItem="IO6-Kc-fQv" secondAttribute="bottom" constant="15" id="L3A-6k-9Kd"/>
+                        <constraint firstAttribute="trailing" secondItem="cpX-AL-TUl" secondAttribute="trailing" constant="53" id="Lrn-dz-j0e"/>
+                        <constraint firstItem="yl3-sR-ib2" firstAttribute="centerX" secondItem="QDh-nx-vqD" secondAttribute="centerX" id="OW0-Ls-Y8m"/>
+                        <constraint firstItem="nvj-AW-Xml" firstAttribute="centerX" secondItem="QDh-nx-vqD" secondAttribute="centerX" id="RnD-Y0-ET9"/>
+                        <constraint firstItem="kCp-Gg-jdL" firstAttribute="top" secondItem="8Ew-Gx-SRt" secondAttribute="bottom" constant="13" id="RvB-Kv-5ZZ"/>
+                        <constraint firstItem="IO6-Kc-fQv" firstAttribute="top" secondItem="tdK-sA-aWD" secondAttribute="bottom" constant="13" id="VUR-M9-wEj"/>
+                        <constraint firstItem="QDh-nx-vqD" firstAttribute="leading" secondItem="bO6-MQ-Hxf" secondAttribute="leading" constant="46" id="WB6-MR-3yh"/>
+                        <constraint firstAttribute="bottom" secondItem="nvj-AW-Xml" secondAttribute="bottom" constant="37" id="evu-mU-GfD"/>
+                        <constraint firstItem="IO6-Kc-fQv" firstAttribute="centerX" secondItem="QDh-nx-vqD" secondAttribute="centerX" id="lI4-Aa-hC1"/>
+                        <constraint firstItem="QDh-nx-vqD" firstAttribute="top" secondItem="hz9-Nj-liy" secondAttribute="bottom" constant="16" id="p90-Fw-cWL"/>
+                        <constraint firstAttribute="height" constant="580" id="w7i-ad-wHN"/>
+                        <constraint firstItem="8Ew-Gx-SRt" firstAttribute="centerX" secondItem="QDh-nx-vqD" secondAttribute="centerX" id="yKO-XT-0hz"/>
+                        <constraint firstItem="fUt-LS-7jX" firstAttribute="top" secondItem="bO6-MQ-Hxf" secondAttribute="top" constant="12" id="zao-A1-wKX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bO6-MQ-Hxf" secondAttribute="bottom" id="9G9-tN-jBs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bO6-MQ-Hxf" secondAttribute="trailing" id="EbO-sB-NWl"/>
+                <constraint firstItem="bO6-MQ-Hxf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PjP-7X-Mf3"/>
+                <constraint firstItem="bO6-MQ-Hxf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RKT-eJ-xxF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.770992366412212" y="123.23943661971832"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_back_left" width="10" height="10"/>
+        <namedColor name="Woloo_Light_Gray_bg">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

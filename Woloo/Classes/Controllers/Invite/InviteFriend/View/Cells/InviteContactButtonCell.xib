@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="157" id="KGk-i7-Jjw" customClass="InviteContactButtonCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-Rh-zsC">
+                        <rect key="frame" x="16" y="0.0" width="288" height="157"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25A-4m-TJ3" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                <rect key="frame" x="44" y="13" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.92941176469999998" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JXK-eE-y0X"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Ljf-lb-X5m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Invite Contacts">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickedBtnInviteContct:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hfU-nX-eqT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es3-ai-Mtg">
+                                <rect key="frame" x="135.66666666666666" y="62" width="17" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="cO3-H7-Vtb">
+                                <rect key="frame" x="124" y="93" width="40" height="40"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-Hd-3QT">
+                                        <rect key="frame" x="-40" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8AU-5c-7QV"/>
+                                            <constraint firstAttribute="width" constant="40" id="dpU-Q2-Bzc"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_fb"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L77-o3-FUG" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1Ur-Zz-GrA"/>
+                                            <constraint firstAttribute="width" constant="40" id="JN6-oe-eqC"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_whatsapp"/>
+                                        <connections>
+                                            <action selector="clickedBtnWhatsApp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qw0-KL-pnC"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIL-FC-M9u" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Woloo_Yellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6FR-O2-dXu"/>
+                                            <constraint firstAttribute="width" constant="40" id="x1e-by-zNj"/>
+                                        </constraints>
+                                        <state key="normal" image="shareBlackIcon"/>
+                                        <connections>
+                                            <action selector="clickedBtnShare:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KPF-dZ-TbN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="es3-ai-Mtg" firstAttribute="centerX" secondItem="2Gg-Rh-zsC" secondAttribute="centerX" id="JY2-SU-ZNo"/>
+                            <constraint firstItem="cO3-H7-Vtb" firstAttribute="centerX" secondItem="2Gg-Rh-zsC" secondAttribute="centerX" id="TYj-65-R4t"/>
+                            <constraint firstItem="cO3-H7-Vtb" firstAttribute="top" secondItem="es3-ai-Mtg" secondAttribute="bottom" constant="9" id="dzY-kV-v0R"/>
+                            <constraint firstAttribute="bottom" secondItem="cO3-H7-Vtb" secondAttribute="bottom" constant="24" id="ePe-A8-RlN"/>
+                            <constraint firstItem="es3-ai-Mtg" firstAttribute="top" secondItem="25A-4m-TJ3" secondAttribute="bottom" constant="9" id="gUN-F7-TmH"/>
+                            <constraint firstItem="25A-4m-TJ3" firstAttribute="centerX" secondItem="2Gg-Rh-zsC" secondAttribute="centerX" id="j4a-Oe-fd9"/>
+                            <constraint firstItem="25A-4m-TJ3" firstAttribute="top" secondItem="2Gg-Rh-zsC" secondAttribute="top" constant="13" id="syo-Vd-YeG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2Gg-Rh-zsC" secondAttribute="bottom" id="73m-yS-YCW"/>
+                    <constraint firstItem="2Gg-Rh-zsC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="YB9-91-wng"/>
+                    <constraint firstItem="2Gg-Rh-zsC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aAv-3d-GlF"/>
+                    <constraint firstAttribute="trailing" secondItem="2Gg-Rh-zsC" secondAttribute="trailing" constant="16" id="o6Z-aM-Mf5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnInviteContact" destination="25A-4m-TJ3" id="QCr-jZ-4kI"/>
+                <outlet property="btnShare" destination="GIL-FC-M9u" id="b2D-fk-msD"/>
+                <outlet property="btnWhatsApp" destination="L77-o3-FUG" id="XjJ-0n-kOV"/>
+            </connections>
+            <point key="canvasLocation" x="27.480916030534349" y="59.507042253521128"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_fb" width="99" height="91"/>
+        <image name="icon_whatsapp" width="40" height="40"/>
+        <image name="shareBlackIcon" width="23" height="25"/>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

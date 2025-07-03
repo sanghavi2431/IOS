@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookmarkedVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="H0x-KF-NJ5" id="krt-W1-XNe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCc-99-gOM">
+                    <rect key="frame" x="20" y="71" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="bAo-Ty-Ib3"/>
+                        <constraint firstAttribute="width" constant="40" id="y5M-Ag-dSZ"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="arrow.left" catalog="system"/>
+                    <connections>
+                        <action selector="clickedBackButton:" destination="-1" eventType="touchUpInside" id="Fg6-mq-gcq"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvM-iS-hTQ">
+                    <rect key="frame" x="63" y="59" width="330" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5zm-9t-tbG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                    <color key="textColor" red="0.53333333333333333" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwe-ue-y2w">
+                    <rect key="frame" x="0.0" y="103" width="393" height="72"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-Vh-Wrx">
+                            <rect key="frame" x="16" y="12" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="ORN-tB-60j"/>
+                                <constraint firstAttribute="width" constant="60" id="zl8-kC-rXB"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarked Hosts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN1-tF-2Di">
+                            <rect key="frame" x="84" y="12.000000000000002" width="293" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Check out the Woloo Hosts you have bookmarked. This helps you visit them again!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hE-XI-4sM">
+                            <rect key="frame" x="84" y="38.666666666666657" width="293" height="33.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AN1-tF-2Di" firstAttribute="top" secondItem="zS9-Vh-Wrx" secondAttribute="top" id="8fF-nF-QmQ"/>
+                        <constraint firstItem="5hE-XI-4sM" firstAttribute="bottom" secondItem="zS9-Vh-Wrx" secondAttribute="bottom" id="NcG-V7-JdB"/>
+                        <constraint firstItem="5hE-XI-4sM" firstAttribute="top" secondItem="AN1-tF-2Di" secondAttribute="bottom" constant="5" id="Nfu-Ev-IaD"/>
+                        <constraint firstItem="5hE-XI-4sM" firstAttribute="leading" secondItem="zS9-Vh-Wrx" secondAttribute="trailing" constant="8" id="Qhk-69-VrD"/>
+                        <constraint firstAttribute="bottom" secondItem="5hE-XI-4sM" secondAttribute="bottom" id="VD0-dC-cwh"/>
+                        <constraint firstItem="AN1-tF-2Di" firstAttribute="leading" secondItem="zS9-Vh-Wrx" secondAttribute="trailing" constant="8" id="eh4-5B-0ls"/>
+                        <constraint firstAttribute="trailing" secondItem="5hE-XI-4sM" secondAttribute="trailing" constant="16" id="ftX-nd-I5s"/>
+                        <constraint firstItem="zS9-Vh-Wrx" firstAttribute="leading" secondItem="Gwe-ue-y2w" secondAttribute="leading" constant="16" id="mA0-zG-hJm"/>
+                        <constraint firstItem="zS9-Vh-Wrx" firstAttribute="top" secondItem="Gwe-ue-y2w" secondAttribute="top" constant="12" id="qEa-wp-vH5"/>
+                        <constraint firstAttribute="trailing" secondItem="AN1-tF-2Di" secondAttribute="trailing" constant="16" id="sFg-s4-rMd"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-KF-NJ5">
+                    <rect key="frame" x="0.0" y="180" width="393" height="626"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H0x-KF-NJ5" secondAttribute="trailing" id="4H0-BW-LO5"/>
+                <constraint firstItem="Gwe-ue-y2w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B2I-ug-tCW"/>
+                <constraint firstItem="H0x-KF-NJ5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QnM-m8-yW4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gwe-ue-y2w" secondAttribute="trailing" id="RJx-Hq-eIo"/>
+                <constraint firstItem="RCc-99-gOM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Xb8-pv-03D"/>
+                <constraint firstItem="qvM-iS-hTQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZdY-Hh-WrE"/>
+                <constraint firstAttribute="trailing" secondItem="qvM-iS-hTQ" secondAttribute="trailing" id="d0f-gj-JZ1"/>
+                <constraint firstItem="qvM-iS-hTQ" firstAttribute="leading" secondItem="RCc-99-gOM" secondAttribute="trailing" constant="3" id="ei1-Ty-Slh"/>
+                <constraint firstItem="Gwe-ue-y2w" firstAttribute="top" secondItem="qvM-iS-hTQ" secondAttribute="bottom" id="ewl-44-2Ns"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H0x-KF-NJ5" secondAttribute="bottom" constant="12" id="fg2-0a-oKr"/>
+                <constraint firstItem="RCc-99-gOM" firstAttribute="centerY" secondItem="qvM-iS-hTQ" secondAttribute="centerY" id="m1o-cj-xWL"/>
+                <constraint firstItem="H0x-KF-NJ5" firstAttribute="top" secondItem="Gwe-ue-y2w" secondAttribute="bottom" constant="5" id="ufv-5C-mrB"/>
+            </constraints>
+            <point key="canvasLocation" x="26.717557251908396" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="icon_bookmark" width="12" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

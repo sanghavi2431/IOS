@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "squreArrow.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

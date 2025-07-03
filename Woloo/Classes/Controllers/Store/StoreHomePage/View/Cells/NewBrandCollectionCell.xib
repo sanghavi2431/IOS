@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NewBrandCollectionCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="163"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="306" height="163"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ic5-P2-Rla" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="8" y="4" width="290" height="155"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_Brand_Img" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-px-Aeb">
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="155"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="n5I-px-Aeb" secondAttribute="bottom" id="3Ny-VQ-iur"/>
+                            <constraint firstItem="n5I-px-Aeb" firstAttribute="leading" secondItem="Ic5-P2-Rla" secondAttribute="leading" id="deb-FL-daw"/>
+                            <constraint firstItem="n5I-px-Aeb" firstAttribute="top" secondItem="Ic5-P2-Rla" secondAttribute="top" id="nwe-Ea-jTt"/>
+                            <constraint firstAttribute="trailing" secondItem="n5I-px-Aeb" secondAttribute="trailing" id="odx-ze-1kS"/>
+                            <constraint firstAttribute="width" constant="290" id="uVp-xl-3jj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ic5-P2-Rla" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="FHX-ff-NHj"/>
+                <constraint firstItem="Ic5-P2-Rla" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="J2W-Oc-VsO"/>
+                <constraint firstAttribute="trailing" secondItem="Ic5-P2-Rla" secondAttribute="trailing" constant="8" id="V56-sd-O3a"/>
+                <constraint firstAttribute="bottom" secondItem="Ic5-P2-Rla" secondAttribute="bottom" constant="4" id="hFW-Gn-WIF"/>
+            </constraints>
+            <size key="customSize" width="306" height="163"/>
+            <connections>
+                <outlet property="bgImg" destination="n5I-px-Aeb" id="PQC-hR-yaf"/>
+                <outlet property="vwBack" destination="Ic5-P2-Rla" id="dDl-u1-avs"/>
+            </connections>
+            <point key="canvasLocation" x="261.06870229007632" y="45.422535211267608"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bg_Brand_Img" width="290" height="163"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

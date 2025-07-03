@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="txtFieldSayItWolooCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28t-ZK-XJX">
+                        <rect key="frame" x="16" y="22" width="288" height="57"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Receiver's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7t-y0-9mK">
+                                <rect key="frame" x="12" y="0.0" width="276" height="57"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textPlaceholderColor">
+                                        <color key="value" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_contact_book" translatesAutoresizingMaskIntoConstraints="NO" id="KA4-RE-sCz">
+                                <rect key="frame" x="248" y="16.666666666666664" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="mru-yr-3AN"/>
+                                    <constraint firstAttribute="width" constant="24" id="ud9-4u-bC6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJi-gF-J2s">
+                                <rect key="frame" x="248" y="16.666666666666664" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="ODM-5Z-Pgt"/>
+                                    <constraint firstAttribute="height" constant="24" id="xNl-Hv-FZy"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="clickedBtnContact:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FCP-xs-yIJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OJi-gF-J2s" secondAttribute="trailing" constant="16" id="26s-xY-5Qq"/>
+                            <constraint firstItem="A7t-y0-9mK" firstAttribute="top" secondItem="28t-ZK-XJX" secondAttribute="top" id="F7W-dO-gv1"/>
+                            <constraint firstAttribute="trailing" secondItem="KA4-RE-sCz" secondAttribute="trailing" constant="16" id="Odx-wI-xLI"/>
+                            <constraint firstItem="OJi-gF-J2s" firstAttribute="centerY" secondItem="28t-ZK-XJX" secondAttribute="centerY" id="Rvk-mu-kZh"/>
+                            <constraint firstAttribute="trailing" secondItem="A7t-y0-9mK" secondAttribute="trailing" id="SH3-KS-JXR"/>
+                            <constraint firstAttribute="height" constant="57" id="a1w-Ci-EdB"/>
+                            <constraint firstItem="KA4-RE-sCz" firstAttribute="centerY" secondItem="28t-ZK-XJX" secondAttribute="centerY" id="cA4-oc-evA"/>
+                            <constraint firstAttribute="bottom" secondItem="A7t-y0-9mK" secondAttribute="bottom" id="kVH-QS-qOp"/>
+                            <constraint firstItem="A7t-y0-9mK" firstAttribute="leading" secondItem="28t-ZK-XJX" secondAttribute="leading" constant="12" id="lyR-Qn-aUh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="28t-ZK-XJX" secondAttribute="bottom" id="DMz-q0-kIf"/>
+                    <constraint firstItem="28t-ZK-XJX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="Dg2-aM-jVQ"/>
+                    <constraint firstItem="28t-ZK-XJX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Wfs-Rq-G0C"/>
+                    <constraint firstAttribute="trailing" secondItem="28t-ZK-XJX" secondAttribute="trailing" constant="16" id="g7C-QM-uB9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnOpenContact" destination="OJi-gF-J2s" id="pBe-l1-xQx"/>
+                <outlet property="imgContact" destination="KA4-RE-sCz" id="MhP-ke-ZwI"/>
+                <outlet property="txtField" destination="A7t-y0-9mK" id="1XU-mw-vSQ"/>
+                <outlet property="vwBackTxtField" destination="28t-ZK-XJX" id="pqn-V0-yfX"/>
+            </connections>
+            <point key="canvasLocation" x="27.480916030534349" y="33.450704225352112"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_contact_book" width="23" height="23"/>
+    </resources>
+</document>

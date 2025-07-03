@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductColorCollectionCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="123" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="123" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-uk-0XX" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="107" height="129"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goG-Gw-r37">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="75.666666666666671"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="frv-2u-mew">
+                                        <rect key="frame" x="41.666666666666664" y="26" width="23.999999999999993" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Sr9-mx-WRE"/>
+                                            <constraint firstAttribute="height" constant="24" id="fvv-sS-3bi"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="frv-2u-mew" firstAttribute="centerY" secondItem="goG-Gw-r37" secondAttribute="centerY" id="GjC-gv-EF2"/>
+                                    <constraint firstItem="frv-2u-mew" firstAttribute="centerX" secondItem="goG-Gw-r37" secondAttribute="centerX" id="e1Z-aX-iUl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="color name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-aq-ggD">
+                                <rect key="frame" x="8" y="83.666666666666671" width="91" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e69-ei-HWU">
+                                <rect key="frame" x="8" y="106.66666666666667" width="91" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e69-ei-HWU" firstAttribute="top" secondItem="OaA-aq-ggD" secondAttribute="bottom" constant="8" id="Agw-ek-3A5"/>
+                            <constraint firstAttribute="trailing" secondItem="goG-Gw-r37" secondAttribute="trailing" id="SQF-bV-tL1"/>
+                            <constraint firstItem="OaA-aq-ggD" firstAttribute="leading" secondItem="WWV-uk-0XX" secondAttribute="leading" constant="8" id="TLI-q1-MPm"/>
+                            <constraint firstItem="goG-Gw-r37" firstAttribute="leading" secondItem="WWV-uk-0XX" secondAttribute="leading" id="VGb-H4-cKM"/>
+                            <constraint firstItem="e69-ei-HWU" firstAttribute="leading" secondItem="WWV-uk-0XX" secondAttribute="leading" constant="8" id="j1X-Ec-Lx9"/>
+                            <constraint firstAttribute="trailing" secondItem="OaA-aq-ggD" secondAttribute="trailing" constant="8" id="jel-Ow-z2s"/>
+                            <constraint firstItem="goG-Gw-r37" firstAttribute="top" secondItem="WWV-uk-0XX" secondAttribute="top" id="jjx-4U-keE"/>
+                            <constraint firstItem="OaA-aq-ggD" firstAttribute="top" secondItem="goG-Gw-r37" secondAttribute="bottom" constant="8" id="lZK-YH-Xzp"/>
+                            <constraint firstAttribute="bottom" secondItem="e69-ei-HWU" secondAttribute="bottom" constant="8" id="pDi-Wl-e6v"/>
+                            <constraint firstAttribute="trailing" secondItem="e69-ei-HWU" secondAttribute="trailing" constant="8" id="zUV-iJ-L5b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WWV-uk-0XX" secondAttribute="bottom" constant="8" id="0br-9E-rqw"/>
+                <constraint firstItem="WWV-uk-0XX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="BUx-1f-tze"/>
+                <constraint firstItem="WWV-uk-0XX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="NHw-Cv-bKG"/>
+                <constraint firstAttribute="trailing" secondItem="WWV-uk-0XX" secondAttribute="trailing" constant="8" id="oAM-h2-Gxa"/>
+            </constraints>
+            <size key="customSize" width="123" height="145"/>
+            <connections>
+                <outlet property="imgCheckMark" destination="frv-2u-mew" id="8Ef-O3-GtC"/>
+                <outlet property="lblVariantName" destination="OaA-aq-ggD" id="CyC-XC-IeB"/>
+                <outlet property="lblVariantValues" destination="e69-ei-HWU" id="fuh-BJ-PBc"/>
+                <outlet property="vwBack" destination="WWV-uk-0XX" id="Eb3-ao-da5"/>
+                <outlet property="vwbackVariant" destination="goG-Gw-r37" id="xOS-TH-cML"/>
+            </connections>
+            <point key="canvasLocation" x="148.85496183206106" y="52.464788732394368"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" width="1365.3333740234375" height="1365.3333740234375"/>
+    </resources>
+</document>

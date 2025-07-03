@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCatCollectionViewCell" id="gTV-IL-0wX" customClass="FilterCatCollectionViewCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="65"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7SB-Lg-3MH" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="2" y="2" width="242" height="61"/>
+                        <color key="backgroundColor" name="Woloo_white_text"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-bl-FzV">
+                        <rect key="frame" x="12" y="7" width="222" height="51"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5V1-bl-FzV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="0mH-lh-y2o"/>
+                <constraint firstAttribute="trailing" secondItem="7SB-Lg-3MH" secondAttribute="trailing" constant="2" id="9f8-p3-5zh"/>
+                <constraint firstAttribute="bottom" secondItem="7SB-Lg-3MH" secondAttribute="bottom" constant="2" id="Epf-en-Y0k"/>
+                <constraint firstAttribute="bottom" secondItem="5V1-bl-FzV" secondAttribute="bottom" constant="7" id="QC1-73-o03"/>
+                <constraint firstAttribute="trailing" secondItem="5V1-bl-FzV" secondAttribute="trailing" constant="12" id="bwg-AN-BxF"/>
+                <constraint firstItem="7SB-Lg-3MH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="mEN-Mw-JqG"/>
+                <constraint firstItem="5V1-bl-FzV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="yC5-Te-mrN"/>
+                <constraint firstItem="7SB-Lg-3MH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="znK-1j-g7M"/>
+            </constraints>
+            <size key="customSize" width="246" height="65"/>
+            <connections>
+                <outlet property="filterLabel" destination="5V1-bl-FzV" id="I79-Sx-mUi"/>
+            </connections>
+            <point key="canvasLocation" x="174.04580152671755" y="25"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
