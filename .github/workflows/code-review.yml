@@ -16,10 +16,10 @@ jobs:
       - name: Install SwiftLint
         run: brew install swiftlint
 
-      - name: Run SwiftLint
-        run: swiftlint --strict --reporter xcode
-        continue-on-error: true 
-        
+      - name: Run SwiftLint (only errors)
+        run: swiftlint --quiet --reporter xcode --strict | tee swiftlint-errors.txt
+        continue-on-error: true
+
       - name: Install SwiftFormat
         run: brew install swiftformat
 
@@ -32,7 +32,13 @@ jobs:
         run: |
           swiftlint --reporter json > swiftlint-report.json || true
 
-      - name: Upload Artifact
+      - name: Upload SwiftLint Error Log
+        uses: actions/upload-artifact@v4
+        with:
+          name: swiftlint-errors
+          path: swiftlint-errors.txt
+
+      - name: Upload Full SwiftLint JSON Report
         uses: actions/upload-artifact@v4
         with:
           name: swiftlint-report
