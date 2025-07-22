@@ -43,3 +43,22 @@ jobs:
         with:
           name: swiftlint-report
           path: swiftlint-report.json
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods
+
+      - name: Install iOS Dependencies (Pod Install)
+        run: pod install
+
+      - name: Snyk Test (Podfile.lock)
+        uses: snyk/actions@master
+        with:
+          command: test
+          file: Podfile.lock
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
