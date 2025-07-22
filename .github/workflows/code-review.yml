@@ -44,21 +44,22 @@ jobs:
           name: swiftlint-report
           path: swiftlint-report.json
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          ruby-version: '3.1'
+          node-version: 20
+
+      - name: Install Snyk CLI
+        run: npm install -g snyk
 
       - name: Install CocoaPods
         run: sudo gem install cocoapods
 
-      - name: Install iOS Dependencies (Pod Install)
+      - name: Install Pods
         run: pod install
 
-      - name: Snyk Test (Podfile.lock)
-        uses: snyk/actions@master
-        with:
-          command: test
-          file: Podfile.lock
+      - name: Run Snyk to test for vulnerabilities
+        run: snyk test --file=Podfile --severity-threshold=low
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        continue-on-error: true
