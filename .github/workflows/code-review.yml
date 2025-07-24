@@ -52,3 +52,9 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
+
+      - name: Upload Snyk Vulnerability Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: snyk-vulnerability-report
+          path: snyk-report.txt
