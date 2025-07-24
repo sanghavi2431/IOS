@@ -48,7 +48,7 @@ jobs:
         run: pod install
 
       - name: Run Snyk to test for vulnerabilities
-        run: snyk test --file=Podfile --severity-threshold=low
+        run: snyk test --file=Podfile --severity-threshold=low | tee snyk-report.txt
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
