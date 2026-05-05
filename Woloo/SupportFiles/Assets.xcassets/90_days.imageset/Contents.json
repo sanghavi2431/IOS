@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "90_days.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

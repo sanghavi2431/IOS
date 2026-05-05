@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="RateYourExperienceCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="471" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-tr-ITU">
+                        <rect key="frame" x="16" y="0.0" width="439" height="117"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-Ta-sUU" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="12" width="419" height="93.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Your Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyI-UP-M6a">
+                                        <rect key="frame" x="20" y="18" width="161" height="15.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7av-qc-U39">
+                                        <rect key="frame" x="20" y="40" width="245" height="28.666666666666671"/>
+                                        <string key="text">Your rating help us improve
+our service</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOW-br-Zdj" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="273" y="33.333333333333336" width="130" height="42.000000000000007"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write A Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmu-qq-Q1T">
+                                                <rect key="frame" x="22.666666666666686" y="13.666666666666664" width="85" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDr-Kp-3Me">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="42"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="clickedWriteAReview:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hfi-GW-9xI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Wmu-qq-Q1T" firstAttribute="centerY" secondItem="ZOW-br-Zdj" secondAttribute="centerY" id="3DA-go-9TT"/>
+                                            <constraint firstAttribute="height" constant="42" id="8El-Y7-zQq"/>
+                                            <constraint firstItem="cDr-Kp-3Me" firstAttribute="top" secondItem="ZOW-br-Zdj" secondAttribute="top" id="D8W-F5-rXp"/>
+                                            <constraint firstAttribute="trailing" secondItem="cDr-Kp-3Me" secondAttribute="trailing" id="Hrf-GC-QoE"/>
+                                            <constraint firstAttribute="width" constant="130" id="Zio-ac-WUe"/>
+                                            <constraint firstAttribute="bottom" secondItem="cDr-Kp-3Me" secondAttribute="bottom" id="lM8-fk-XzK"/>
+                                            <constraint firstItem="cDr-Kp-3Me" firstAttribute="leading" secondItem="ZOW-br-Zdj" secondAttribute="leading" id="m3I-hj-ker"/>
+                                            <constraint firstItem="Wmu-qq-Q1T" firstAttribute="centerX" secondItem="ZOW-br-Zdj" secondAttribute="centerX" id="y68-4C-eWN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="yellow_button_color"/>
+                                <constraints>
+                                    <constraint firstItem="7av-qc-U39" firstAttribute="centerY" secondItem="cDr-Kp-3Me" secondAttribute="centerY" id="Cxd-qh-olo"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZOW-br-Zdj" secondAttribute="trailing" constant="16" id="Gxz-dY-PCv"/>
+                                    <constraint firstItem="ZOW-br-Zdj" firstAttribute="leading" secondItem="7av-qc-U39" secondAttribute="trailing" constant="8" id="LxF-Si-YpA"/>
+                                    <constraint firstItem="ZyI-UP-M6a" firstAttribute="leading" secondItem="nEg-Ta-sUU" secondAttribute="leading" constant="20" id="P67-TG-1dE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZOW-br-Zdj" secondAttribute="bottom" constant="18" id="P9n-Eo-7ag"/>
+                                    <constraint firstItem="ZyI-UP-M6a" firstAttribute="top" secondItem="nEg-Ta-sUU" secondAttribute="top" constant="18" id="iY5-kB-xrg"/>
+                                    <constraint firstItem="7av-qc-U39" firstAttribute="leading" secondItem="nEg-Ta-sUU" secondAttribute="leading" constant="20" id="jMn-HJ-RlF"/>
+                                    <constraint firstItem="ZOW-br-Zdj" firstAttribute="top" secondItem="ZyI-UP-M6a" secondAttribute="bottom" id="uMr-BJ-7Jl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nEg-Ta-sUU" firstAttribute="top" secondItem="gQv-tr-ITU" secondAttribute="top" constant="12" id="P6Q-fT-wte"/>
+                            <constraint firstAttribute="bottom" secondItem="nEg-Ta-sUU" secondAttribute="bottom" constant="11.67" id="hqU-IV-rKE"/>
+                            <constraint firstItem="nEg-Ta-sUU" firstAttribute="leading" secondItem="gQv-tr-ITU" secondAttribute="leading" constant="10" id="l8b-Nw-RrO"/>
+                            <constraint firstAttribute="trailing" secondItem="nEg-Ta-sUU" secondAttribute="trailing" constant="10" id="y7J-x1-vO9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gQv-tr-ITU" secondAttribute="bottom" id="NkC-hm-JJE"/>
+                    <constraint firstItem="gQv-tr-ITU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ffP-4w-bex"/>
+                    <constraint firstAttribute="trailing" secondItem="gQv-tr-ITU" secondAttribute="trailing" constant="16" id="ozz-3m-5dU"/>
+                    <constraint firstItem="gQv-tr-ITU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="x4Q-EH-4fw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="225.19083969465649" y="45.422535211267608"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

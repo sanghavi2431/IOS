@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zjJ-Ja-e7x">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Invite FriendVC-->
+        <scene sceneID="r3h-ns-Q4p">
+            <objects>
+                <viewController storyboardIdentifier="InviteFriendVC" id="zjJ-Ja-e7x" customClass="InviteFriendVC" customModule="Woloo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DQR-l7-JLe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Refer" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-nE-mH2">
+                                <rect key="frame" x="81.5" y="140" width="212" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="KAw-fr-TpZ"/>
+                                    <constraint firstAttribute="width" constant="212" id="uLv-Px-Ph1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9E-Aa-Jxw">
+                                <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="XUa-yP-dnQ"/>
+                                    <constraint firstAttribute="height" constant="20" id="dp4-cH-vdq"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="icon_back_left"/>
+                                <connections>
+                                    <action selector="clickedDismissBtn:" destination="zjJ-Ja-e7x" eventType="touchUpInside" id="gMx-1A-gL2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-vO-hLC">
+                                <rect key="frame" x="47" y="20" width="316" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.53333336109999996" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DT0-dy-cvf">
+                                <rect key="frame" x="0.0" y="48" width="375" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_refer" translatesAutoresizingMaskIntoConstraints="NO" id="l4q-85-fji">
+                                        <rect key="frame" x="16" y="12" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="78Y-Mw-Fg0"/>
+                                            <constraint firstAttribute="height" constant="60" id="ABW-K3-uSS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Refer a friend to Woloo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-sy-Cct">
+                                        <rect key="frame" x="84" y="12" width="275" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer your friend to Woloo and get 100 Woloo Points!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOj-H7-Rbi">
+                                        <rect key="frame" x="84" y="43" width="275" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nOj-H7-Rbi" firstAttribute="bottom" secondItem="l4q-85-fji" secondAttribute="bottom" id="9If-rn-5OD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wug-sy-Cct" secondAttribute="trailing" constant="16" id="Ebc-uq-LSf"/>
+                                    <constraint firstAttribute="bottom" secondItem="l4q-85-fji" secondAttribute="bottom" constant="8" id="FHq-xn-e4x"/>
+                                    <constraint firstItem="Wug-sy-Cct" firstAttribute="leading" secondItem="l4q-85-fji" secondAttribute="trailing" constant="8" id="OdT-pl-kUA"/>
+                                    <constraint firstItem="l4q-85-fji" firstAttribute="leading" secondItem="DT0-dy-cvf" secondAttribute="leading" constant="16" id="TI3-qj-5HF"/>
+                                    <constraint firstItem="nOj-H7-Rbi" firstAttribute="leading" secondItem="l4q-85-fji" secondAttribute="trailing" constant="8" id="UEt-vw-yJX"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOj-H7-Rbi" secondAttribute="trailing" constant="16" id="ccp-ZR-jDT"/>
+                                    <constraint firstItem="l4q-85-fji" firstAttribute="top" secondItem="DT0-dy-cvf" secondAttribute="top" constant="12" id="hGc-4T-1DM"/>
+                                    <constraint firstItem="nOj-H7-Rbi" firstAttribute="leading" secondItem="l4q-85-fji" secondAttribute="trailing" constant="8" id="o56-LE-dwZ"/>
+                                    <constraint firstItem="nOj-H7-Rbi" firstAttribute="top" secondItem="Wug-sy-Cct" secondAttribute="bottom" constant="12" id="v8s-xD-FZI"/>
+                                    <constraint firstItem="Wug-sy-Cct" firstAttribute="top" secondItem="l4q-85-fji" secondAttribute="top" id="xho-2n-AOy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFk-t6-N7S" customClass="ShadowViewButton">
+                                <rect key="frame" x="87.5" y="632" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.92941176469999998" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ssn-bq-oDY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="u2I-i7-hmb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Invite Contacts">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="inviteContactPressed:" destination="zjJ-Ja-e7x" eventType="touchUpInside" id="OUu-Cg-M0W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-Aa-smu">
+                                <rect key="frame" x="179" y="590" width="17" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 D I 4 8 A 2 9 9 6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plz-qp-n43">
+                                <rect key="frame" x="75" y="366" width="225" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="OQx-JO-bQh"/>
+                                    <constraint firstAttribute="height" constant="110" id="o7W-sD-uRd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="17t-Vn-jEB">
+                                <rect key="frame" x="116" y="530" width="143" height="40"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xr-o2-gal">
+                                        <rect key="frame" x="-40" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="PsP-J3-SdU"/>
+                                            <constraint firstAttribute="height" constant="40" id="SQS-S2-J2V"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_fb"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D5-BT-GjC" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fji-iE-yaF"/>
+                                            <constraint firstAttribute="height" constant="40" id="oWa-4B-ceD"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_whatsapp"/>
+                                        <connections>
+                                            <action selector="shareWhatsappPressed:" destination="zjJ-Ja-e7x" eventType="touchUpInside" id="i1v-MR-gVh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg5-aq-AC3" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                        <rect key="frame" x="103" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="LAK-7E-JW1"/>
+                                            <constraint firstAttribute="height" constant="40" id="qkn-f2-kcg"/>
+                                        </constraints>
+                                        <state key="normal" image="shareBlackIcon"/>
+                                        <connections>
+                                            <action selector="sharePressed:" destination="zjJ-Ja-e7x" eventType="touchUpInside" id="kpt-zI-ZV1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Via" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-0v-k8Y">
+                                <rect key="frame" x="153.5" y="500" width="68" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OT6-th-26U">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XqA-wL-jSC"/>
+                        <color key="backgroundColor" name="Woloo_white_text"/>
+                        <constraints>
+                            <constraint firstItem="Plz-qp-n43" firstAttribute="centerX" secondItem="XqA-wL-jSC" secondAttribute="centerX" id="0ok-Cd-nhO"/>
+                            <constraint firstItem="17t-Vn-jEB" firstAttribute="centerX" secondItem="DQR-l7-JLe" secondAttribute="centerX" id="10D-qb-drh"/>
+                            <constraint firstItem="Kam-Aa-smu" firstAttribute="top" secondItem="17t-Vn-jEB" secondAttribute="bottom" constant="20" id="3eq-CS-Oci"/>
+                            <constraint firstItem="Kam-Aa-smu" firstAttribute="centerX" secondItem="SFk-t6-N7S" secondAttribute="centerX" id="5SY-F8-eNj"/>
+                            <constraint firstItem="G9E-Aa-Jxw" firstAttribute="centerY" secondItem="tqW-vO-hLC" secondAttribute="centerY" id="8tu-Qp-SYM"/>
+                            <constraint firstItem="SFk-t6-N7S" firstAttribute="top" secondItem="Kam-Aa-smu" secondAttribute="bottom" constant="20" id="94L-xK-9fL"/>
+                            <constraint firstItem="8wc-0v-k8Y" firstAttribute="centerX" secondItem="Plz-qp-n43" secondAttribute="centerX" id="FLj-YA-JYz"/>
+                            <constraint firstItem="XqA-wL-jSC" firstAttribute="trailing" secondItem="DT0-dy-cvf" secondAttribute="trailing" id="Fwj-7p-4Ez"/>
+                            <constraint firstItem="eyQ-nE-mH2" firstAttribute="centerX" secondItem="DQR-l7-JLe" secondAttribute="centerX" id="Ils-Gn-Gq2"/>
+                            <constraint firstItem="OT6-th-26U" firstAttribute="leading" secondItem="XqA-wL-jSC" secondAttribute="leading" id="KoF-ce-dhe"/>
+                            <constraint firstItem="8wc-0v-k8Y" firstAttribute="top" secondItem="Plz-qp-n43" secondAttribute="bottom" constant="24" id="SPR-eH-A1O"/>
+                            <constraint firstItem="tqW-vO-hLC" firstAttribute="top" secondItem="XqA-wL-jSC" secondAttribute="top" id="T49-Iz-kct"/>
+                            <constraint firstItem="DT0-dy-cvf" firstAttribute="leading" secondItem="DQR-l7-JLe" secondAttribute="leading" id="VAJ-Tk-DBl"/>
+                            <constraint firstItem="Plz-qp-n43" firstAttribute="width" secondItem="DQR-l7-JLe" secondAttribute="width" multiplier="0.6" id="YX6-py-OfV"/>
+                            <constraint firstItem="G9E-Aa-Jxw" firstAttribute="leading" secondItem="XqA-wL-jSC" secondAttribute="leading" constant="20" id="aUm-7W-ns8"/>
+                            <constraint firstItem="17t-Vn-jEB" firstAttribute="top" secondItem="8wc-0v-k8Y" secondAttribute="bottom" constant="12" id="bM3-Id-5j0"/>
+                            <constraint firstItem="DT0-dy-cvf" firstAttribute="top" secondItem="tqW-vO-hLC" secondAttribute="bottom" constant="8" id="c4h-eJ-Xv4"/>
+                            <constraint firstItem="OT6-th-26U" firstAttribute="top" secondItem="G9E-Aa-Jxw" secondAttribute="bottom" id="dmt-ky-ddS"/>
+                            <constraint firstItem="OT6-th-26U" firstAttribute="bottom" secondItem="DQR-l7-JLe" secondAttribute="bottom" id="iTG-eC-fF7"/>
+                            <constraint firstItem="Plz-qp-n43" firstAttribute="top" secondItem="eyQ-nE-mH2" secondAttribute="bottom" constant="12" id="lJV-ld-3rw"/>
+                            <constraint firstItem="eyQ-nE-mH2" firstAttribute="top" secondItem="DT0-dy-cvf" secondAttribute="bottom" constant="12" id="mo4-jw-ePL"/>
+                            <constraint firstItem="SFk-t6-N7S" firstAttribute="centerX" secondItem="XqA-wL-jSC" secondAttribute="centerX" id="qe8-SD-0VB"/>
+                            <constraint firstItem="XqA-wL-jSC" firstAttribute="trailing" secondItem="tqW-vO-hLC" secondAttribute="trailing" constant="12" id="rds-Be-Taa"/>
+                            <constraint firstItem="OT6-th-26U" firstAttribute="trailing" secondItem="XqA-wL-jSC" secondAttribute="trailing" id="sOq-gd-wSG"/>
+                            <constraint firstItem="tqW-vO-hLC" firstAttribute="leading" secondItem="G9E-Aa-Jxw" secondAttribute="trailing" constant="7" id="w8Q-v9-pAg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QcU-yF-Xf1"/>
+                    <connections>
+                        <outlet property="couponLbl" destination="Plz-qp-n43" id="a2d-6k-r9W"/>
+                        <outlet property="shareBtn" destination="Fg5-aq-AC3" id="vId-v8-WE7"/>
+                        <outlet property="tableView" destination="OT6-th-26U" id="uKZ-wj-8aa"/>
+                        <outlet property="whtsappBtn" destination="6D5-BT-GjC" id="5m1-wx-S89"/>
+                        <segue destination="StN-4J-LLu" kind="show" identifier="InviteMessageSegue" id="ZWi-Sr-zLJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5q-TT-5cc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="402.54872563718146"/>
+        </scene>
+        <!--Invite MessageVC-->
+        <scene sceneID="ZMP-3t-gBE">
+            <objects>
+                <viewController storyboardIdentifier="ContactListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="StN-4J-LLu" customClass="InviteMessageVC" customModule="Woloo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96D-CI-V4T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h0-Ue-voJ">
+                                <rect key="frame" x="10" y="52" width="355" height="27.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-LG-hOh">
+                                <rect key="frame" x="16" y="109.5" width="343" height="407.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-lW-GdJ" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                                <rect key="frame" x="25" y="567" width="325" height="40"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.92941176469999998" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vbE-4m-eQv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backSubmitPressed:" destination="StN-4J-LLu" eventType="touchUpInside" id="Xpe-Ln-UeD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBg-JK-1u1">
+                                <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="7eg-TF-pfW"/>
+                                    <constraint firstAttribute="height" constant="20" id="j7Z-hb-gJa"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="icon_back_left"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="StN-4J-LLu" eventType="touchUpInside" id="tx2-Oc-PmO"/>
+                                    <action selector="clickedDismissBtn:" destination="zjJ-Ja-e7x" eventType="touchUpInside" id="HJe-0R-yzH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-Kd-ZDc">
+                                <rect key="frame" x="47" y="20" width="36" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                <color key="textColor" red="0.53333336109999996" green="0.52156865600000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Upt-wf-CYv"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Upt-wf-CYv" firstAttribute="trailing" secondItem="gvT-LG-hOh" secondAttribute="trailing" constant="16" id="CK5-Jf-yEC"/>
+                            <constraint firstItem="gvT-LG-hOh" firstAttribute="top" secondItem="2h0-Ue-voJ" secondAttribute="bottom" constant="30" id="Ez8-D0-Zkp"/>
+                            <constraint firstItem="Upt-wf-CYv" firstAttribute="bottom" secondItem="bX1-lW-GdJ" secondAttribute="bottom" constant="40" id="FNh-RM-WB6"/>
+                            <constraint firstItem="cqk-Kd-ZDc" firstAttribute="centerY" secondItem="LBg-JK-1u1" secondAttribute="centerY" id="GcB-Cl-9bR"/>
+                            <constraint firstItem="cqk-Kd-ZDc" firstAttribute="leading" secondItem="LBg-JK-1u1" secondAttribute="trailing" constant="7" id="NiO-wm-x0E"/>
+                            <constraint firstItem="LBg-JK-1u1" firstAttribute="leading" secondItem="Upt-wf-CYv" secondAttribute="leading" constant="20" id="Qws-xJ-cmh"/>
+                            <constraint firstItem="2h0-Ue-voJ" firstAttribute="top" secondItem="LBg-JK-1u1" secondAttribute="bottom" constant="12" id="RuM-cT-78f"/>
+                            <constraint firstItem="Upt-wf-CYv" firstAttribute="trailing" secondItem="bX1-lW-GdJ" secondAttribute="trailing" constant="25" id="ZFr-8p-fqx"/>
+                            <constraint firstItem="gvT-LG-hOh" firstAttribute="leading" secondItem="Upt-wf-CYv" secondAttribute="leading" constant="16" id="Zyb-FE-7bI"/>
+                            <constraint firstItem="Upt-wf-CYv" firstAttribute="trailing" secondItem="2h0-Ue-voJ" secondAttribute="trailing" constant="10" id="dYM-Pc-OoX"/>
+                            <constraint firstItem="bX1-lW-GdJ" firstAttribute="leading" secondItem="Upt-wf-CYv" secondAttribute="leading" constant="25" id="jzh-Ke-eJG"/>
+                            <constraint firstItem="2h0-Ue-voJ" firstAttribute="leading" secondItem="Upt-wf-CYv" secondAttribute="leading" constant="10" id="kgR-aH-hUp"/>
+                            <constraint firstItem="LBg-JK-1u1" firstAttribute="top" secondItem="Upt-wf-CYv" secondAttribute="top" constant="20" id="lsN-i0-ver"/>
+                            <constraint firstItem="bX1-lW-GdJ" firstAttribute="top" secondItem="gvT-LG-hOh" secondAttribute="bottom" constant="50" id="rXd-HZ-KfR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QzA-v4-Ozp"/>
+                    <connections>
+                        <outlet property="msgTxtVw" destination="gvT-LG-hOh" id="N2i-Wo-CH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2i-JQ-0be" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="402.54872563718146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_fb" width="99" height="91"/>
+        <image name="icon_back_left" width="10" height="10"/>
+        <image name="icon_refer" width="18" height="18"/>
+        <image name="icon_whatsapp" width="40" height="40"/>
+        <image name="img_Refer" width="212" height="214"/>
+        <image name="shareBlackIcon" width="23" height="25"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

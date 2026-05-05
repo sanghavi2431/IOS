@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="KGk-i7-Jjw" customClass="ProductItemAddressCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHv-Qj-AOy">
+                        <rect key="frame" x="18" y="31" width="284" height="1"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8jC-8X-ET1"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6v-lR-AmL" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="62" width="288" height="79"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address - Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2B-f0-Z5J">
+                                <rect key="frame" x="16" y="13" width="112" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-O2-4rx">
+                                <rect key="frame" x="215" y="14" width="51" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nck-eT-XT7">
+                                <rect key="frame" x="16" y="35" width="111" height="1"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="5SL-hj-n1b"/>
+                                    <constraint firstAttribute="width" constant="111" id="kXR-dg-dbA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Lane road, Area, Location, Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-ha-aI6">
+                                <rect key="frame" x="16" y="48" width="250" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nck-eT-XT7" firstAttribute="top" secondItem="Z2B-f0-Z5J" secondAttribute="bottom" constant="4" id="5MM-Nr-ok1"/>
+                            <constraint firstItem="nck-eT-XT7" firstAttribute="leading" secondItem="e6v-lR-AmL" secondAttribute="leading" constant="16" id="Ii1-qv-J0A"/>
+                            <constraint firstItem="H4n-ha-aI6" firstAttribute="leading" secondItem="e6v-lR-AmL" secondAttribute="leading" constant="16" id="YgC-yg-auV"/>
+                            <constraint firstItem="Z2B-f0-Z5J" firstAttribute="top" secondItem="e6v-lR-AmL" secondAttribute="top" constant="13" id="bT2-Pl-uhs"/>
+                            <constraint firstItem="H4n-ha-aI6" firstAttribute="top" secondItem="nck-eT-XT7" secondAttribute="bottom" constant="12" id="ci5-Mw-m3b"/>
+                            <constraint firstItem="Z2B-f0-Z5J" firstAttribute="leading" secondItem="e6v-lR-AmL" secondAttribute="leading" constant="16" id="jCy-9H-l4g"/>
+                            <constraint firstAttribute="trailing" secondItem="bvO-O2-4rx" secondAttribute="trailing" constant="22" id="kin-xx-BBe"/>
+                            <constraint firstItem="bvO-O2-4rx" firstAttribute="top" secondItem="e6v-lR-AmL" secondAttribute="top" constant="14" id="pQP-WU-zA6"/>
+                            <constraint firstAttribute="bottom" secondItem="H4n-ha-aI6" secondAttribute="bottom" constant="14" id="rv9-bA-3wC"/>
+                            <constraint firstAttribute="trailing" secondItem="H4n-ha-aI6" secondAttribute="trailing" constant="22" id="t9x-od-z8o"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4x-Kd-X61">
+                        <rect key="frame" x="18" y="172" width="284" height="1"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="H1r-C5-tGQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="L4x-Kd-X61" secondAttribute="bottom" id="8RY-P9-eTu"/>
+                    <constraint firstItem="e6v-lR-AmL" firstAttribute="top" secondItem="eHv-Qj-AOy" secondAttribute="bottom" constant="30" id="CRW-HK-70W"/>
+                    <constraint firstItem="e6v-lR-AmL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HXW-kd-gt5"/>
+                    <constraint firstAttribute="trailing" secondItem="e6v-lR-AmL" secondAttribute="trailing" constant="16" id="Icd-Up-3tz"/>
+                    <constraint firstAttribute="trailing" secondItem="L4x-Kd-X61" secondAttribute="trailing" constant="18" id="Kle-qC-Jby"/>
+                    <constraint firstAttribute="trailing" secondItem="eHv-Qj-AOy" secondAttribute="trailing" constant="18" id="Wew-wM-ZqC"/>
+                    <constraint firstItem="L4x-Kd-X61" firstAttribute="top" secondItem="e6v-lR-AmL" secondAttribute="bottom" constant="31" id="Z2W-2l-IY4"/>
+                    <constraint firstItem="L4x-Kd-X61" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="f9F-RT-UU2"/>
+                    <constraint firstItem="eHv-Qj-AOy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="fJf-XL-vxS"/>
+                    <constraint firstItem="eHv-Qj-AOy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="xOV-Pq-8G1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblAddress" destination="H4n-ha-aI6" id="xVa-Rd-R6d"/>
+                <outlet property="lblAddressType" destination="Z2B-f0-Z5J" id="UoZ-Be-FES"/>
+            </connections>
+            <point key="canvasLocation" x="36.641221374045799" y="65.140845070422543"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

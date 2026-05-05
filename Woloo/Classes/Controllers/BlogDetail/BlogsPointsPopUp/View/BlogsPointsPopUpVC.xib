@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlogsPointsPopUpVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClose" destination="SPC-gt-t4R" id="1cx-a9-CUR"/>
+                <outlet property="lblWolooPoints" destination="xZK-37-Cnv" id="v5i-sY-tiP"/>
+                <outlet property="lottieImgView" destination="MXE-mK-sWG" id="SkE-cE-Oj6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwBack" destination="SWX-ya-kLV" id="lLQ-C5-zq8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="222"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWX-ya-kLV">
+                    <rect key="frame" x="0.0" y="24" width="406" height="178"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_woloo_piggy_coins" translatesAutoresizingMaskIntoConstraints="NO" id="zux-0m-lcT">
+                            <rect key="frame" x="12" y="24" width="71" height="74"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="71" id="BIe-fR-ixo"/>
+                                <constraint firstAttribute="height" constant="74" id="Wo9-rx-dnL"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MXE-mK-sWG">
+                            <rect key="frame" x="0.0" y="0.0" width="406" height="178"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woohoo! You Earned 10 Woloo Points!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZK-37-Cnv">
+                            <rect key="frame" x="95" y="52" width="295" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPC-gt-t4R">
+                            <rect key="frame" x="34" y="110" width="338" height="44"/>
+                            <color key="backgroundColor" name="yellow_button_color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="661-N8-Aji"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedBtnHome:" destination="-1" eventType="touchUpInside" id="21N-c4-5mV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.7494419642857143" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="zux-0m-lcT" firstAttribute="top" secondItem="SWX-ya-kLV" secondAttribute="top" constant="24" id="FPk-aZ-dUu"/>
+                        <constraint firstItem="SPC-gt-t4R" firstAttribute="top" secondItem="zux-0m-lcT" secondAttribute="bottom" constant="12" id="GrU-sm-3cH"/>
+                        <constraint firstItem="xZK-37-Cnv" firstAttribute="leading" secondItem="zux-0m-lcT" secondAttribute="trailing" constant="12" id="SH6-FW-jJP"/>
+                        <constraint firstItem="MXE-mK-sWG" firstAttribute="top" secondItem="SWX-ya-kLV" secondAttribute="top" id="VAD-cx-6WQ"/>
+                        <constraint firstItem="xZK-37-Cnv" firstAttribute="centerY" secondItem="zux-0m-lcT" secondAttribute="centerY" id="Wo8-90-YG2"/>
+                        <constraint firstAttribute="bottom" secondItem="SPC-gt-t4R" secondAttribute="bottom" constant="24" id="i7S-jt-X1U"/>
+                        <constraint firstAttribute="trailing" secondItem="MXE-mK-sWG" secondAttribute="trailing" id="iOR-H6-YqR"/>
+                        <constraint firstItem="zux-0m-lcT" firstAttribute="leading" secondItem="SWX-ya-kLV" secondAttribute="leading" constant="12" id="iRs-nB-7ea"/>
+                        <constraint firstAttribute="bottom" secondItem="MXE-mK-sWG" secondAttribute="bottom" id="mAY-I3-8jU"/>
+                        <constraint firstItem="SPC-gt-t4R" firstAttribute="leading" secondItem="SWX-ya-kLV" secondAttribute="leading" constant="34" id="rUP-Gu-mSD"/>
+                        <constraint firstItem="MXE-mK-sWG" firstAttribute="leading" secondItem="SWX-ya-kLV" secondAttribute="leading" id="sGf-Rk-BjY"/>
+                        <constraint firstAttribute="trailing" secondItem="xZK-37-Cnv" secondAttribute="trailing" constant="16" id="uGE-pH-dED"/>
+                        <constraint firstAttribute="trailing" secondItem="SPC-gt-t4R" secondAttribute="trailing" constant="34" id="uNe-kF-lfO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SWX-ya-kLV" secondAttribute="trailing" id="1XX-Zd-uRT"/>
+                <constraint firstItem="SWX-ya-kLV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B2R-Z2-WXv"/>
+                <constraint firstItem="SWX-ya-kLV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="CVd-OV-oeT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="146.56488549618319" y="161.26760563380282"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_woloo_piggy_coins" width="134" height="140"/>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

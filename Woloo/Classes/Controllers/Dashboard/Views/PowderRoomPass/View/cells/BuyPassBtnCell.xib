@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="BuyPassBtnCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get one time instant access after payment." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saQ-qV-x0o">
+                        <rect key="frame" x="16" y="12" width="367" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tt1-HS-fBB" customClass="ShadowViewButton" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="16" y="48" width="367" height="55"/>
+                        <color key="backgroundColor" name="yellow_button_color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="2lt-hb-JJJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Buy Pass For RS1/-">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="clickedBtnBuyPass:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eGf-gU-cLC"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="tt1-HS-fBB" secondAttribute="trailing" constant="16" id="CCR-gL-xs5"/>
+                    <constraint firstItem="saQ-qV-x0o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FQr-ee-7Yt"/>
+                    <constraint firstItem="tt1-HS-fBB" firstAttribute="top" secondItem="saQ-qV-x0o" secondAttribute="bottom" constant="12" id="Gkb-Pz-AQe"/>
+                    <constraint firstAttribute="bottom" secondItem="tt1-HS-fBB" secondAttribute="bottom" constant="24" id="PSl-hp-WAl"/>
+                    <constraint firstAttribute="trailing" secondItem="saQ-qV-x0o" secondAttribute="trailing" constant="16" id="Sli-aE-3Ji"/>
+                    <constraint firstItem="saQ-qV-x0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hcy-u1-zgk"/>
+                    <constraint firstItem="tt1-HS-fBB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xCQ-tx-2ey"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnBuyPass" destination="tt1-HS-fBB" id="REb-MY-4Ps"/>
+            </connections>
+            <point key="canvasLocation" x="199.23664122137404" y="48.943661971830991"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

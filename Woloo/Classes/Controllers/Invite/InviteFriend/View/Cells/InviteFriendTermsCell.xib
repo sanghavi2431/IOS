@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="155" id="KGk-i7-Jjw" customClass="InviteFriendTermsCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxm-eP-iEM">
+                        <rect key="frame" x="16" y="0.0" width="300" height="155"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gift a Woloo subscription to your friends &amp; show your care &amp; concern." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGm-an-Awx">
+                                <rect key="frame" x="16" y="10" width="268" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-BN-iE3">
+                                <rect key="frame" x="16" y="70" width="268" height="36"/>
+                                <string key="text">Get Woloo Points
+when she accepts your gift.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Terms &amp; Condition Applied" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1j-ga-xSG">
+                                <rect key="frame" x="85.666666666666671" y="131" width="128.66666666666663" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QGm-an-Awx" secondAttribute="trailing" constant="16" id="96i-1Z-ooe"/>
+                            <constraint firstItem="F1j-ga-xSG" firstAttribute="centerX" secondItem="Wxm-eP-iEM" secondAttribute="centerX" id="Cix-U9-mcZ"/>
+                            <constraint firstItem="QGm-an-Awx" firstAttribute="top" secondItem="Wxm-eP-iEM" secondAttribute="top" constant="10" id="OCf-Pf-Gev"/>
+                            <constraint firstItem="QOo-BN-iE3" firstAttribute="top" secondItem="QGm-an-Awx" secondAttribute="bottom" constant="24" id="QGp-1E-tFn"/>
+                            <constraint firstAttribute="trailing" secondItem="QOo-BN-iE3" secondAttribute="trailing" constant="16" id="Vo1-x2-RfW"/>
+                            <constraint firstAttribute="bottom" secondItem="F1j-ga-xSG" secondAttribute="bottom" constant="12" id="W44-hS-krW"/>
+                            <constraint firstItem="QGm-an-Awx" firstAttribute="leading" secondItem="Wxm-eP-iEM" secondAttribute="leading" constant="16" id="kJ8-Td-eRp"/>
+                            <constraint firstItem="F1j-ga-xSG" firstAttribute="top" secondItem="QOo-BN-iE3" secondAttribute="bottom" constant="24" id="xmb-0V-e3p"/>
+                            <constraint firstItem="QOo-BN-iE3" firstAttribute="leading" secondItem="Wxm-eP-iEM" secondAttribute="leading" constant="16" id="xsp-sT-elE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Wxm-eP-iEM" secondAttribute="trailing" constant="16" id="UYi-EH-Yi0"/>
+                    <constraint firstItem="Wxm-eP-iEM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ek3-fI-GnO"/>
+                    <constraint firstAttribute="bottom" secondItem="Wxm-eP-iEM" secondAttribute="bottom" id="faI-cB-cRy"/>
+                    <constraint firstItem="Wxm-eP-iEM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="l43-TS-bZ8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="38.167938931297705" y="62.323943661971832"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoreRecentSearchCollectionCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PQ-4x-18E" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="2" y="2" width="129" height="46"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_recent_search" translatesAutoresizingMaskIntoConstraints="NO" id="MYO-xO-eJW">
+                                <rect key="frame" x="8" y="13" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="BXN-b0-dOg"/>
+                                    <constraint firstAttribute="width" constant="20" id="f2J-Vk-UU7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4d-ef-OJq">
+                                <rect key="frame" x="36" y="8" width="85" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Woloo_white_text"/>
+                        <constraints>
+                            <constraint firstItem="k4d-ef-OJq" firstAttribute="leading" secondItem="MYO-xO-eJW" secondAttribute="trailing" constant="8" id="HAg-ha-dId"/>
+                            <constraint firstItem="MYO-xO-eJW" firstAttribute="leading" secondItem="1PQ-4x-18E" secondAttribute="leading" constant="8" id="IRa-nv-3kS"/>
+                            <constraint firstAttribute="bottom" secondItem="k4d-ef-OJq" secondAttribute="bottom" constant="8" id="K64-p1-dBb"/>
+                            <constraint firstAttribute="trailing" secondItem="k4d-ef-OJq" secondAttribute="trailing" constant="8" id="RYh-Pi-imq"/>
+                            <constraint firstItem="k4d-ef-OJq" firstAttribute="top" secondItem="1PQ-4x-18E" secondAttribute="top" constant="8" id="WyA-J9-aF0"/>
+                            <constraint firstItem="MYO-xO-eJW" firstAttribute="centerY" secondItem="1PQ-4x-18E" secondAttribute="centerY" id="nMY-vR-qGI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="1PQ-4x-18E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Dtn-2E-cEQ"/>
+                <constraint firstAttribute="trailing" secondItem="1PQ-4x-18E" secondAttribute="trailing" constant="2" id="Gml-kX-Cne"/>
+                <constraint firstAttribute="bottom" secondItem="1PQ-4x-18E" secondAttribute="bottom" constant="2" id="bL3-hm-vHY"/>
+                <constraint firstItem="1PQ-4x-18E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="wFy-A3-Mj1"/>
+            </constraints>
+            <size key="customSize" width="133" height="50"/>
+            <connections>
+                <outlet property="searchlbl" destination="k4d-ef-OJq" id="4RE-mh-D3g"/>
+            </connections>
+            <point key="canvasLocation" x="89.312977099236633" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_recent_search" width="20" height="20"/>
+        <namedColor name="Woloo_white_text">
+            <color red="0.9882352941176471" green="0.99215686274509807" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

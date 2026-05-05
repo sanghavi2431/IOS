@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreShowAllBrandVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCart" destination="fZR-uB-mTh" id="VjK-qq-TkZ"/>
+                <outlet property="collectionview" destination="UHJ-Xb-Lyd" id="9qC-YT-WCY"/>
+                <outlet property="lblAddress" destination="fxt-Gt-Fmx" id="sDr-Iy-rGK"/>
+                <outlet property="lblAdressType" destination="Aq0-pl-Igb" id="Loc-TO-PwO"/>
+                <outlet property="lblCartCount" destination="HxW-Jc-GSF" id="70a-aP-Siy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwCartCountBack" destination="XMu-ib-tGY" id="d0e-no-jXK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-Xb-Lyd">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="piR-3I-1IT">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npp-hY-zoh">
+                    <rect key="frame" x="0.0" y="59" width="393" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecct Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-pl-Igb">
+                            <rect key="frame" x="15.999999999999993" y="8" width="126.33333333333331" height="20"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-Gt-Fmx">
+                            <rect key="frame" x="16" y="36" width="6.3333333333333321" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpj-S3-1pi">
+                            <rect key="frame" x="30.333333333333329" y="36.666666666666671" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="0Ka-ch-asN"/>
+                                <constraint firstAttribute="height" constant="15" id="Wds-bl-bmG"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="icon_adress_dropdown"/>
+                            <connections>
+                                <action selector="clickedBtnAddress:" destination="-1" eventType="touchUpInside" id="X01-Lt-3wQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZR-uB-mTh">
+                            <rect key="frame" x="336" y="8" width="41" height="41"/>
+                            <color key="backgroundColor" name="gray_selected_button_color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="do0-9b-iAe"/>
+                                <constraint firstAttribute="width" constant="41" id="wiq-2W-WXa"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="tab_shopping"/>
+                            <connections>
+                                <action selector="clickedBtnCart:" destination="-1" eventType="touchUpInside" id="9yK-hg-bRh"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMu-ib-tGY">
+                            <rect key="frame" x="364" y="3" width="17" height="17"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxW-Jc-GSF">
+                                    <rect key="frame" x="5" y="1.6666666666666643" width="7" height="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="yellow_button_color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="17" id="8dx-XC-kLb"/>
+                                <constraint firstAttribute="height" constant="17" id="Rgg-tR-ojl"/>
+                                <constraint firstItem="HxW-Jc-GSF" firstAttribute="centerX" secondItem="XMu-ib-tGY" secondAttribute="centerX" id="lot-JF-Fmk"/>
+                                <constraint firstItem="HxW-Jc-GSF" firstAttribute="centerY" secondItem="XMu-ib-tGY" secondAttribute="centerY" id="pXN-8G-I1P"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.95182291669999997" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Aq0-pl-Igb" firstAttribute="leading" secondItem="npp-hY-zoh" secondAttribute="leading" constant="16" id="Mcr-fF-I0m"/>
+                        <constraint firstItem="XMu-ib-tGY" firstAttribute="top" secondItem="fZR-uB-mTh" secondAttribute="top" constant="-5" id="MgO-GH-GC0"/>
+                        <constraint firstItem="fxt-Gt-Fmx" firstAttribute="leading" secondItem="npp-hY-zoh" secondAttribute="leading" constant="16" id="Onr-Vl-Dgk"/>
+                        <constraint firstItem="mpj-S3-1pi" firstAttribute="leading" secondItem="fxt-Gt-Fmx" secondAttribute="trailing" constant="8" id="T5A-pr-Eb0"/>
+                        <constraint firstAttribute="trailing" secondItem="XMu-ib-tGY" secondAttribute="trailing" constant="12" id="TlO-3P-Cc4"/>
+                        <constraint firstItem="fZR-uB-mTh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mpj-S3-1pi" secondAttribute="trailing" constant="12" id="UZb-rY-dH2"/>
+                        <constraint firstAttribute="bottom" secondItem="fZR-uB-mTh" secondAttribute="bottom" constant="12" id="WOB-JE-pqI"/>
+                        <constraint firstAttribute="trailing" secondItem="fZR-uB-mTh" secondAttribute="trailing" constant="16" id="aHb-T2-dBT"/>
+                        <constraint firstItem="mpj-S3-1pi" firstAttribute="centerY" secondItem="fxt-Gt-Fmx" secondAttribute="centerY" id="cBa-iG-QdO"/>
+                        <constraint firstItem="Aq0-pl-Igb" firstAttribute="top" secondItem="npp-hY-zoh" secondAttribute="top" constant="8" id="gSt-qC-dKe"/>
+                        <constraint firstItem="fxt-Gt-Fmx" firstAttribute="top" secondItem="Aq0-pl-Igb" secondAttribute="bottom" constant="8" id="ifk-0t-oOr"/>
+                        <constraint firstItem="fZR-uB-mTh" firstAttribute="top" secondItem="npp-hY-zoh" secondAttribute="top" constant="8" id="zBN-yM-eyg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="npp-hY-zoh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9Ch-bl-lqL"/>
+                <constraint firstItem="npp-hY-zoh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CZy-mZ-2WN"/>
+                <constraint firstAttribute="trailing" secondItem="UHJ-Xb-Lyd" secondAttribute="trailing" id="Ljh-Fd-Npn"/>
+                <constraint firstAttribute="bottom" secondItem="UHJ-Xb-Lyd" secondAttribute="bottom" id="WQ4-yD-D95"/>
+                <constraint firstItem="UHJ-Xb-Lyd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wsz-q6-5tg"/>
+                <constraint firstItem="npp-hY-zoh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hC6-a2-slV"/>
+                <constraint firstItem="UHJ-Xb-Lyd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ujV-EP-7Ce"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_adress_dropdown" width="15.333333015441895" height="15"/>
+        <image name="tab_shopping" width="23" height="23"/>
+        <namedColor name="gray_selected_button_color">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow_button_color">
+            <color red="1" green="0.92199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

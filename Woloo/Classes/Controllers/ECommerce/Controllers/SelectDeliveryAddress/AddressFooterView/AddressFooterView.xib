@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddressFooterView" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="513"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ekq-4a-3Cl">
+                    <rect key="frame" x="5" y="10" width="404" height="493"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-mc-tA7">
+                            <rect key="frame" x="0.0" y="0.0" width="404" height="36"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                            <state key="normal" title="+Add Address">
+                                <color key="titleColor" name="Woloo_Gray_bg"/>
+                            </state>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="W6t-Gm-Jdf">
+                            <rect key="frame" x="0.0" y="36" width="404" height="457"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-XR-lSn">
+                                    <rect key="frame" x="0.0" y="0.0" width="404" height="55"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fGk-dA-5Rk">
+                                    <rect key="frame" x="0.0" y="67" width="404" height="55"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ij-xn-44U">
+                                            <rect key="frame" x="0.0" y="0.0" width="194.5" height="55"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pincode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BqZ-eg-ker">
+                                                    <rect key="frame" x="10" y="0.0" width="174.5" height="55"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BqZ-eg-ker" secondAttribute="trailing" constant="10" id="0hq-Et-mHo"/>
+                                                <constraint firstAttribute="height" constant="55" id="Mj2-eZ-RJS"/>
+                                                <constraint firstItem="BqZ-eg-ker" firstAttribute="leading" secondItem="5ij-xn-44U" secondAttribute="leading" constant="10" id="Qzq-za-20M"/>
+                                                <constraint firstAttribute="bottom" secondItem="BqZ-eg-ker" secondAttribute="bottom" id="U8Y-QB-uYf"/>
+                                                <constraint firstItem="BqZ-eg-ker" firstAttribute="top" secondItem="5ij-xn-44U" secondAttribute="top" id="dab-pK-3AY"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpA-hC-Lay">
+                                            <rect key="frame" x="209.5" y="0.0" width="194.5" height="55"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1oI-Il-7Lh">
+                                                    <rect key="frame" x="10" y="0.0" width="174.5" height="55"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1oI-Il-7Lh" firstAttribute="leading" secondItem="zpA-hC-Lay" secondAttribute="leading" constant="10" id="8Hq-4Z-9Xu"/>
+                                                <constraint firstAttribute="trailing" secondItem="1oI-Il-7Lh" secondAttribute="trailing" constant="10" id="Rxv-CF-WHR"/>
+                                                <constraint firstItem="1oI-Il-7Lh" firstAttribute="top" secondItem="zpA-hC-Lay" secondAttribute="top" id="YYo-Kz-qrO"/>
+                                                <constraint firstAttribute="bottom" secondItem="1oI-Il-7Lh" secondAttribute="bottom" id="j2e-we-Zl0"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVW-3n-3vK">
+                                    <rect key="frame" x="0.0" y="134" width="404" height="55"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czt-o0-lUP">
+                                            <rect key="frame" x="10" y="0.0" width="384" height="55"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="czt-o0-lUP" secondAttribute="trailing" constant="10" id="3dC-xH-yeB"/>
+                                        <constraint firstItem="czt-o0-lUP" firstAttribute="leading" secondItem="AVW-3n-3vK" secondAttribute="leading" constant="10" id="BiA-Xm-U5D"/>
+                                        <constraint firstAttribute="bottom" secondItem="czt-o0-lUP" secondAttribute="bottom" id="DbT-VS-nms"/>
+                                        <constraint firstItem="czt-o0-lUP" firstAttribute="top" secondItem="AVW-3n-3vK" secondAttribute="top" id="Hm6-uQ-ckd"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8J-nv-Noo">
+                                    <rect key="frame" x="0.0" y="201" width="404" height="55"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Locality / Area / Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCe-Jw-eHi">
+                                            <rect key="frame" x="10" y="0.0" width="384" height="55"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="lCe-Jw-eHi" secondAttribute="trailing" constant="10" id="ZnJ-LP-ioc"/>
+                                        <constraint firstItem="lCe-Jw-eHi" firstAttribute="top" secondItem="P8J-nv-Noo" secondAttribute="top" id="efL-lj-3xk"/>
+                                        <constraint firstItem="lCe-Jw-eHi" firstAttribute="leading" secondItem="P8J-nv-Noo" secondAttribute="leading" constant="10" id="g8g-We-Cga"/>
+                                        <constraint firstAttribute="bottom" secondItem="lCe-Jw-eHi" secondAttribute="bottom" id="ycV-XY-fBP"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-VM-nNH">
+                                    <rect key="frame" x="0.0" y="268" width="404" height="55"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Flat no / Building name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shF-W1-JNL">
+                                            <rect key="frame" x="10" y="0.0" width="384" height="55"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="shF-W1-JNL" secondAttribute="trailing" constant="10" id="8Zp-gP-CdY"/>
+                                        <constraint firstAttribute="bottom" secondItem="shF-W1-JNL" secondAttribute="bottom" id="cJB-Uw-JfT"/>
+                                        <constraint firstItem="shF-W1-JNL" firstAttribute="top" secondItem="Ll5-VM-nNH" secondAttribute="top" id="njm-5p-Dzw"/>
+                                        <constraint firstItem="shF-W1-JNL" firstAttribute="leading" secondItem="Ll5-VM-nNH" secondAttribute="leading" constant="10" id="u3V-br-Ggq"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lv-Li-sl9">
+                                    <rect key="frame" x="0.0" y="335" width="404" height="55"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Landmark (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASa-7X-JPk">
+                                            <rect key="frame" x="10" y="0.0" width="384" height="55"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ASa-7X-JPk" secondAttribute="bottom" id="3S3-Zz-pQK"/>
+                                        <constraint firstItem="ASa-7X-JPk" firstAttribute="leading" secondItem="1lv-Li-sl9" secondAttribute="leading" constant="10" id="d9P-Uc-dZs"/>
+                                        <constraint firstAttribute="trailing" secondItem="ASa-7X-JPk" secondAttribute="trailing" constant="10" id="qHk-du-LWs"/>
+                                        <constraint firstItem="ASa-7X-JPk" firstAttribute="top" secondItem="1lv-Li-sl9" secondAttribute="top" id="zvp-zF-RrP"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YId-w0-tSv">
+                                    <rect key="frame" x="0.0" y="402" width="404" height="55"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                    <state key="normal" title="Save Address">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Woloo_Yellow"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ekq-4a-3Cl" secondAttribute="bottom" constant="10" id="1CB-56-NWV"/>
+                <constraint firstItem="Ekq-4a-3Cl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="WZy-bQ-a6H"/>
+                <constraint firstItem="Ekq-4a-3Cl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="m6U-8A-KKf"/>
+                <constraint firstAttribute="trailing" secondItem="Ekq-4a-3Cl" secondAttribute="trailing" constant="5" id="qMB-uY-FJ5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addAddressButton" destination="9SB-mc-tA7" id="HLd-8u-jEn"/>
+                <outlet property="addAddressFieldsStackView" destination="W6t-Gm-Jdf" id="WEc-UA-64L"/>
+                <outlet property="addAddressLabel" destination="1eo-XR-lSn" id="x6n-tS-tpB"/>
+                <outlet property="cityTextField" destination="1oI-Il-7Lh" id="Q5w-Vr-T8S"/>
+                <outlet property="flatTextField" destination="shF-W1-JNL" id="Za2-fg-ldf"/>
+                <outlet property="landmarkTextField" destination="ASa-7X-JPk" id="ZtV-Ch-Kxp"/>
+                <outlet property="localityTextField" destination="lCe-Jw-eHi" id="8F9-AK-GNT"/>
+                <outlet property="pincodeTextField" destination="BqZ-eg-ker" id="2Im-EU-i7P"/>
+                <outlet property="saveAddressButton" destination="YId-w0-tSv" id="dFZ-qQ-xpf"/>
+                <outlet property="stateTextField" destination="czt-o0-lUP" id="VFO-Po-Vik"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Woloo_Gray_bg">
+            <color red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Woloo_Yellow">
+            <color red="1" green="0.93333333333333335" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductColorCollectionCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="58" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="58" height="56"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-uk-0XX">
+                        <rect key="frame" x="11" y="10" width="36" height="36"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tick" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-k1-lU1">
+                                <rect key="frame" x="7" y="7" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="DuN-tC-6dQ"/>
+                                    <constraint firstAttribute="height" constant="22" id="Kee-k5-coX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iqh-k1-lU1" firstAttribute="centerX" secondItem="WWV-uk-0XX" secondAttribute="centerX" id="7Vf-N8-zWO"/>
+                            <constraint firstAttribute="width" constant="36" id="JNU-kt-9MI"/>
+                            <constraint firstItem="iqh-k1-lU1" firstAttribute="centerY" secondItem="WWV-uk-0XX" secondAttribute="centerY" id="gjb-75-zru"/>
+                            <constraint firstAttribute="height" constant="36" id="yZt-1U-b5O"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WWV-uk-0XX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pUu-CJ-Unn"/>
+                <constraint firstItem="WWV-uk-0XX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="y6g-eR-Za3"/>
+            </constraints>
+            <size key="customSize" width="58" height="56"/>
+            <connections>
+                <outlet property="imgCheckMark" destination="iqh-k1-lU1" id="qtF-JQ-awI"/>
+                <outlet property="vwBack" destination="WWV-uk-0XX" id="Eb3-ao-da5"/>
+            </connections>
+            <point key="canvasLocation" x="99.236641221374043" y="30.985915492957748"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_tick" width="22" height="22"/>
+    </resources>
+</document>

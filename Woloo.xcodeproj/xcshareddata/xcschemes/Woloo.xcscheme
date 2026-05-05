@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1420"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B808C701258B58E3007D5935"
+               BuildableName = "Woloo.app"
+               BlueprintName = "Woloo"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      systemAttachmentLifetime = "keepNever"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B808C701258B58E3007D5935"
+            BuildableName = "Woloo.app"
+            BlueprintName = "Woloo"
+            ReferencedContainer = "container:Woloo.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B8CC0872D20063B003B5CF0"
+               BuildableName = "OnboardingTestCase.xctest"
+               BlueprintName = "OnboardingTestCase"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B8CC0A32D21CFEE003B5CF0"
+               BuildableName = "OTPVerification.xctest"
+               BlueprintName = "OTPVerification"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B8CC0B92D221A87003B5CF0"
+               BuildableName = "Dashboard.xctest"
+               BlueprintName = "Dashboard"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BED2F7A2D221B52002AA28B"
+               BuildableName = "TestsDashboard.xctest"
+               BlueprintName = "TestsDashboard"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BC21DB02D2244AC00B139A8"
+               BuildableName = "TestMore.xctest"
+               BlueprintName = "TestMore"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BC21DCD2D22525000B139A8"
+               BuildableName = "HomeDashboardTests.xctest"
+               BlueprintName = "HomeDashboardTests"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BC21DEE2D225C6100B139A8"
+               BuildableName = "TestPeriodTracker.xctest"
+               BlueprintName = "TestPeriodTracker"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BC21E422D30FA1A00B139A8"
+               BuildableName = "TestUIDashboard.xctest"
+               BlueprintName = "TestUIDashboard"
+               ReferencedContainer = "container:Woloo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B808C701258B58E3007D5935"
+            BuildableName = "Woloo.app"
+            BlueprintName = "Woloo"
+            ReferencedContainer = "container:Woloo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-FIRDebugEnabled"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "WOLOO_TOKEN"
+            value = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjIyMzEsImlhdCI6MTczNTk2NzE4NCwibmJmIjoxNzM1OTY3MTg0LCJleHAiOjE3NDM3NDMxODQsImlzcyI6Imh0dHBzOi8vd29sb28udmVyaWZpbm93LmNvbS9hcGkvdjEvbG9naW4iLCJzdWIiOiI2MjIzMSIsImp0aSI6IkFCQ0RFRkdISUpLIn0.idEUr8PCuLXtrxfUV4Lbe1Fb3eAbJ3BJAdkU4dRHVyA"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "lat_Sucess"
+            value = "12.917640"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "long_Success"
+            value = "77.690773"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "no_woloo_lat"
+            value = "20.9276"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "no_woloo_lng"
+            value = "79.0040"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "mob_number"
+            value = "8999153610"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "invalid_mob"
+            value = "99153610"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "login_otp"
+            value = "1234"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "valid_woloo_id"
+            value = "20441"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "invalid_woloo_id"
+            value = "1373"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "src_lat"
+            value = "18.520"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "src_lng"
+            value = "73.856"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "src_lat_noWoloo"
+            value = "0"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "src_lng_noWoloo"
+            value = "73.856"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "overview_polyline"
+            value = "mg`pBebxaMz@dArHSClIsCNwDGsBoBgBKgUxH_J`GeClEyJjGaDd@iCbMgD|RsFlNyTn^gb@bp@CjHv@`PpFtZvBh_@~Dph@bEbSFnMQre@d@|@FNbCrM?Dd@lCzArK_DvK_@|HiCdL{@tKObE@~DdIs@lI~CRr@vAhBaI_BmGmA{DMeIpDiTrZuFrFkRzFm~@nUup@~Pc~Bnn@qdAbYglCvt@kwBxn@a}Apd@gc@lMmFdDeF~Jy@pOu@|bAyCxTwMpOy{AhqAol@ds@_QrPm{@n^iNbMuDlKw@xKp@tQm@nLyc@zsAud@ruAUbTtG|d@hRvkAjLnc@~Lzx@fL~k@t@rUyJfz@aSh_B_ItTsb@bn@_m@b`AiPb[w[|e@cVvM{MrAo_@vB_TjIuNpO_I~Uw@tU`G|`@nS|sA`XdkCpJz}@dLbf@nUhaAtJ|d@UdPoHd^Q~c@iDfJoLvFsKe@wo@{HaLOkU`HgKhA}RAcDbAuCdJiClUwEnSgXps@iKdU_F`[_@`\\`Bxa@vCpQfI`JxLxF~J~G`DrD|C|KxElQlLtMMrCiE~LHjDvAnGmFzBkWvEmIrCa^tOuErFJ|NfNtIdJ`IEpAlAlDdEfN|J~DtCrBInEaFt@{FqGiIuNoGiG}L_GwFqAgAxBxC~CnM|G|BlGhUrS_@lEsCbBb@lBrHbFrErKo@rAoQ~IqXjE_DdDvBjG`K`LPtBoKrMcNnm@o@nIrBfMZxIaEbM}MbHeLtJeOlXqSjLiSrMmHbO{a@ncBcGtLqUhO}p@h^cf@`XmP~T_`@ln@uMnIoNxIeGdHoTto@sHtOgn@x~@sl@l{@qP~Jgu@l]{tAjp@qy@l`@yfA~g@kUhHeO`FuC~BsFvIcn@nuAaM`Wg_@nh@eo@hr@yb@l_@eLvIgMxFsSlE{f@hJuh@tIuOkAsZgI_q@eQ_LPiGjCkSdQceAl~@sn@fj@gb@fg@wKxGaJjEiJdJan@rn@sKxMsMlWcM~ViHfUya@~q@gpAjuByHvMc@rMlVra@|h@`|@pW~b@rHtRc@jUiD|b@cCvHwY|]iH~HHnIe@zEyGtB{dArIuu@zm@cGtEcNfAar@v@eTTaAbAkExlAaH|gBX|PfDxEdRzRzGrNdOd`A~OhhA~G`XtNxj@fU|{@iLhGiMnMmDnL{DnTkSzf@yN~e@eA~G{GbOoFjD{Fz@kH`AgExC_BhECzCxFvKjAxBfF|Hl@dClMxVpAjHiGb_@sEpLkDdDw\\lY{ChEi@xFkAxF{HdPiArBq@OXe@"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "dest_lat"
+            value = "18.56"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "dest_lng"
+            value = "73.77"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "dest_lat_noWoloo"
+            value = "18.56"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "dest_lng_noWoloo"
+            value = "73.77"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "is_thirst_reminder_yes"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "is_thirst_reminder_no"
+            value = "0"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "thirst_reminder_frequency"
+            value = "5"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "blog_category_shop"
+            value = "shop"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "blog_category_periods"
+            value = "periods"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "blog_category_blogs"
+            value = "blogs"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "period_cycleLength_Invalid"
+            value = "20"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "periodDate"
+            value = "2023-11-04"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "periodLength_Invalid"
+            value = "26"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "lutealLength"
+            value = "23"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "period_cycleLength_Valid"
+            value = "27"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "periodLength_Valid"
+            value = "3"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "voucher_code"
+            value = "https://woloo.page.link/zRGC6pSwHNCMHfdq7"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "force_Apply"
+            value = "true"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "not_force_apply"
+            value = "false"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "add_woloo_name"
+            value = "Demo TestUser"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "add_woloo_city"
+            value = "Pune"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "add_woloo_pin"
+            value = "411033"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "add_woloo_address"
+            value = "Dummy Test Address"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+      <LocationScenarioReference
+         identifier = "../Woloo/SupportFiles/OfficeLocation.gpx"
+         referenceType = "0">
+      </LocationScenarioReference>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B808C701258B58E3007D5935"
+            BuildableName = "Woloo.app"
+            BlueprintName = "Woloo"
+            ReferencedContainer = "container:Woloo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

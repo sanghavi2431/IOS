@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoInternetConnectionView" customModule="Woloo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoInternetConnectionView" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nF8-tK-Iuh" customClass="CustomView" customModule="Woloo" customModuleProvider="target">
+                    <rect key="frame" x="28" y="340" width="319" height="142.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odP-d2-mWF">
+                            <rect key="frame" x="20" y="20" width="279" height="17.666666666666671"/>
+                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icNoInternet" translatesAutoresizingMaskIntoConstraints="NO" id="SqY-bC-TuU">
+                            <rect key="frame" x="137.66666666666666" y="55.666666666666686" width="44" height="41.666666666666657"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Load Offline Mode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qti-Rh-09l">
+                            <rect key="frame" x="84.666666666666686" y="112.33333333333331" width="150" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="JDP-Aa-fAm"/>
+                                <constraint firstAttribute="height" constant="20" id="P4u-Ag-sRG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N94-3z-Avh">
+                            <rect key="frame" x="0.0" y="0.0" width="319" height="142.33333333333334"/>
+                            <connections>
+                                <action selector="retryBtnClicked" destination="iN0-l3-epB" eventType="touchUpInside" id="vnt-gE-jUD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.24518460040000001" green="0.30130758880000003" blue="0.34718254209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="odP-d2-mWF" firstAttribute="leading" secondItem="nF8-tK-Iuh" secondAttribute="leading" constant="20" id="4kY-OZ-6BF"/>
+                        <constraint firstAttribute="bottom" secondItem="N94-3z-Avh" secondAttribute="bottom" id="54b-xw-uVF"/>
+                        <constraint firstAttribute="trailing" secondItem="odP-d2-mWF" secondAttribute="trailing" constant="20" id="72j-Yj-AZf"/>
+                        <constraint firstAttribute="bottom" secondItem="Qti-Rh-09l" secondAttribute="bottom" constant="10" id="8MS-PF-g4e"/>
+                        <constraint firstItem="odP-d2-mWF" firstAttribute="top" secondItem="nF8-tK-Iuh" secondAttribute="top" constant="20" id="A6x-eE-l3C"/>
+                        <constraint firstItem="Qti-Rh-09l" firstAttribute="centerX" secondItem="nF8-tK-Iuh" secondAttribute="centerX" id="BMs-He-Tes"/>
+                        <constraint firstAttribute="trailing" secondItem="N94-3z-Avh" secondAttribute="trailing" id="IZo-az-HYF"/>
+                        <constraint firstItem="SqY-bC-TuU" firstAttribute="top" secondItem="odP-d2-mWF" secondAttribute="bottom" constant="18" id="Im7-jT-8jv"/>
+                        <constraint firstItem="N94-3z-Avh" firstAttribute="leading" secondItem="nF8-tK-Iuh" secondAttribute="leading" id="Pup-HM-m0j"/>
+                        <constraint firstItem="Qti-Rh-09l" firstAttribute="top" secondItem="SqY-bC-TuU" secondAttribute="bottom" constant="15" id="T2U-j6-zH2"/>
+                        <constraint firstItem="N94-3z-Avh" firstAttribute="top" secondItem="nF8-tK-Iuh" secondAttribute="top" id="jqC-Rb-XEx"/>
+                        <constraint firstItem="SqY-bC-TuU" firstAttribute="centerX" secondItem="nF8-tK-Iuh" secondAttribute="centerX" id="zTW-4z-2RV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nF8-tK-Iuh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="1Gb-L0-zSE"/>
+                <constraint firstItem="nF8-tK-Iuh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4dC-Ug-Phf"/>
+                <constraint firstItem="nF8-tK-Iuh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.85" id="kbw-8c-sFq"/>
+            </constraints>
+            <connections>
+                <outlet property="contentView" destination="nF8-tK-Iuh" id="TDc-Th-K2f"/>
+                <outlet property="imgNoInternet" destination="SqY-bC-TuU" id="Ie9-Es-2Hj"/>
+                <outlet property="noInternetAvailableLabel" destination="odP-d2-mWF" id="EgM-Ww-xmc"/>
+                <outlet property="tapToRetryLabel" destination="Qti-Rh-09l" id="cop-oW-SH4"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="119.70443349753695"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icNoInternet" width="44" height="41.666667938232422"/>
+    </resources>
+</document>

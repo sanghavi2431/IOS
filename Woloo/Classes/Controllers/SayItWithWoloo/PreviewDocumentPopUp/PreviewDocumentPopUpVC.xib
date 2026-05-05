@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewDocumentPopUpVC" customModule="Woloo" customModuleProvider="target">
+            <connections>
+                <outlet property="imgHeight" destination="qNm-42-L5W" id="k3d-uN-xz2"/>
+                <outlet property="imgView" destination="dUf-h3-ycA" id="Hyq-38-J4c"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X30-8I-g7D">
+                    <rect key="frame" x="12" y="11.999999999999998" width="60" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gallery" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-h3-ycA">
+                    <rect key="frame" x="12" y="44.333333333333343" width="369" height="197"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="197" id="qNm-42-L5W"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dUf-h3-ycA" secondAttribute="trailing" constant="12" id="0xU-Ij-wez"/>
+                <constraint firstItem="dUf-h3-ycA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Ohe-PX-c6o"/>
+                <constraint firstItem="dUf-h3-ycA" firstAttribute="top" secondItem="X30-8I-g7D" secondAttribute="bottom" constant="12" id="WJ2-ox-LgE"/>
+                <constraint firstItem="X30-8I-g7D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="Yxv-7V-cdb"/>
+                <constraint firstAttribute="bottom" secondItem="dUf-h3-ycA" secondAttribute="bottom" constant="11.67" id="jYq-dq-FcO"/>
+                <constraint firstItem="X30-8I-g7D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="pKL-mJ-ACD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.717557251908396" y="219.36619718309859"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_gallery" width="512" height="512"/>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="WAHCertificateNoCell" customModule="Woloo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPS-qR-z7Y" customClass="ShadowView" customModule="Woloo" customModuleProvider="target">
+                        <rect key="frame" x="36" y="16" width="271" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Certificate No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztc-3v-WRJ">
+                                <rect key="frame" x="79" y="12" width="113" height="19"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNL-B5-k3f">
+                                <rect key="frame" x="16" y="39" width="239" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3bp-Kh-GBo"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="[Number]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBw-4I-dmk">
+                                <rect key="frame" x="97.666666666666657" y="52" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HBw-4I-dmk" firstAttribute="centerX" secondItem="MPS-qR-z7Y" secondAttribute="centerX" id="4gj-1n-FCQ"/>
+                            <constraint firstItem="Ztc-3v-WRJ" firstAttribute="top" secondItem="MPS-qR-z7Y" secondAttribute="top" constant="12" id="SFn-uO-zXV"/>
+                            <constraint firstAttribute="trailing" secondItem="XNL-B5-k3f" secondAttribute="trailing" constant="16" id="ZYk-od-6gp"/>
+                            <constraint firstItem="Ztc-3v-WRJ" firstAttribute="centerX" secondItem="MPS-qR-z7Y" secondAttribute="centerX" id="ZiO-Zh-GGZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HBw-4I-dmk" secondAttribute="bottom" constant="12" id="cdg-tO-MN6"/>
+                            <constraint firstItem="XNL-B5-k3f" firstAttribute="top" secondItem="Ztc-3v-WRJ" secondAttribute="bottom" constant="8" id="jL7-Xy-GZv"/>
+                            <constraint firstItem="XNL-B5-k3f" firstAttribute="leading" secondItem="MPS-qR-z7Y" secondAttribute="leading" constant="16" id="sgy-mk-Yja"/>
+                            <constraint firstItem="HBw-4I-dmk" firstAttribute="top" secondItem="XNL-B5-k3f" secondAttribute="bottom" constant="12" id="yl1-nw-hvL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MPS-qR-z7Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="36" id="CEc-Ux-cGe"/>
+                    <constraint firstItem="MPS-qR-z7Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Jtj-3S-xER"/>
+                    <constraint firstAttribute="trailing" secondItem="MPS-qR-z7Y" secondAttribute="trailing" constant="36" id="hrC-zV-1dz"/>
+                    <constraint firstAttribute="bottom" secondItem="MPS-qR-z7Y" secondAttribute="bottom" constant="16" id="jWn-04-wnt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDesc" destination="HBw-4I-dmk" id="FAs-FE-blb"/>
+                <outlet property="lblTitle" destination="Ztc-3v-WRJ" id="DJD-Dc-cAH"/>
+                <outlet property="vwBack" destination="MPS-qR-z7Y" id="22l-N1-Qju"/>
+            </connections>
+            <point key="canvasLocation" x="109.16030534351144" y="45.422535211267608"/>
+        </tableViewCell>
+    </objects>
+</document>
