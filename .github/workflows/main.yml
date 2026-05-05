@@ -1,0 +1,55 @@
+name: iOS Build
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      # 1️⃣ Get code
+      - uses: actions/checkout@v4
+
+      # 2️⃣ Install dependencies (CocoaPods)
+      - name: Install Pods
+        run: |
+          cd ios
+          pod install
+
+      # 3️⃣ Build (creates .xcarchive)
+      - name: Build iOS App
+        run: |
+          cd ios
+          xcodebuild -workspace Woloo.xcworkspace \
+          -scheme Woloo \
+          -configuration Debug \
+          -sdk iphoneos \
+          -archivePath $PWD/build/Woloo.xcarchive archive
+
+      # 4️⃣ Create ExportOptions.plist (required for IPA)
+      - name: Create ExportOptions.plist
+        run: |
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > ios/ExportOptions.plist
+          echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN">' >> ios/ExportOptions.plist
+          echo '<plist version="1.0"><dict>' >> ios/ExportOptions.plist
+          echo '<key>method</key><string>development</string>' >> ios/ExportOptions.plist
+          echo '</dict></plist>' >> ios/ExportOptions.plist
+
+      # 5️⃣ Export IPA (final file)
+      - name: Export IPA
+        run: |
+          cd ios
+          xcodebuild -exportArchive \
+          -archivePath build/Woloo.xcarchive \
+          -exportOptionsPlist ExportOptions.plist \
+          -exportPath build
+
+      # 6️⃣ Upload IPA
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-ipa
+          path: ios/build/*.ipa
