@@ -10,41 +10,25 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      # Checkout code
       - uses: actions/checkout@v4
 
-      # Install Pods (no cd ios)
+      # Install Pods
       - name: Install Pods
         run: pod install
 
-      # Build
-      - name: Build iOS App
+      # Build for simulator (NO SIGNING REQUIRED)
+      - name: Build iOS App (Simulator)
         run: |
           xcodebuild -workspace Woloo.xcworkspace \
           -scheme Woloo \
           -configuration Debug \
-          -sdk iphoneos \
-          -archivePath $PWD/build/Woloo.xcarchive archive
+          -sdk iphonesimulator \
+          build
 
-      # Create plist
-      - name: Create ExportOptions.plist
-        run: |
-          echo '<?xml version="1.0" encoding="UTF-8"?>' > ExportOptions.plist
-          echo '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN">' >> ExportOptions.plist
-          echo '<plist version="1.0"><dict>' >> ExportOptions.plist
-          echo '<key>method</key><string>development</string>' >> ExportOptions.plist
-          echo '</dict></plist>' >> ExportOptions.plist
-
-      # Export IPA
-      - name: Export IPA
-        run: |
-          xcodebuild -exportArchive \
-          -archivePath build/Woloo.xcarchive \
-          -exportOptionsPlist ExportOptions.plist \
-          -exportPath build
-
-      # Upload
-      - name: Upload IPA
+      # Upload build logs (optional but useful)
+      - name: Upload Logs
         uses: actions/upload-artifact@v4
         with:
-          name: ios-ipa
-          path: build/*.ipa
+          name: ios-build-logs
+          path: ~/Library/Logs/DiagnosticReports
