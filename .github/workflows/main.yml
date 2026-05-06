@@ -13,23 +13,27 @@ jobs:
       # Checkout code
       - uses: actions/checkout@v4
 
-      # Select Xcode 26.3
+      # List available Xcode versions
+      - name: List Xcode Versions
+        run: ls /Applications | grep Xcode
+
+      # Select Xcode
       - name: Select Xcode Version
-        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+        run: sudo xcode-select -s /Applications/Xcode.app
 
       # Verify Xcode version
       - name: Check Xcode Version
         run: xcodebuild -version
 
-      # List available simulators
+      # List simulators
       - name: List Simulators
         run: xcrun simctl list devices
 
-      # Install CocoaPods dependencies
+      # Install pods
       - name: Install Pods
         run: pod install --repo-update
 
-      # Build app for iOS Simulator
+      # Build app
       - name: Build iOS App
         run: |
           xcodebuild -workspace Woloo.xcworkspace \
@@ -40,7 +44,7 @@ jobs:
           ONLY_ACTIVE_ARCH=NO \
           build
 
-      # Upload logs if build fails
+      # Upload logs if failed
       - name: Upload Logs
         if: failure()
         uses: actions/upload-artifact@v4
