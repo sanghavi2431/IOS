@@ -21,11 +21,15 @@ jobs:
       - name: Check Xcode Version
         run: xcodebuild -version
 
+      # List available simulators
+      - name: List Simulators
+        run: xcrun simctl list devices
+
       # Install CocoaPods dependencies
       - name: Install Pods
-        run: pod install
+        run: pod install --repo-update
 
-      # Build app for iOS Simulator (no signing required)
+      # Build app for iOS Simulator
       - name: Build iOS App
         run: |
           xcodebuild -workspace Woloo.xcworkspace \
