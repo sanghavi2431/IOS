@@ -7,27 +7,38 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-26
 
     steps:
       # Checkout code
       - uses: actions/checkout@v4
 
-      # Install Pods
+      # Select Xcode 26.3
+      - name: Select Xcode Version
+        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+
+      # Verify Xcode version
+      - name: Check Xcode Version
+        run: xcodebuild -version
+
+      # Install CocoaPods dependencies
       - name: Install Pods
         run: pod install
 
-      # Build for simulator (NO SIGNING REQUIRED)
-      - name: Build iOS App (Simulator)
+      # Build app for iOS Simulator (no signing required)
+      - name: Build iOS App
         run: |
           xcodebuild -workspace Woloo.xcworkspace \
           -scheme Woloo \
           -configuration Debug \
           -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 15' \
+          ONLY_ACTIVE_ARCH=NO \
           build
 
-      # Upload build logs (optional but useful)
+      # Upload logs if build fails
       - name: Upload Logs
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: ios-build-logs
