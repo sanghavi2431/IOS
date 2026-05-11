@@ -11,7 +11,7 @@ jobs:
 
     steps:
       # Checkout code
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Select Xcode 26.3
       - name: Select Xcode Version
@@ -21,15 +21,16 @@ jobs:
       - name: Check Xcode Version
         run: xcodebuild -version
 
-      # List available simulators
-      - name: List Simulators
-        run: xcrun simctl list devices
-
       # Remove old pods and lock file
       - name: Remove Pods Cache
         run: |
           rm -rf Pods
           rm -rf Podfile.lock
+
+      # Remove Derived Data
+      - name: Remove Derived Data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData
 
       # Install fresh CocoaPods dependencies
       - name: Install Pods
@@ -38,7 +39,8 @@ jobs:
       # Build app for iOS Simulator
       - name: Build iOS App
         run: |
-          xcodebuild -workspace Woloo.xcworkspace \
+          xcodebuild \
+          -workspace Woloo.xcworkspace \
           -scheme Woloo \
           -configuration Debug \
           -sdk iphonesimulator \
@@ -50,7 +52,7 @@ jobs:
       # Upload logs if build fails
       - name: Upload Logs
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ios-build-logs
           path: ~/Library/Logs/DiagnosticReports
