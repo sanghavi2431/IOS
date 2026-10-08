@@ -44,6 +44,13 @@ jobs:
       - name: Install Snyk CLI
         run: npm install -g snyk
 
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods
+
+      - name: Install Pods
+        run: pod install
+        continue-on-error: true
+
       - name: Run Snyk dependency scan (CocoaPods)
         run: snyk test --file=Podfile.lock --severity-threshold=low | tee snyk-dependency-report.txt
         env:
